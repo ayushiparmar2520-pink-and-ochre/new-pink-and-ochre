@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pinkandochre.com)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\QSS\\\\Videos\\\\My Website\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(ConvertTo-Json)",
+      "Bash(npm install *)"
+    ]
+  }
+}
