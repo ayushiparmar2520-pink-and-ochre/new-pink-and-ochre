@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-charcoal;
+  font-feature-settings: "rlig" 1, "calt" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-charcoal text-cream rounded-sm font-sans font-medium tracking-wide hover:bg-taupe transition-all duration-300 uppercase text-sm;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-charcoal text-charcoal rounded-sm font-sans font-medium tracking-wide hover:bg-charcoal hover:text-cream transition-all duration-300 uppercase text-sm;
+  }
+
+  .btn-tertiary {
+    @apply px-6 py-2 text-charcoal font-body font-medium hover:text-gold transition-colors duration-300 border-b-2 border-transparent hover:border-gold;
+  }
+
+  .card {
+    @apply bg-white overflow-hidden transition-all duration-300 hover:shadow-sm;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .heading-large {
+    @apply text-5xl md:text-6xl font-display font-bold text-charcoal leading-tight tracking-tight;
+  }
+
+  .heading-medium {
+    @apply text-4xl md:text-5xl font-display font-bold text-charcoal leading-tight tracking-tight;
+  }
+
+  .heading-small {
+    @apply text-3xl font-display font-bold text-charcoal tracking-tight;
+  }
+
+  .heading-xs {
+    @apply text-xl font-display font-semibold text-charcoal tracking-wide;
+  }
+
+  .subtitle {
+    @apply text-lg font-body text-taupe leading-relaxed tracking-wide;
+  }
+
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-taupe to-transparent;
+  }
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Subtle hover effects */
+button, a {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Link styling */
+a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary) {
+  @apply relative;
+}
+
+a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):hover {
+  @apply text-gold;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ivory;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-taupe rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-charcoal;
+}
