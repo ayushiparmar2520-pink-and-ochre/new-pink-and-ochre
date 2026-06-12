@@ -32,6 +32,7 @@ export default function Footer() {
             <h4 className="font-display text-lg mb-6 text-cream">Pages</h4>
             <ul className="space-y-3">
               <li><a href="/" className="text-taupe hover:text-gold transition text-sm font-body">Home</a></li>
+              <li><a href="/start-here" className="text-taupe hover:text-gold transition text-sm font-body">Start Here</a></li>
               <li><a href="/blog" className="text-taupe hover:text-gold transition text-sm font-body">Stories</a></li>
               <li><a href="/about" className="text-taupe hover:text-gold transition text-sm font-body">About</a></li>
               <li><a href="/contact" className="text-taupe hover:text-gold transition text-sm font-body">Contact</a></li>
