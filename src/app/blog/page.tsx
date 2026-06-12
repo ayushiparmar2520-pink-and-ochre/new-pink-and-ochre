@@ -73,7 +73,7 @@ const allPosts = [
     date: '2026-05-05',
     category: 'Book',
     slug: 'it-ends-with-us-book-review',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?w=750&q=75',
+    image: '/images/blog/it-ends-with-us-book-review.webp',
   },
   {
     id: 13,

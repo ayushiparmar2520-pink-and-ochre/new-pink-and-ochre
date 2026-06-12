@@ -1051,7 +1051,7 @@ const blogPosts: Record<string, any> = {
     title: 'The Art of Mindful Living in Modern Times',
     date: '2024-05-10',
     category: 'Wellness',
-    author: 'You',
+    author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1080&q=75',
     content: `
       <h2>Introduction</h2>
@@ -1074,7 +1074,7 @@ const blogPosts: Record<string, any> = {
     title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin',
     date: '2026-05-04',
     category: 'Beauty',
-    author: 'You',
+    author: 'Aayushi Parmar',
     image: '/images/blog/orange-peel-banner.jpg',
     content: `
       <p><em>Your kitchen might already have the best-kept skincare secret — and it's been sitting in your trash bin this whole time.</em></p>
@@ -1202,7 +1202,7 @@ const blogPosts: Record<string, any> = {
     title: 'The Only Throw Pillow Guide You\'ll Ever Need (Designer Secrets Inside)',
     date: '2026-05-05',
     category: 'Lifestyle',
-    author: 'You',
+    author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1080&q=75',
     content: `
       <p><em>By a home décor enthusiast who has obsessed over every square inch of sofa styling.</em></p>
@@ -1338,8 +1338,8 @@ const blogPosts: Record<string, any> = {
     title: 'It Ends With Us Book Review: Colleen Hoover\'s Most Powerful Story Yet',
     date: '2026-05-05',
     category: 'Book',
-    author: 'You',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?w=1080&q=75',
+    author: 'Aayushi Parmar',
+    image: '/images/blog/it-ends-with-us-book-review.webp',
     content: `
       <p><em>Honest thoughts from someone who started reading at 1:00 a.m. and couldn't put it down.</em></p>
 
@@ -1347,7 +1347,6 @@ const blogPosts: Record<string, any> = {
 
       <p>This is my first ever Colleen Hoover book. And if It Ends With Us is any indication of what the rest of her writing is like, I completely understand why she has become one of the most beloved authors of our time.</p>
 
-      <img src="https://images.unsplash.com/photo-1507842217343-583f20270319?w=800&q=75" alt="Open book on table" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 2rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
 
       <div style="background:#FBEEF1;border-left:5px solid #D4607A;border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
         <p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#2C2018;">Quick Answer</p>
@@ -1414,7 +1413,6 @@ const blogPosts: Record<string, any> = {
         <div style="background:#FFFFFF;border:1px solid #ece2d6;border-top:4px solid #D4607A;border-radius:10px;padding:1.3rem 1.5rem;"><p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#2C2018;">Atlas Corrigan</p><p style="margin:0;color:#5b4f43;font-size:.98rem;line-height:1.65;">Lily's first love — kind, quiet, carrying a difficult past of his own. He's a powerful contrast to Ryle, and his reappearance adds beautifully complicated layers to her choices. He's not a rescue. He's a reminder.</p></div>
       </div>
 
-      <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=75" alt="Reading book with coffee" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 2rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
 
       <h2 id="themes" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">The Themes That Stay With You</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;">
@@ -1434,7 +1432,6 @@ const blogPosts: Record<string, any> = {
         <p style="margin:0;color:#48403a;font-size:1.02rem;line-height:1.7;">The pacing also slows in certain sections, which might pull some readers out of the story temporarily. These are minor critiques in the context of an otherwise exceptional novel, but they're worth noting.</p>
       </div>
 
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=75" alt="Stack of books and reading" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 2rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
 
       <h2 id="should-read" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Should You Read It Ends With Us?</h2>
       <p>Yes. Especially if you are someone who loves emotionally rich, character-driven fiction, is interested in stories that tackle real-world issues with honesty and care, or is looking for a book that will genuinely make you think about relationships, about love, about what you deserve.</p>
@@ -1450,7 +1447,6 @@ const blogPosts: Record<string, any> = {
         <details style="border:1px solid #ece2d6;border-radius:8px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#FFFFFF;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">What age group is It Ends With Us suitable for?</summary><p style="margin:.75rem 0 0;color:#5b4f43;font-size:1rem;line-height:1.7;">The novel is written for adult readers. It contains mature themes including domestic violence and abuse, and is best suited for readers 18 and above.</p></details>
       </div>
 
-      <img src="https://images.unsplash.com/photo-1543002588-d83cdf395bde?w=800&q=75" alt="Colleen Hoover book collection" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 2rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
 
       <h2 id="verdict" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Final Verdict</h2>
       <p>It Ends With Us is not an easy read. It will make you uncomfortable. It will make you angry. It will probably make you cry. And when you finish it, you'll find yourself sitting quietly for a few minutes, just thinking.</p>
@@ -1465,8 +1461,8 @@ const blogPosts: Record<string, any> = {
     title: 'The Devil Wears Prada Book Review: Why Everyone Is Obsessing Over It Again in 2026',
     date: '2026-05-05',
     category: 'Book',
-    author: 'You',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?w=1080&q=75',
+    author: 'Aayushi Parmar',
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1080&q=75',
     content: `
       <p><em>The sequel just made $234 million in its opening weekend. Here's why you need to read the book that started it all — before everyone else does.</em></p>
 
@@ -1591,7 +1587,7 @@ const blogPosts: Record<string, any> = {
     title: '7 Reasons *The Devil Wears Prada* Book Is Better Than the Movie — And Why Everyone Is Reading It Again in 2026',
     date: '2026-05-05',
     category: 'Book',
-    author: 'You',
+    author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1080&q=75',
     content: `
       <p><em>Last updated: May 2026 | Reading time: 12 minutes</em></p>
