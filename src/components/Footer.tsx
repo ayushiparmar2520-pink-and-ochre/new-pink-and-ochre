@@ -12,7 +12,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-6 mt-6">
               <a href="#" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Instagram</a>
-              <a href="#" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Pinterest</a>
+              <a href="https://pinterest.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Pinterest</a>
             </div>
           </div>
 
