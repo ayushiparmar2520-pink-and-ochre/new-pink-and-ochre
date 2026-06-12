@@ -1,8 +1,59 @@
-'use client'
-
-import { useParams } from 'next/navigation'
+import type { Metadata } from 'next'
 import BlogCard from '@/components/BlogCard'
 import Link from 'next/link'
+
+const categoryMeta: Record<string, { title: string; description: string }> = {
+  fashion: {
+    title: 'Fashion Guides for Women | Pink & Ochre',
+    description: 'Outfit guides, seasonal trends, and capsule wardrobe ideas for women who dress with intention — from Pink & Ochre.',
+  },
+  beauty: {
+    title: 'Beauty Tips & Skincare Rituals | Pink & Ochre',
+    description: 'Honest skincare reviews, glow-up routines, and beauty rituals for every skin type — from Pink & Ochre.',
+  },
+  wellness: {
+    title: 'Wellness Habits for Women | Pink & Ochre',
+    description: 'Mindful habits, calming routines, and holistic wellness ideas for a calmer, more intentional life — from Pink & Ochre.',
+  },
+  food: {
+    title: 'Food Recipes & Inspiration | Pink & Ochre',
+    description: 'Easy, nourishing recipes and entertaining ideas — from weeknight dinners to grazing boards — on Pink & Ochre.',
+  },
+  book: {
+    title: 'Book Reviews for Women | Pink & Ochre',
+    description: 'Honest book reviews and curated reading lists for women who love a good story — from Pink & Ochre.',
+  },
+  books: {
+    title: 'Book Reviews for Women | Pink & Ochre',
+    description: 'Honest book reviews and curated reading lists for women who love a good story — from Pink & Ochre.',
+  },
+  lifestyle: {
+    title: 'Lifestyle Guides for Intentional Living | Pink & Ochre',
+    description: 'Slow-living tips, home rituals, and intentional-living guides for everyday life — from Pink & Ochre.',
+  },
+}
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const meta = categoryMeta[params.slug]
+  const title = meta ? meta.title : 'Stories | Pink & Ochre'
+  const description = meta
+    ? meta.description
+    : 'Browse stories on Pink & Ochre — fashion, beauty, wellness, food, and books for intentional living.'
+  return {
+    title,
+    description,
+    alternates: { canonical: `https://pinkandochre.com/category/${params.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `https://pinkandochre.com/category/${params.slug}`,
+      siteName: 'Pink & Ochre',
+      type: 'website',
+    },
+  }
+}
 
 const allPosts: Record<string, any[]> = {
   lifestyle: [
@@ -136,9 +187,8 @@ const categoryLabels: Record<string, string> = {
   food: 'Food',
 }
 
-export default function CategoryPage() {
-  const params = useParams()
-  const slug = params.slug as string
+export default function CategoryPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug
   const categoryName = categoryLabels[slug] || slug
   const posts = allPosts[slug] || []
 

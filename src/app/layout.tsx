@@ -4,8 +4,12 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'My Blog - Stories & Inspiration',
-  description: 'A collection of thoughtful articles across different categories',
+  metadataBase: new URL('https://pinkandochre.com'),
+  title: {
+    default: 'Pink & Ochre | Lifestyle Blog',
+    template: '%s',
+  },
+  description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',
   verification: {
     other: {
       'p:domain_verify': '8165a9961f0540ef26dc0336e387af7c',

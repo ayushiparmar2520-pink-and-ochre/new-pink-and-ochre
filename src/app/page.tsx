@@ -1,7 +1,84 @@
-'use client'
-
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
+
+export const metadata: Metadata = {
+  title: 'Pink & Ochre | Lifestyle Blog — Fashion, Beauty, Wellness, Food & Books',
+  description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',
+  alternates: { canonical: 'https://pinkandochre.com/' },
+  openGraph: {
+    title: 'Pink & Ochre | Lifestyle Blog — Fashion, Beauty, Wellness, Food & Books',
+    description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',
+    url: 'https://pinkandochre.com/',
+    siteName: 'Pink & Ochre',
+    type: 'website',
+  },
+}
+
+const homeSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://pinkandochre.com/#website',
+      url: 'https://pinkandochre.com/',
+      name: 'Pink & Ochre',
+      description: 'An independent lifestyle blog covering fashion, beauty, wellness, food, and books — written by Aayushi Parmar for people who believe living well is in the details.',
+      publisher: { '@id': 'https://pinkandochre.com/#person' },
+      inLanguage: 'en-US',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://pinkandochre.com/?s={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://pinkandochre.com/#person',
+      name: 'Aayushi Parmar',
+      url: 'https://pinkandochre.com/about',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://pinkandochre.com/images/contact-pink-ochre.webp',
+        width: 1200,
+        height: 628,
+      },
+      description: 'Aayushi Parmar is a digital marketer and the founder and sole author of Pink & Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books.',
+      jobTitle: 'Lifestyle Blogger & Digital Marketer',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Pink & Ochre',
+        url: 'https://pinkandochre.com/',
+      },
+      sameAs: [
+        'https://pinterest.com/pinkandochre',
+        'https://medium.com/@ayushi.parmar.2520',
+      ],
+    },
+    {
+      '@type': 'Blog',
+      '@id': 'https://pinkandochre.com/#blog',
+      name: 'Pink & Ochre',
+      url: 'https://pinkandochre.com/',
+      description: 'An independent lifestyle blog covering fashion, beauty, wellness, food, and books for people who believe living well is in the details.',
+      author: { '@id': 'https://pinkandochre.com/#person' },
+      publisher: { '@id': 'https://pinkandochre.com/#person' },
+      inLanguage: 'en-US',
+      about: [
+        { '@type': 'Thing', name: 'Fashion' },
+        { '@type': 'Thing', name: 'Beauty' },
+        { '@type': 'Thing', name: 'Wellness' },
+        { '@type': 'Thing', name: 'Food' },
+        { '@type': 'Thing', name: 'Books' },
+        { '@type': 'Thing', name: 'Intentional Living' },
+        { '@type': 'Thing', name: 'Lifestyle' },
+      ],
+    },
+  ],
+}
 
 // Sample featured blogs - will be replaced with real data
 const featuredPosts = [
@@ -104,6 +181,10 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[65vh] flex items-center bg-cream">
         <div className="absolute inset-0 opacity-[0.02]">
