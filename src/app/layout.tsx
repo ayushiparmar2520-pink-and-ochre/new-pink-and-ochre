@@ -6,6 +6,11 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'My Blog - Stories & Inspiration',
   description: 'A collection of thoughtful articles across different categories',
+  verification: {
+    other: {
+      'p:domain_verify': '8165a9961f0540ef26dc0336e387af7c',
+    },
+  },
 }
 
 export default function RootLayout({
