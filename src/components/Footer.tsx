@@ -11,8 +11,9 @@ export default function Footer() {
               Thoughtful stories on lifestyle, fashion, wellness, books, and food.
             </p>
             <div className="flex gap-6 mt-6">
-              <a href="#" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Instagram</a>
+              <a href="https://www.instagram.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Instagram</a>
               <a href="https://pinterest.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">Pinterest</a>
+              <a href="https://www.youtube.com/@Pinkandochre-bm1hp" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-taupe hover:text-gold transition text-sm font-sans tracking-wide uppercase">YouTube</a>
             </div>
           </div>
 
