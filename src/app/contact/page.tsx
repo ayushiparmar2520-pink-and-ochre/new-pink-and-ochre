@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -66,7 +65,7 @@ export default function ContactPage() {
     },
     {
       question: 'Can I feature your content on my platform?',
-      answer: 'Absolutely! I appreciate attribution. Please send me the details of how you'd like to share my work, and we can discuss further.',
+      answer: 'Absolutely! I appreciate attribution. Please send me the details of how you\'d like to share my work, and we can discuss further.',
     },
     {
       question: 'Do you offer affiliate partnerships?',
@@ -76,6 +75,39 @@ export default function ContactPage() {
 
   return (
     <>
+      <style jsx>{`
+        .contact-split {
+          display: grid;
+          grid-template-columns: 55% 45%;
+          gap: 4rem;
+          align-items: start;
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 4rem 2rem;
+        }
+        .contact-image {
+          width: 100%;
+          height: 100%;
+          min-height: 500px;
+          object-fit: cover;
+          border-radius: 16px;
+          display: block;
+        }
+        @media (max-width: 768px) {
+          .contact-split {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem 1.5rem;
+          }
+          .contact-image {
+            order: -1;
+            min-height: 280px;
+            height: 280px;
+            border-radius: 12px;
+          }
+        }
+      `}</style>
+
       {/* Hero Section */}
       <section className="py-20 md:py-28 bg-ivory">
         <div className="section-container">
@@ -88,7 +120,9 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <section className="py-20 md:py-28 bg-cream">
-        <div className="section-container max-w-2xl">
+        <div className="contact-split">
+          {/* Left column: heading + form */}
+          <div>
           <div className="mb-12 pb-8 border-b border-warm-stone">
             <span className="text-xs font-sans tracking-widest text-taupe uppercase">Get In Touch</span>
             <h2 className="heading-medium mt-4">Send a Message</h2>
@@ -185,6 +219,14 @@ export default function ContactPage() {
               </div>
             )}
           </form>
+          </div>
+
+          {/* Right column: image */}
+          <img
+            src="/images/contact-pink-ochre.webp"
+            alt="Contact Pink & Ochre — woman with warm mug and open notebook ready to connect"
+            className="contact-image"
+          />
         </div>
       </section>
 
@@ -250,7 +292,7 @@ export default function ContactPage() {
           <p className="subtitle text-cream mb-10">
             Whether it's a collaboration, feedback, or just a friendly hello—I'm here and ready to connect.
           </p>
-          <a href="#" onClick={() => document.querySelector('input[name="name"]')?.focus()} className="btn-primary">
+          <a href="#" onClick={() => document.querySelector<HTMLInputElement>('input[name="name"]')?.focus()} className="btn-primary">
             START A CONVERSATION
           </a>
         </div>

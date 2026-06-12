@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="section-container py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-12">
           <div>
-            <h3 className="font-display text-2xl mb-4 text-cream">Pinkandochre</h3>
+            <h3 className="font-display text-2xl mb-4 text-cream">Pink <span className="logo-symbol">&amp;</span> Ochre</h3>
             <p className="text-taupe text-sm leading-relaxed font-body">
               Thoughtful stories on lifestyle, fashion, wellness, books, and food.
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-warm-stone pt-8 text-center">
-          <p className="text-taupe text-sm font-sans tracking-wide">© {currentYear} Pinkandochre. All rights reserved. · <a href="/terms" className="hover:text-gold transition">Terms</a> · <a href="/privacy" className="hover:text-gold transition">Privacy</a></p>
+          <p className="text-taupe text-sm font-sans tracking-wide">© {currentYear} Pink &amp; Ochre. All rights reserved. · <a href="/terms" className="hover:text-gold transition">Terms</a> · <a href="/privacy" className="hover:text-gold transition">Privacy</a></p>
         </div>
       </div>
     </footer>

@@ -94,8 +94,31 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary) {
   @apply relative;
 }
 
-a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):hover {
+a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   @apply text-gold;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #2C2018;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-symbol {
+  color: #C2845A;
+  font-style: italic;
+}
+
+.logo:hover {
+  color: #2C2018;
+  opacity: 0.85;
 }
 
 /* Custom scrollbar */
