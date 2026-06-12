@@ -56,13 +56,13 @@ export default function TermsPage() {
               <div className="space-y-3">
                 {[
                   { term: 'Affiliate', def: 'An entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors.' },
-                  { term: 'Company', def: 'Refers to Pinkandochre.' },
+                  { term: 'Company', def: 'Refers to Pink & Ochre.' },
                   { term: 'Country', def: 'Refers to the location where the Company operates.' },
                   { term: 'Device', def: 'Any device that can access the Service such as a computer, a cellphone or a digital tablet.' },
                   { term: 'Service', def: 'Refers to the Website.' },
                   { term: 'Terms and Conditions', def: 'These Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.' },
                   { term: 'Third-party Social Media Service', def: 'Any services or content provided by a third-party that may be displayed, included or made available by the Service.' },
-                  { term: 'Website', def: 'Pinkandochre, accessible from our domain.' },
+                  { term: 'Website', def: 'Pink & Ochre, accessible from our domain.' },
                   { term: 'You', def: 'The individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.' },
                 ].map((item, idx) => (
                   <div key={idx} className="border-l-4 border-gold pl-4">
@@ -224,7 +224,7 @@ export default function TermsPage() {
                 </p>
                 <p className="font-body text-charcoal">
                   <strong>By Visiting:</strong><br />
-                  <a href="/contact" className="text-gold hover:text-charcoal transition">Pinkandochre Contact Page</a>
+                  <a href="/contact" className="text-gold hover:text-charcoal transition">Pink & Ochre Contact Page</a>
                 </p>
               </div>
             </div>

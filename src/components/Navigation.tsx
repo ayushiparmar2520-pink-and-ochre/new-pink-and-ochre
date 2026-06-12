@@ -10,10 +10,8 @@ export default function Navigation() {
     <nav className="bg-cream border-b border-warm-stone sticky top-0 z-50">
       <div className="section-container">
         <div className="flex items-center justify-between h-24 md:h-20">
-          <Link href="/" className="flex items-center">
-            <span className="font-display text-2xl md:text-3xl text-charcoal font-bold tracking-tight">
-              Pinkandochre
-            </span>
+          <Link href="/" className="logo">
+            Pink <span className="logo-symbol">&amp;</span> Ochre
           </Link>
 
           <div className="hidden md:flex items-center space-x-12">
