@@ -1,4 +1,29 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'About Aayushi Parmar | Founder of Pink & Ochre Lifestyle Blog',
+  description: 'Meet Aayushi Parmar, the founder and writer behind Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally tested.',
+  alternates: { canonical: 'https://pinkandochre.com/about' },
+  openGraph: {
+    title: 'About Aayushi Parmar | Founder of Pink & Ochre Lifestyle Blog',
+    description: 'Meet Aayushi Parmar, the founder and writer behind Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally tested.',
+    url: 'https://pinkandochre.com/about',
+    siteName: 'Pink & Ochre',
+    type: 'profile',
+  },
+}
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://pinkandochre.com/about#aboutpage',
+  url: 'https://pinkandochre.com/about',
+  name: 'About Aayushi Parmar | Pink & Ochre',
+  description: 'Learn about Aayushi Parmar, the founder and author behind Pink & Ochre, an independent lifestyle blog.',
+  mainEntity: { '@id': 'https://pinkandochre.com/#person' },
+  isPartOf: { '@id': 'https://pinkandochre.com/#website' },
+}
 
 export default function AboutPage() {
   const categories = [
@@ -59,6 +84,10 @@ export default function AboutPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-20 md:py-28 bg-ivory">
         <div className="section-container">

@@ -1,6 +1,18 @@
-'use client'
-
+import type { Metadata } from 'next'
 import BlogCard from '@/components/BlogCard'
+
+export const metadata: Metadata = {
+  title: 'Stories | Pink & Ochre — Fashion, Beauty, Wellness & Lifestyle Guides',
+  description: 'Browse all stories on Pink & Ochre — fashion outfit guides, skincare rituals, wellness routines, easy recipes, and curated book lists for women who love intentional living.',
+  alternates: { canonical: 'https://pinkandochre.com/blog' },
+  openGraph: {
+    title: 'Stories | Pink & Ochre — Fashion, Beauty, Wellness & Lifestyle Guides',
+    description: 'Browse all stories on Pink & Ochre — fashion outfit guides, skincare rituals, wellness routines, easy recipes, and curated book lists for women who love intentional living.',
+    url: 'https://pinkandochre.com/blog',
+    siteName: 'Pink & Ochre',
+    type: 'website',
+  },
+}
 
 const allPosts = [
   {
