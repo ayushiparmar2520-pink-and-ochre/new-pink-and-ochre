@@ -168,7 +168,7 @@ const blogPosts: Record<string, any> = {
   },
   'how-to-get-glass-skin': {
     title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works (For Every Skin Tone)',
-    date: '2026-06-01',
+    date: '2026-06-05',
     category: 'Beauty',
     author: 'Aayushi Parmar',
     image: '/images/blog/how-to-get-glass-skin-skincare-ritual.webp',
@@ -738,7 +738,7 @@ const blogPosts: Record<string, any> = {
   },
   'aesthetic-grazing-board-ideas': {
     title: 'Aesthetic Grazing Board Ideas for Any Occasion (That Look Like a Pinterest Dream)',
-    date: '2025-06-01',
+    date: '2026-05-24',
     category: 'Food',
     author: 'Priya Sharma',
     image: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp',
@@ -1336,8 +1336,8 @@ const blogPosts: Record<string, any> = {
   },
   'it-ends-with-us-book-review': {
     title: 'It Ends With Us Book Review: Colleen Hoover\'s Most Powerful Story Yet',
-    date: '2026-05-05',
-    category: 'Book',
+    date: '2026-05-20',
+    category: 'Books',
     author: 'Aayushi Parmar',
     image: '/images/blog/it-ends-with-us-book-review.webp',
     content: `
@@ -1460,7 +1460,7 @@ const blogPosts: Record<string, any> = {
   'devil-wears-prada-book-review': {
     title: 'The Devil Wears Prada Book Review: Why Everyone Is Obsessing Over It Again in 2026',
     date: '2026-05-05',
-    category: 'Book',
+    category: 'Books',
     author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1080&q=75',
     content: `
@@ -1586,7 +1586,7 @@ const blogPosts: Record<string, any> = {
   'devil-wears-prada-book-vs-movie': {
     title: '7 Reasons *The Devil Wears Prada* Book Is Better Than the Movie — And Why Everyone Is Reading It Again in 2026',
     date: '2026-05-05',
-    category: 'Book',
+    category: 'Books',
     author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1080&q=75',
     content: `
@@ -1713,8 +1713,8 @@ const blogPosts: Record<string, any> = {
   },
   'books-like-devil-wears-prada': {
     title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next',
-    date: '2026-05-01',
-    category: 'Book',
+    date: '2026-05-15',
+    category: 'Books',
     author: 'Aayushi Parmar',
     image: '/images/blog/books-like-devil-wears-prada-hero.webp',
     content: `
@@ -1925,7 +1925,7 @@ const blogPosts: Record<string, any> = {
   },
   'summer-2026-fashion-trends': {
     title: 'Summer 2026 Fashion Trends: 10 Viral Styles That Are Taking Over Right Now',
-    date: '2026-05-03',
+    date: '2026-05-28',
     category: 'Fashion',
     author: 'Aayushi Parmar',
     image: '/images/blog/summer-2026-fashion-trends.webp',
@@ -2127,7 +2127,7 @@ const relatedPostPool = [
   {
     id: 101,
     title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones',
-    excerpt: 'What spikes your stress hormones before 9am — and the 7 gentle habits that protect your energy all day, plus how long it takes to feel calmer.',
+    excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.',
     date: '2026-06-09',
     category: 'Wellness',
     slug: 'low-cortisol-morning-routine',
@@ -2136,8 +2136,8 @@ const relatedPostPool = [
   {
     id: 102,
     title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works (For Every Skin Tone)',
-    excerpt: 'Want glass skin? This complete ritual guide covers the exact ingredients, the HER Method, and a routine that works for every skin tone — in 6–8 months.',
-    date: '2026-06-01',
+    excerpt: 'Three ingredients, one method, and the honest 6-month timeline that creates glass skin for every skin tone.',
+    date: '2026-06-05',
     category: 'Beauty',
     slug: 'how-to-get-glass-skin',
     image: '/images/blog/how-to-get-glass-skin-skincare-ritual.webp',
@@ -2145,7 +2145,7 @@ const relatedPostPool = [
   {
     id: 103,
     title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide to Dressing With Less (and Looking More)',
-    excerpt: 'Build your dream capsule wardrobe in 2026 — 30 essential pieces, outfit formulas, quiet luxury tips, and a seasonal checklist for beginners.',
+    excerpt: '30 essential pieces, outfit formulas, and a complete checklist to build a wardrobe that actually works.',
     date: '2026-06-01',
     category: 'Fashion',
     slug: 'capsule-wardrobe-guide',
@@ -2154,8 +2154,8 @@ const relatedPostPool = [
   {
     id: 104,
     title: 'Aesthetic Grazing Board Ideas for Any Occasion (That Look Like a Pinterest Dream)',
-    excerpt: 'Stunning grazing board ideas for parties, brunch, holidays and more — easy tips, full ingredient lists, and styling secrets for a Pinterest-worthy spread.',
-    date: '2025-06-01',
+    excerpt: 'The complete guide to building a beautiful grazing board — ingredients, styling tips, and the secrets that make it look like a Pinterest dream.',
+    date: '2026-05-24',
     category: 'Food',
     slug: 'aesthetic-grazing-board-ideas',
     image: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp',
@@ -2163,8 +2163,8 @@ const relatedPostPool = [
   {
     id: 105,
     title: 'Summer 2026 Fashion Trends: 10 Viral Styles That Are Taking Over Right Now',
-    excerpt: 'Discover the 10 hottest fashion trends of summer 2026, from the Glamoratti aesthetic to cow print, with styling tips and shopping recommendations.',
-    date: '2026-05-03',
+    excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone will be wearing this summer.',
+    date: '2026-05-28',
     category: 'Fashion',
     slug: 'summer-2026-fashion-trends',
     image: '/images/blog/summer-2026-fashion-trends.webp',
