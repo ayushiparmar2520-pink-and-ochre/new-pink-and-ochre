@@ -21,6 +21,9 @@ export default function Navigation() {
             <Link href="/blog" className="font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               STORIES
             </Link>
+            <Link href="/start-here" className="font-body text-sm tracking-wide text-[#D4607A] hover:text-[#bf4f69] transition-colors">
+              START HERE
+            </Link>
             <Link href="/about" className="font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               ABOUT
             </Link>
@@ -51,6 +54,9 @@ export default function Navigation() {
             </Link>
             <Link href="/blog" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               STORIES
+            </Link>
+            <Link href="/start-here" className="block px-0 py-2 font-body text-sm tracking-wide text-[#D4607A] hover:text-[#bf4f69] transition-colors">
+              START HERE
             </Link>
             <Link href="/about" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               ABOUT

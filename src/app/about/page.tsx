@@ -55,7 +55,7 @@ export default function AboutPage() {
     {
       title: 'Book Reviews',
       description: 'Honest reviews and curated reading lists across literary fiction, romance, memoir, and self-help.',
-      slug: 'book',
+      slug: 'books',
     },
   ]
 

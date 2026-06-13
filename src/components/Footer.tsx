@@ -23,7 +23,7 @@ export default function Footer() {
               <li><a href="/category/lifestyle" className="text-taupe hover:text-gold transition text-sm font-body">Lifestyle</a></li>
               <li><a href="/category/fashion" className="text-taupe hover:text-gold transition text-sm font-body">Fashion</a></li>
               <li><a href="/category/wellness" className="text-taupe hover:text-gold transition text-sm font-body">Wellness</a></li>
-              <li><a href="/category/books" className="text-taupe hover:text-gold transition text-sm font-body">Book</a></li>
+              <li><a href="/category/books" className="text-taupe hover:text-gold transition text-sm font-body">Books</a></li>
               <li><a href="/category/food" className="text-taupe hover:text-gold transition text-sm font-body">Food</a></li>
             </ul>
           </div>
