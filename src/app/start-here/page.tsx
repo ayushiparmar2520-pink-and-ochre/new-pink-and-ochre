@@ -26,12 +26,12 @@ const startHereSchema = {
 }
 
 const posts = [
-  { href: '/blog/how-to-get-glass-skin', block: '#F5D0D9', catCls: 'sh-cat-beauty', cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.' },
-  { href: '/blog/capsule-wardrobe-guide', block: '#EDD5C0', catCls: 'sh-cat-fashion', cat: 'Fashion', date: 'June 1, 2026', title: "Capsule Wardrobe for Women 2026: The Complete Beginner's Guide", excerpt: '30 essential pieces, outfit formulas, and a checklist to build a wardrobe that actually works.' },
-  { href: '/blog/low-cortisol-morning-routine', block: '#D5E8DF', catCls: 'sh-cat-wellness', cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.' },
-  { href: '/blog/aesthetic-grazing-board-ideas', block: '#F5F0D5', catCls: 'sh-cat-food', cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to building a beautiful grazing board — ingredients, styling tips and secrets.' },
-  { href: '/blog/it-ends-with-us-book-review', block: '#E8D5F5', catCls: 'sh-cat-books', cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.' },
-  { href: '/blog/summer-2026-fashion-trends', block: '#D4E8F5', catCls: 'sh-cat-fashion', cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.' },
+  { href: '/blog/how-to-get-glass-skin', image: '/images/blog/how-to-get-glass-skin-skincare-ritual.webp', block: '#F5D0D9', catCls: 'sh-cat-beauty', cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.' },
+  { href: '/blog/capsule-wardrobe-guide', image: '/images/blog/capsule-wardrobe-for-women-2026.webp', block: '#EDD5C0', catCls: 'sh-cat-fashion', cat: 'Fashion', date: 'June 1, 2026', title: "Capsule Wardrobe for Women 2026: The Complete Beginner's Guide", excerpt: '30 essential pieces, outfit formulas, and a checklist to build a wardrobe that actually works.' },
+  { href: '/blog/low-cortisol-morning-routine', image: '/images/blog/low-cortisol-morning-routine.webp', block: '#D5E8DF', catCls: 'sh-cat-wellness', cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.' },
+  { href: '/blog/aesthetic-grazing-board-ideas', image: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp', block: '#F5F0D5', catCls: 'sh-cat-food', cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to building a beautiful grazing board — ingredients, styling tips and secrets.' },
+  { href: '/blog/it-ends-with-us-book-review', image: '/images/blog/it-ends-with-us-book-review.webp', block: '#E8D5F5', catCls: 'sh-cat-books', cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.' },
+  { href: '/blog/summer-2026-fashion-trends', image: '/images/blog/summer-2026-fashion-trends.webp', block: '#D4E8F5', catCls: 'sh-cat-fashion', cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.' },
 ]
 
 const cats = [
@@ -70,7 +70,7 @@ const css = `
 .start-here .sh-featured h2 { font-size:1.8rem; margin-bottom:0.6rem; }
 .start-here .sh-featured .sh-sub { font-size:0.9rem; color:var(--sh-muted); margin-bottom:2.5rem; }
 .start-here .sh-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem 2rem; }
-.start-here .sh-card .sh-block { height:180px; border-radius:4px; margin-bottom:1rem; }
+.start-here .sh-card .sh-block { width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:1rem; display:block; }
 .start-here .sh-card .sh-meta { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.6rem; }
 .start-here .sh-card .sh-meta .cat { font-weight:600; }
 .start-here .sh-card .sh-meta .date { color:var(--sh-muted); }
@@ -152,7 +152,7 @@ export default function StartHerePage() {
           {posts.map((p, i) => (
             <article className="sh-card" key={i}>
               <Link href={p.href}>
-                <div className="sh-block" style={{ background: p.block }}></div>
+                <img className="sh-block" src={p.image} alt={p.title} loading="lazy" style={{ background: p.block }} />
                 <div className="sh-meta"><span className={`cat ${p.catCls}`}>{p.cat}</span> <span className="date">· {p.date}</span></div>
                 <h3>{p.title}</h3>
                 <p>{p.excerpt}</p>
