@@ -1,5 +1,5 @@
 export default function PrivacyPage() {
-  const lastUpdated = 'May 5, 2026'
+  const lastUpdated = 'June 15, 2026'
 
   return (
     <>
@@ -105,6 +105,30 @@ export default function PrivacyPage() {
                 <li><strong>Cookies:</strong> A cookie is a small file placed on Your Device. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
                 <li><strong>Web Beacons:</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons that permit the Company to count users who have visited those pages or opened an email.</li>
               </ul>
+              <p className="text-taupe leading-relaxed mb-4 font-body">
+                The following cookies may be used on Pink &amp; Ochre:
+              </p>
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full text-sm font-body border border-warm-stone">
+                  <thead>
+                    <tr className="bg-ivory text-charcoal">
+                      <th className="text-left p-3 border border-warm-stone font-semibold">Cookie</th>
+                      <th className="text-left p-3 border border-warm-stone font-semibold">Provider</th>
+                      <th className="text-left p-3 border border-warm-stone font-semibold">Purpose</th>
+                      <th className="text-left p-3 border border-warm-stone font-semibold">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-taupe">
+                    <tr><td className="p-3 border border-warm-stone">_ga</td><td className="p-3 border border-warm-stone">Google Analytics</td><td className="p-3 border border-warm-stone">Visitor analytics</td><td className="p-3 border border-warm-stone">2 years</td></tr>
+                    <tr><td className="p-3 border border-warm-stone">_gid</td><td className="p-3 border border-warm-stone">Google Analytics</td><td className="p-3 border border-warm-stone">Session tracking</td><td className="p-3 border border-warm-stone">24 hours</td></tr>
+                    <tr><td className="p-3 border border-warm-stone">pinterest_sess</td><td className="p-3 border border-warm-stone">Pinterest</td><td className="p-3 border border-warm-stone">Pinterest tag</td><td className="p-3 border border-warm-stone">Session</td></tr>
+                    <tr><td className="p-3 border border-warm-stone">_fbp</td><td className="p-3 border border-warm-stone">Meta/Facebook</td><td className="p-3 border border-warm-stone">Analytics (if enabled)</td><td className="p-3 border border-warm-stone">90 days</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-taupe leading-relaxed font-body">
+                You can control or disable cookies through your browser settings at any time. Note that disabling cookies may affect the functionality of some features on this website.
+              </p>
             </div>
 
             {/* Use of Personal Data */}
@@ -150,13 +174,10 @@ export default function PrivacyPage() {
             <div id="delete">
               <h2 className="heading-small mb-6">Delete Your Personal Data</h2>
               <p className="text-taupe leading-relaxed mb-4 font-body">
-                You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
-              </p>
-              <p className="text-taupe leading-relaxed mb-4 font-body">
-                Our Service may give You the ability to delete certain information about You from within the Service. You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information.
+                You have the right to request deletion of your personal data that we have collected. Pink &amp; Ochre does not operate user accounts. To request deletion of any personal data we hold, please contact us directly at <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a> and we will respond within 30 days.
               </p>
               <p className="text-taupe leading-relaxed font-body">
-                Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
+                <strong>India — Digital Personal Data Protection Act (DPDPA) 2023:</strong> Users based in India have rights under India's Digital Personal Data Protection Act, 2023, including the right to access, correct, and request erasure of their personal data. To exercise these rights, contact <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a>.
               </p>
             </div>
 
@@ -215,6 +236,9 @@ export default function PrivacyPage() {
               <p className="text-taupe leading-relaxed font-body">
                 We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
               </p>
+              <p className="text-taupe leading-relaxed font-body mt-4">
+                <strong>Affiliate Links:</strong> Some content on Pink &amp; Ochre contains affiliate links, including links to Amazon products through the Amazon Associates programme (tag: pinkandochre-20). If you purchase through these links, Pink &amp; Ochre may earn a small commission at no additional cost to you. All recommendations are genuine and independently chosen.
+              </p>
             </div>
 
             {/* Changes to Privacy Policy */}
@@ -237,7 +261,7 @@ export default function PrivacyPage() {
               <div className="bg-ivory p-6 rounded-sm border border-warm-stone">
                 <p className="font-body text-charcoal mb-3">
                   <strong>By Email:</strong><br />
-                  <a href="mailto:hello@example.com" className="text-gold hover:text-charcoal transition">hello@example.com</a>
+                  <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a>
                 </p>
                 <p className="font-body text-charcoal">
                   <strong>By Visiting:</strong><br />

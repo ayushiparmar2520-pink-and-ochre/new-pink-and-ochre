@@ -10,6 +10,20 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'android-chrome',
+        url: '/android-chrome-192x192.png',
+      },
+    ],
+  },
   verification: {
     other: {
       'p:domain_verify': '8165a9961f0540ef26dc0336e387af7c',
