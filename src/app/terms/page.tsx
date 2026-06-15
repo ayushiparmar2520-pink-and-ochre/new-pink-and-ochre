@@ -1,5 +1,5 @@
 export default function TermsPage() {
-  const lastUpdated = 'May 5, 2026'
+  const lastUpdated = 'June 15, 2026'
 
   return (
     <>
@@ -21,6 +21,7 @@ export default function TermsPage() {
             <ul className="space-y-2 text-taupe font-body text-sm">
               <li><a href="#interpretation" className="hover:text-gold transition">Interpretation and Definitions</a></li>
               <li><a href="#acknowledgment" className="hover:text-gold transition">Acknowledgment</a></li>
+              <li><a href="#copyright" className="hover:text-gold transition">Copyright &amp; Intellectual Property</a></li>
               <li><a href="#links" className="hover:text-gold transition">Links to Other Websites</a></li>
               <li><a href="#termination" className="hover:text-gold transition">Termination</a></li>
               <li><a href="#limitation" className="hover:text-gold transition">Limitation of Liability</a></li>
@@ -28,7 +29,6 @@ export default function TermsPage() {
               <li><a href="#governing" className="hover:text-gold transition">Governing Law</a></li>
               <li><a href="#disputes" className="hover:text-gold transition">Disputes Resolution</a></li>
               <li><a href="#eu" className="hover:text-gold transition">For European Union (EU) Users</a></li>
-              <li><a href="#us" className="hover:text-gold transition">United States Legal Compliance</a></li>
               <li><a href="#severability" className="hover:text-gold transition">Severability and Waiver</a></li>
               <li><a href="#translation" className="hover:text-gold transition">Translation Interpretation</a></li>
               <li><a href="#changes" className="hover:text-gold transition">Changes to These Terms and Conditions</a></li>
@@ -93,6 +93,47 @@ export default function TermsPage() {
               </p>
             </div>
 
+            {/* Copyright & Intellectual Property */}
+            <div id="copyright">
+              <h2 className="heading-small mb-6">Copyright &amp; Intellectual Property</h2>
+              <p className="text-taupe leading-relaxed mb-4 font-body">
+                All content published on Pink &amp; Ochre — including but not limited to articles, blog posts, photographs, graphics, illustrations, logos, brand elements, and written copy — is the original work of Aayushi Parmar and is owned exclusively by Pink &amp; Ochre.
+              </p>
+              <p className="text-taupe leading-relaxed mb-6 font-body">
+                All content is protected under applicable copyright law including the Indian Copyright Act, 1957 and international copyright treaties.
+              </p>
+
+              <h3 className="font-bold text-charcoal mb-4">What you may do</h3>
+              <ul className="list-disc list-inside space-y-2 text-taupe font-body ml-4 mb-6">
+                <li>Share links to Pink &amp; Ochre articles on social media or personal websites</li>
+                <li>Quote up to 50 words from any article with clear attribution and a link back to the original post</li>
+                <li>Pin images to Pinterest using the official share button on the website</li>
+              </ul>
+
+              <h3 className="font-bold text-charcoal mb-4">What you may not do</h3>
+              <ul className="list-disc list-inside space-y-2 text-taupe font-body ml-4 mb-6">
+                <li>Reproduce, republish, copy, or scrape any article or portion of an article without written permission from Pink &amp; Ochre</li>
+                <li>Use Pink &amp; Ochre content in AI training datasets, content aggregators, or automated scraping tools</li>
+                <li>Republish images from this site without written permission</li>
+                <li>Claim ownership of or present Pink &amp; Ochre content as your own work</li>
+              </ul>
+
+              <h3 className="font-bold text-charcoal mb-4">AI &amp; Automated Scraping</h3>
+              <p className="text-taupe leading-relaxed mb-6 font-body">
+                Pink &amp; Ochre does not grant permission for its content to be used in AI training datasets, large language model training, or any automated scraping or indexing beyond standard search engine crawling. Use of this site's content for AI training without written consent is a violation of these Terms.
+              </p>
+
+              <h3 className="font-bold text-charcoal mb-4">DMCA &amp; Content Theft</h3>
+              <p className="text-taupe leading-relaxed mb-6 font-body">
+                If you believe your copyrighted work has been reproduced on Pink &amp; Ochre without permission, contact <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a>. If Pink &amp; Ochre content has been reproduced elsewhere without permission, we reserve the right to file a DMCA takedown notice.
+              </p>
+
+              <h3 className="font-bold text-charcoal mb-4">Contact for Permissions</h3>
+              <p className="text-taupe leading-relaxed font-body">
+                To request permission to reproduce or licence Pink &amp; Ochre content, email <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a>.
+              </p>
+            </div>
+
             {/* 3. Links to Other Websites */}
             <div id="links">
               <h2 className="heading-small mb-6">Links to Other Websites</h2>
@@ -104,6 +145,9 @@ export default function TermsPage() {
               </p>
               <p className="text-taupe leading-relaxed font-body">
                 We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+              </p>
+              <p className="text-taupe leading-relaxed font-body mt-4">
+                <strong>Affiliate Links:</strong> Some content on Pink &amp; Ochre contains affiliate links, including links to Amazon products through the Amazon Associates programme (tag: pinkandochre-20). If you purchase through these links, Pink &amp; Ochre may earn a small commission at no additional cost to you. All recommendations are genuine and independently chosen.
               </p>
             </div>
 
@@ -144,13 +188,17 @@ export default function TermsPage() {
               <p className="text-taupe leading-relaxed font-body">
                 Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
               </p>
+              <h3 className="font-bold text-charcoal mb-4 mt-8">Health &amp; Wellness Content Disclaimer</h3>
+              <p className="text-taupe leading-relaxed font-body">
+                Content published on Pink &amp; Ochre related to skincare, wellness, nutrition, fitness, and lifestyle is for informational and inspirational purposes only. It does not constitute medical, dermatological, nutritional, or professional advice of any kind. Always consult a qualified healthcare professional before making changes to your health, skincare, or wellness routine. Pink &amp; Ochre accepts no liability for any outcomes resulting from following content published on this website.
+              </p>
             </div>
 
             {/* 7. Governing Law */}
             <div id="governing">
               <h2 className="heading-small mb-6">Governing Law</h2>
               <p className="text-taupe leading-relaxed font-body">
-                The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+                The laws of India shall govern these Terms and Conditions and your use of the website, without regard to its conflict of law provisions.
               </p>
             </div>
 
@@ -167,14 +215,6 @@ export default function TermsPage() {
               <h2 className="heading-small mb-6">For European Union (EU) Users</h2>
               <p className="text-taupe leading-relaxed font-body">
                 If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.
-              </p>
-            </div>
-
-            {/* 10. US Legal Compliance */}
-            <div id="us">
-              <h2 className="heading-small mb-6">United States Legal Compliance</h2>
-              <p className="text-taupe leading-relaxed font-body">
-                You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a 'terrorist supporting' country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
               </p>
             </div>
 
@@ -220,7 +260,7 @@ export default function TermsPage() {
               <div className="bg-ivory p-6 rounded-sm border border-warm-stone">
                 <p className="font-body text-charcoal mb-3">
                   <strong>By Email:</strong><br />
-                  <a href="mailto:hello@example.com" className="text-gold hover:text-charcoal transition">hello@example.com</a>
+                  <a href="mailto:hello@pinkandochre.com" className="text-gold hover:text-charcoal transition">hello@pinkandochre.com</a>
                 </p>
                 <p className="font-body text-charcoal">
                   <strong>By Visiting:</strong><br />
