@@ -1049,25 +1049,240 @@ const blogPosts: Record<string, any> = {
   },
   'mindful-living-modern-times': {
     title: 'The Art of Mindful Living in Modern Times',
-    date: '2024-05-10',
+    date: '2026-05-10',
     category: 'Wellness',
     author: 'Aayushi Parmar',
     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1080&q=75',
     content: `
-      <h2>Introduction</h2>
-      <p>In our increasingly fast-paced world, finding moments of stillness and intention has become more important than ever. Mindful living isn't about perfection—it's about bringing awareness and presence to the ordinary moments that make up our lives.</p>
+      <style>
+        .ml-article h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #2C2018; margin: 2.6rem 0 1.1rem; line-height: 1.25; }
+        .ml-article p { color: #3d2e23; font-size: 1.05rem; line-height: 1.75; margin: 0 0 1.2rem; }
+        .ml-lead { font-family: 'Playfair Display', serif; font-style: italic; color: #8C7060; font-size: 1.15rem; line-height: 1.6; }
+        .ml-box { border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .ml-box-pink { background: #FFF0F3; border-left: 3px solid #D4607A; }
+        .ml-box-ochre { background: #FDF5EC; border-left: 3px solid #C2845A; }
+        .ml-label { display: block; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.7rem; }
+        .ml-box-pink .ml-label { color: #D4607A; }
+        .ml-box-ochre .ml-label { color: #C2845A; }
+        .ml-list { display: flex; flex-direction: column; gap: 0.6rem; }
+        .ml-list .it { position: relative; padding-left: 1.7rem; font-size: 1rem; color: #3d2e23; line-height: 1.55; }
+        .ml-list .it .mk { position: absolute; left: 0; top: 0; font-weight: 700; }
+        .ml-check .mk { color: #D4607A; }
+        .ml-cross .mk { color: #8C7060; }
+        .ml-notbox { background: #F5EDE4; border-left: 3px solid #E8DDD5; border-radius: 12px; padding: 1.25rem; margin: 1.6rem 0; }
+        .ml-notbox .ml-label { color: #8C7060; }
+        .ml-divider { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin: 2.6rem 0; }
+        .ml-divider::before, .ml-divider::after { content: ""; height: 1px; background: #E8DDD5; flex: 1; }
+        .ml-divider span { color: #C2845A; }
+        .ml-quote { border-left: 4px solid #D4607A; background: #FDF8F4; padding: 1.3rem 1.8rem; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: #2C2018; line-height: 1.55; margin: 1.8rem 0; border-radius: 0 8px 8px 0; }
+        .ml-quote.ochre { border-left-color: #C2845A; }
+        .ml-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+        .ml-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .ml-table th { background: #2C2018; color: #fff; text-align: left; padding: 0.85rem 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; font-family: 'Jost', sans-serif; }
+        .ml-table td { padding: 0.85rem 1rem; color: #3d2e23; }
+        .ml-table tbody tr:nth-child(odd) { background: #FDF8F4; }
+        .ml-table tbody tr:nth-child(even) { background: #F5EDE4; }
+        .ml-table td:first-child { font-weight: 600; color: #2C2018; }
+        .ml-hcard { background: #fff; border: 1px solid #E8DDD5; border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1rem; }
+        .ml-hcard .num { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: #EDD5C0; line-height: 1; margin-bottom: 0.3rem; }
+        .ml-hcard h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #2C2018; margin: 0 0 0.5rem; }
+        .ml-hcard p { font-size: 0.95rem; color: #8C7060; line-height: 1.7; margin: 0 0 0.6rem; }
+        .ml-hcard .why { font-style: italic; font-size: 0.83rem; color: #C2845A; margin: 0; line-height: 1.6; }
+        .ml-grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin: 1.5rem 0; }
+        .ml-tcard { border-radius: 12px; padding: 1.3rem; }
+        .ml-tcard h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #2C2018; margin: 0 0 0.4rem; }
+        .ml-tcard p { font-size: 0.92rem; color: #8C7060; line-height: 1.65; margin: 0; }
+        .ml-t-pink { border-top: 3px solid #D4607A; background: #FFF0F3; }
+        .ml-t-ochre { border-top: 3px solid #C2845A; background: #FDF5EC; }
+        .ml-t-sage { border-top: 3px solid #7A9E8E; background: #F0F5F3; }
+        .ml-work { padding-left: 1.4rem; position: relative; margin-bottom: 1.1rem; }
+        .ml-work::before { content: "\\2022"; position: absolute; left: 0; top: -2px; color: #D4607A; font-size: 1.3rem; }
+        .ml-work h3 { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: #2C2018; margin: 0 0 0.25rem; }
+        .ml-work p { font-size: 0.95rem; color: #8C7060; line-height: 1.7; margin: 0; }
+        .ml-pills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .ml-pill { background: #F5EDE4; border-left: 3px solid #C2845A; border-radius: 12px; padding: 1.2rem; }
+        .ml-pill h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #2C2018; margin: 0 0 0.3rem; }
+        .ml-pill p { font-size: 0.9rem; color: #8C7060; line-height: 1.6; margin: 0; }
+        .ml-dark { background: #2C2018; border-radius: 16px; padding: 1.8rem 2rem; margin: 1.8rem 0; }
+        .ml-dark p { color: rgba(253,248,244,0.88); margin: 0; line-height: 1.7; font-size: 1.02rem; }
+        .ml-dark h3 { font-family: 'Playfair Display', serif; color: #FDF8F4; font-size: 1.3rem; margin: 0 0 1rem; }
+        .ml-glance { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.5rem; }
+        .ml-glance .gi { font-size: 0.9rem; color: rgba(253,248,244,0.9); line-height: 1.5; }
+        .ml-glance .gi strong { display: block; color: #E6B884; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; font-weight: 600; }
+        .ml-sumtable { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #E8DDD5; border-radius: 12px; overflow: hidden; margin: 1.5rem 0; }
+        .ml-sumtable .h { background: #F5EDE4; font-family: 'Playfair Display', serif; font-weight: 600; padding: 0.85rem 1.1rem; color: #2C2018; border-bottom: 1px solid #E8DDD5; }
+        .ml-sumtable .h:first-child { border-right: 1px solid #E8DDD5; }
+        .ml-sumtable .b { padding: 1.1rem; }
+        .ml-sumtable .b:first-of-type { border-right: 1px solid #E8DDD5; }
+        .ml-sumtable ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+        .ml-sumtable li { position: relative; padding-left: 1.1rem; font-size: 0.9rem; color: #3d2e23; }
+        .ml-sumtable li::before { content: "\\2014"; position: absolute; left: 0; color: #C2845A; }
+        .ml-closing { font-family: 'Playfair Display', serif; font-style: italic; text-align: center; color: #8C7060; font-size: 1.1rem; line-height: 1.65; max-width: 600px; margin: 2.5rem auto 1rem; }
+        .ml-sig { text-align: right; font-size: 0.9rem; color: #8C7060; margin-top: 0.5rem; }
+        .ml-faq { border-bottom: 1px solid #E8DDD5; padding: 1.1rem 0; }
+        .ml-faq h3 { font-family: 'Playfair Display', serif; font-size: 1.08rem; color: #2C2018; margin: 0 0 0.5rem; }
+        .ml-faq p { font-size: 0.97rem; color: #8C7060; line-height: 1.7; margin: 0; }
+        @media (max-width: 640px) {
+          .ml-grid3 { grid-template-columns: 1fr; }
+          .ml-pills { grid-template-columns: 1fr; }
+          .ml-glance { grid-template-columns: 1fr; }
+          .ml-sumtable { grid-template-columns: 1fr; }
+          .ml-sumtable .h:first-child, .ml-sumtable .b:first-of-type { border-right: none; }
+        }
+      </style>
+      <div class="ml-article">
+        <p class="ml-lead">Something happens when you try to remember last Tuesday. Not the big things — the meeting, the errand, the thing you made for dinner. The actual texture of it. What you noticed. What you thought. Whether the light was good. Whether you felt like yourself.</p>
+        <p>For most of us, most Tuesdays have become largely indistinguishable from each other. Not because nothing happens in them, but because we move through them at a pace that makes genuine experience almost impossible. We are too busy processing the next thing to be fully inside the current one.</p>
+        <p>Mindful living is the answer to that Tuesday problem. Not in a dramatic, requires-a-retreat, give-up-your-phone-forever way. In the quiet, sustainable, genuinely achievable way that makes an ordinary week feel like it actually belonged to you.</p>
 
-      <h2>What Is Mindfulness?</h2>
-      <p>Mindfulness is the practice of bringing full attention to the present moment without judgment. It's about noticing the details—the warmth of your morning coffee, the texture of your favorite sweater, the genuine connection in a conversation.</p>
+        <div class="ml-box ml-box-pink">
+          <span class="ml-label">Quick Answer</span>
+          <p style="margin:0;font-size:1rem;color:#3d2e23;line-height:1.7;">Mindful living means making intentional choices about where you place your attention — in your daily habits, relationships, consumption, and time. It does not require meditation, minimalism, or a complete lifestyle overhaul. Intentional living is about consciously choosing how you spend your time, energy, and resources rather than letting external forces or habits dictate your life. Start with one small habit: the deliberate pause, the phone-free morning, the single-tasked meal. Small practices, sustained consistently, are how a mindful life is built.</p>
+        </div>
 
-      <h2>Simple Practices to Begin</h2>
-      <p>Start small. Even five minutes of intentional breathing can ground you. Create space for things that matter: a quiet breakfast, a walk without your phone, a moment of reflection before bed.</p>
+        <div class="ml-box ml-box-ochre">
+          <span class="ml-label">Key Takeaways</span>
+          <div class="ml-list ml-check">
+            <div class="it"><span class="mk">✓</span> Mindful living is about presence and intention — not perfection, minimalism, or a specific aesthetic</div>
+            <div class="it"><span class="mk">✓</span> Intentional living means understanding your values and actively living in line with them — it looks different for everyone</div>
+            <div class="it"><span class="mk">✓</span> You do not need to meditate to live mindfully — mindfulness is a quality of attention, not a specific practice</div>
+            <div class="it"><span class="mk">✓</span> The biggest barrier in 2026 is not lack of time — it is digital distraction and habit-driven inattention</div>
+            <div class="it"><span class="mk">✓</span> Slow living and mindful living overlap but are not the same — slow living is about pace, mindful living is about presence</div>
+            <div class="it"><span class="mk">✓</span> Small micro-moments of presence are more sustainable than scheduled mindfulness blocks</div>
+            <div class="it"><span class="mk">✓</span> Consistency matters more than duration — one deliberate pause beats an elaborate routine abandoned by Thursday</div>
+            <div class="it"><span class="mk">✓</span> Living intentionally is an ongoing process — not an achievement, but a daily return</div>
+          </div>
+        </div>
 
-      <h2>Making It Sustainable</h2>
-      <p>The key is consistency and compassion toward yourself. Mindfulness isn't something you achieve—it's something you practice. Each day is a new opportunity to show up with presence and intention.</p>
+        <h2>What Is Mindful Living — Really?</h2>
+        <p>Mindful living is not a personality type. It is not an aesthetic. It is not the woman with the linen wardrobe, the matcha latte, and the sourdough starter — though there is nothing wrong with any of those things.</p>
+        <p>Mindful living is the practice of bringing deliberate, non-judgmental attention to ordinary experience. It is about being aware of your thoughts, feelings, and surroundings — anchoring yourself in the present rather than being lost in mental clutter about the past or future.</p>
+        <p>In practice, it is the difference between eating lunch while scrolling and eating lunch while actually tasting your food. Between walking from the car to the office while composing a mental to-do list and noticing the feel of pavement beneath your feet. Between listening to someone speak while formulating your response and actually hearing what they are saying. These are not dramatic changes. They are small. But they are significant — and they compound over time in ways that genuinely transform how a life feels from the inside.</p>
+        <div class="ml-notbox">
+          <span class="ml-label">What Mindful Living Is Not</span>
+          <div class="ml-list ml-cross">
+            <div class="it"><span class="mk">×</span> It is not about being calm all the time — mindfulness includes being present with difficult emotions, not avoiding them</div>
+            <div class="it"><span class="mk">×</span> It is not the same as minimalism — you can own a great deal and still be present with it</div>
+            <div class="it"><span class="mk">×</span> It is not a productivity hack — the goal is not to do more; it is to be more fully where you already are</div>
+            <div class="it"><span class="mk">×</span> It is not a substitute for professional mental health support when that is needed</div>
+            <div class="it"><span class="mk">×</span> It is not something you achieve and then maintain — it is a practice you return to, every day, indefinitely</div>
+          </div>
+        </div>
+        <div class="ml-divider"><span>✦</span></div>
 
-      <h2>Closing Thoughts</h2>
-      <p>By cultivating mindfulness, we create space for joy, gratitude, and deeper connection to ourselves and others. It's a gift we can give ourselves, one moment at a time.</p>
+        <h2>Mindful Living vs Intentional Living vs Slow Living</h2>
+        <p>These three terms circulate together so frequently that they have become blurred. They are related but genuinely distinct — and understanding the difference helps you know what you are actually building.</p>
+        <div class="ml-table-wrap">
+          <table class="ml-table">
+            <thead><tr><th>Concept</th><th>Focus</th><th>Core Question</th></tr></thead>
+            <tbody>
+              <tr><td>Mindful Living</td><td>Attention</td><td>"Where is my awareness right now?"</td></tr>
+              <tr><td>Intentional Living</td><td>Values</td><td>"Does this choice align with what I actually believe?"</td></tr>
+              <tr><td>Slow Living</td><td>Pace</td><td>"Am I moving at a rhythm that allows me to experience my life?"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>You can be a minimalist without being mindful — owning very little but perpetually anxious. You can live slowly without being present — moving gently but spending the whole time in your head. And you can live mindfully with a full calendar, a busy household, and a wardrobe you love. Most people who begin with one of these concepts naturally find themselves drawn toward the others over time. But none requires the others as a prerequisite.</p>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>Why Mindful Living Feels Harder Than Ever in 2026</h2>
+        <p>The honest answer is that it is harder — and not because of any personal failing. In 2026, your attention has become a commodity. Every platform, application, and notification system is designed — by some of the most intelligent engineers in the world — specifically to capture and hold your focus as long as possible. Your attention is what is being bought and sold. Protecting it now requires deliberate effort in a way that it simply never did before.</p>
+        <p>Chronic stress, anxiety, and burnout are real concerns, especially with work-from-home culture and digital overload. Urban professionals, remote workers, and parents alike are reporting higher levels of cognitive fatigue. Digital saturation — from endless notifications to back-to-back virtual meetings — has made genuine mental rest harder to achieve than at any point in recent memory.</p>
+        <div class="ml-quote">The most expensive thing you own in 2026 is not your phone. It is your attention. And most of us are giving it away, constantly, for free.</div>
+        <p>This is not a character flaw. It is a design problem. The good news is that you do not have to solve the whole problem. You simply have to make small, repeated choices about where your attention goes. That is what mindful living asks of you — and that is all it asks.</p>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>The 8 Small Habits of a Mindful Daily Life</h2>
+        <p>These are not grand lifestyle overhauls. They are small, repeatable practices — the kind that actually stick because they fit inside a life that is already full.</p>
+        <div class="ml-hcard"><div class="num">01</div><h3>The One-Thing Rule</h3><p>Before you begin any task, name it. Say — out loud or in your head — I am going to do this one thing. Then do only that thing until it is complete or until the time you intended has passed.</p><p class="why">Why it works: Single-tasking consistently produces better results and lower stress than multitasking. It is the most direct expression of mindful attention available during a workday.</p></div>
+        <div class="ml-hcard"><div class="num">02</div><h3>Micro-Moments of Presence</h3><p>Choose a daily habit you already have — making coffee, brushing your teeth, waiting at a traffic light — and turn it into a small mindfulness moment. Notice the warmth of the cup. The sound of the water. The quality of light in the room.</p><p class="why">Why it works: This approach requires no extra time. It requires only attention. And it builds the neural habit of noticing over time, which is what mindful living is actually made of.</p></div>
+        <div class="ml-hcard"><div class="num">03</div><h3>The Deliberate Pause</h3><p>Before checking your phone, opening your laptop, or responding to a message — pause. Take one breath. Ask: is this urgent, or is this habit? Most of the time, it is habit.</p><p class="why">Why it works: A single breath between stimulus and response is the space where intention lives. It is where you shift from automatic to chosen.</p></div>
+        <div class="ml-hcard"><div class="num">04</div><h3>Sensory Grounding</h3><p>When your mind is caught in a spiral of anxiety, planning, or replaying — return to your senses. Name five things you can see. Four things you can hear. Three things you can feel physically.</p><p class="why">Why it works: This is a return to the present moment, which is where genuine experience happens and where calm is actually available.</p></div>
+        <div class="ml-hcard"><div class="num">05</div><h3>Intentional Transitions</h3><p>Treat the small gaps between tasks, meetings, and places as reset moments rather than gaps to fill with phones or podcasts. The two minutes between a work call and your next commitment. The walk from the car to the front door.</p><p class="why">Why it works: These micro-transitions, when treated as deliberate pauses, significantly reduce the sense of fractured attention that accumulates across a busy day.</p></div>
+        <div class="ml-hcard"><div class="num">06</div><h3>One Screen at a Time</h3><p>Never use two screens simultaneously. No phone while watching television. No television while working. No scrolling while eating.</p><p class="why">Why it works: Each screen you add splits your attention and compounds the sense of never quite arriving anywhere. One screen at a time is a radical act in 2026 — and one of the most effective ones available.</p></div>
+        <div class="ml-hcard"><div class="num">07</div><h3>Mindful Consumption</h3><p>This applies to everything you take in — food, content, information, purchases. The question is simply: is this intentional, or is this automatic? You do not need to stop buying things or watching television. You only need to ask, occasionally: am I choosing this, or is this just happening to me?</p><p class="why">Why it works: The distinction between a chosen experience and a habitual one is the difference between living and being lived.</p></div>
+        <div class="ml-hcard"><div class="num">08</div><h3>A Daily Moment of Noticing</h3><p>At some point each day — even 30 seconds — notice something. The quality of light in the room. The warmth of your coffee cup. The sound of rain or quiet. The colour of the sky at whatever time you happen to look at it.</p><p class="why">Why it works: The habit of noticing is how attention gets trained toward the present over time. Small, free, and one of the most consistent entry points into a mindful life.</p></div>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>A Mindful Morning — Where Intentional Living Begins</h2>
+        <p>The morning is the highest-leverage moment for mindful living because it sets the tone for your nervous system for the rest of the day. A mindful morning does not require waking before dawn, journaling for an hour, or following a rigid sequence. It requires three things:</p>
+        <div class="ml-grid3">
+          <div class="ml-tcard ml-t-pink"><h3>Not starting with your phone</h3><p>Give yourself at least 20 minutes before your first screen. This is the single highest-impact morning habit for attention and nervous system regulation. The mind that begins the day in quiet — even briefly — is genuinely different from the one that begins it in reactive scrolling.</p></div>
+          <div class="ml-tcard ml-t-ochre"><h3>Doing one thing at a time</h3><p>Make your coffee without simultaneously checking email. Eat breakfast without watching something. Get dressed without listening to a podcast. These are not productivity rules. They are presence practices — small opportunities to be where you actually are.</p></div>
+          <div class="ml-tcard ml-t-sage"><h3>One question of intention</h3><p>Before the day begins in earnest, ask yourself: what matters most today? Not what is most urgent — what actually matters. The answer takes 20 seconds and shapes how you move through everything that follows.</p></div>
+        </div>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>Mindful Living at Work</h2>
+        <p>Mindful living does not stop when you open your laptop. It simply shifts its expression. The core practice at work is protecting your attention from fragmentation.</p>
+        <div class="ml-work"><h3>Batch similar tasks.</h3><p>Rather than switching continuously between email, creative work, and administrative tasks, do one type of thing at a time. Your brain functions better with less context-switching, and you arrive at the end of the day less scattered and more able to rest.</p></div>
+        <div class="ml-work"><h3>Close tabs you are not actively using.</h3><p>An open tab is an open loop — it sits in peripheral attention, creating a low-level drain that compounds over hours. Closing it is a small act of cognitive hygiene with a disproportionate effect on how clear your mind feels.</p></div>
+        <div class="ml-work"><h3>Take real breaks.</h3><p>Not scrolling breaks — actual breaks. Stand up, walk to a window, make tea and drink it without doing something else simultaneously. Mental rest is not laziness. It is how sustainable focus is maintained across a full workday.</p></div>
+        <div class="ml-work"><h3>Set a clear end to the workday.</h3><p>A clear ending — a physical ritual of closing, shutting the laptop, making tea — signals to the nervous system that the work phase is complete. Without it, work bleeds into the evening and attention never fully rests.</p></div>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>Mindful Living in Relationships</h2>
+        <p>The most meaningful expression of mindful living is how you are with other people. Full presence in conversation is increasingly rare. When someone is talking to you and you are actually listening — not planning your response, not glancing at your phone, not half-thinking about something else — they feel it. And so do you.</p>
+        <p>Intentional living in relationships does not require grand gestures. It requires the small, repeated act of showing up fully for the person in front of you. Eye contact. Genuine curiosity. The willingness to let a conversation reach its natural end before checking a notification.</p>
+        <div class="ml-quote ochre">The most countercultural act available in 2026 is giving another person your complete, undivided attention for the duration of a conversation. It costs nothing. It changes everything about how connection feels.</div>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>Mindful Living and Technology</h2>
+        <p>Technology is not the enemy of mindful living. Unconscious, habitual technology use is. The difference between a tool and a compulsion is choice. Using your phone to call someone you love is intentional. Picking it up to check nothing in particular for the fourteenth time before noon is not.</p>
+        <p>Meditation and breathwork apps like Calm and Headspace are seeing more daily users as people integrate short mindfulness sessions into their routines — technology being used intentionally and well. The same phone that delivers endless distraction can also deliver a five-minute guided breathing exercise. The technology is neutral. The choice is not.</p>
+        <div class="ml-pills">
+          <div class="ml-pill"><h3>No-phone zones</h3><p>The bedroom, the dinner table, the first 20 minutes of the morning.</p></div>
+          <div class="ml-pill"><h3>Notification audit</h3><p>Turn off every notification that does not require an immediate response — which is most of them.</p></div>
+          <div class="ml-pill"><h3>Intentional scrolling</h3><p>Decide in advance how long you will spend on a platform and keep that agreement with yourself.</p></div>
+          <div class="ml-pill"><h3>Screen-free transitions</h3><p>Use the time between activities as genuine rest rather than another opportunity for consumption.</p></div>
+        </div>
+        <p>None of these require quitting social media or performing a dramatic digital detox. They simply require deciding when and how technology enters your attention — rather than allowing it to enter whenever it wants.</p>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <h2>How to Start — Just This Week</h2>
+        <p>The most common mistake when beginning a mindful living practice is trying to change everything at once. This reliably fails. Pick one thing.</p>
+        <div class="ml-grid3">
+          <div class="ml-tcard ml-t-pink"><h3>If you have one minute</h3><p>The deliberate pause before checking your phone. Just one breath, every time, for one week. That is the entire practice to begin.</p></div>
+          <div class="ml-tcard ml-t-ochre"><h3>If you have five minutes</h3><p>A moment of intentional noticing in your morning — look out the window or hold your coffee and simply notice where you are before the day begins in earnest.</p></div>
+          <div class="ml-tcard ml-t-sage"><h3>If you have ten minutes</h3><p>A single-task block. Set a timer, do one thing without interruption, and observe how that feels compared to your normal scattered approach.</p></div>
+        </div>
+        <div class="ml-sumtable">
+          <div class="h">Do This Week</div>
+          <div class="h">Add This Month</div>
+          <div class="b"><ul><li>One deliberate pause before checking phone</li><li>One screen at a time during meals</li><li>One moment of noticing each day</li><li>Name your task before you begin it</li></ul></div>
+          <div class="b"><ul><li>Morning phone-free period (20 min minimum)</li><li>One real break per workday — no screens</li><li>Full notification audit</li><li>One no-phone zone in your home</li></ul></div>
+        </div>
+        <div class="ml-dark"><p>Living intentionally will never happen by accident. It always requires both a solid foundation and practical habits built on top of it. But it does not require perfection or a major life change. It requires returning — again and again — to the deliberate choice to be present in your own life.</p></div>
+        <div class="ml-divider"><span>✦</span></div>
+
+        <div class="ml-dark">
+          <h3>At a Glance</h3>
+          <div class="ml-glance">
+            <div class="gi"><strong>What it is</strong>Intentional present-moment attention in daily life</div>
+            <div class="gi"><strong>What it requires</strong>Repeated small choices — not a lifestyle overhaul</div>
+            <div class="gi"><strong>Biggest barrier</strong>Digital distraction and habit-driven inattention</div>
+            <div class="gi"><strong>Highest-impact habit</strong>No phone for first 20 minutes of morning</div>
+            <div class="gi"><strong>Time to start</strong>As little as 60 seconds per day</div>
+            <div class="gi"><strong>Results timeline</strong>Shifts in 1–2 weeks, sustained change in 4–8 weeks</div>
+            <div class="gi"><strong>Meditation required</strong>No — helpful but not necessary</div>
+            <div class="gi"><strong>Distinct from</strong>Minimalism (possessions) and slow living (pace)</div>
+          </div>
+        </div>
+
+        <p class="ml-closing">Mindful living is not the destination at the end of the busy season. It is not waiting for things to calm down, for the deadline to pass, for the next chapter to begin. It is available right now, in this room, in this moment, in this ordinary and entirely unrepeatable Tuesday. That is the whole point — and the whole practice.</p>
+        <p class="ml-sig">— Aayushi Parmar, Pink &amp; Ochre</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ml-faq"><h3>What is mindful living?</h3><p>Mindful living means bringing intentional, non-judgmental attention to your ordinary daily experience — your habits, relationships, consumption, and time. It is not a specific routine or practice, but a quality of awareness you bring to whatever you are already doing. The goal is to be genuinely present in your own life rather than always half-somewhere-else in your mind.</p></div>
+        <div class="ml-faq"><h3>What is the difference between mindful living and intentional living?</h3><p>Mindful living is primarily about attention — being present with what is happening right now. Intentional living is about values — consciously aligning your choices with what you actually believe and care about. In practice they reinforce each other, but you can be intentional without being present, and present without being intentional.</p></div>
+        <div class="ml-faq"><h3>What is the difference between mindful living and slow living?</h3><p>Slow living is about pace — choosing a gentler tempo in how you move through life. Mindful living is about presence — being fully aware of whatever pace you are at. You can live slowly and still be distracted, or live at a full, busy pace and be genuinely present.</p></div>
+        <div class="ml-faq"><h3>Do I need to meditate to live mindfully?</h3><p>No. Meditation is one powerful way to cultivate mindful awareness, but it is not the only way and not a prerequisite. You can live mindfully through micro-moments of presence in daily activities — walking, eating, listening, working — without ever sitting in formal meditation.</p></div>
+        <div class="ml-faq"><h3>Can I live mindfully when I am very busy?</h3><p>Yes — and busy people often benefit most from it. Mindful living does not require extra time. It requires doing what you are already doing with more attention. A ten-minute breakfast eaten without screens is more restorative than a ten-minute breakfast eaten while scrolling.</p></div>
+        <div class="ml-faq"><h3>How long does it take to see benefits?</h3><p>Most people notice a shift within one to two weeks of consistent practice — feeling slightly less reactive, more aware of their own patterns. Meaningful changes in sustained stress levels typically emerge over four to eight weeks of maintained practice.</p></div>
+        <div class="ml-faq"><h3>What is the hardest part of mindful living?</h3><p>Tolerating stillness. We have been conditioned to fill every pause with stimulation. The practice of mindful living is largely the practice of sitting with the discomfort of quiet until it becomes, slowly, something that feels like a relief rather than a threat.</p></div>
+        <div class="ml-faq"><h3>Is mindful living only for people who are stressed or struggling?</h3><p>No. Many people practice mindful living not to manage a problem but because presence itself is a more satisfying way to experience daily life. The goal is the fullness of being genuinely inside your own experience rather than always on the way to the next thing.</p></div>
+        <div class="ml-faq"><h3>What is one thing I can do today to start?</h3><p>Before you check your phone next — pause. Take one breath. Ask: is this intentional, or is this habit? Then make a choice. That one pause, repeated consistently, is the beginning of everything else.</p></div>
+      </div>
     `,
   },
   'orange-peel-powder-diy-recipes': {
@@ -2172,15 +2387,15 @@ const relatedPostPool = [
 ]
 
 // ---- Internal linking (contextual link + curated "You Might Also Like") ----
-type ArtItem = { cat: string; date: string; title: string; excerpt: string; href: string }
+type ArtItem = { cat: string; date: string; title: string; excerpt: string; href: string; img: string }
 const ART: Record<string, ArtItem> = {
-  low: { cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.', href: '/blog/low-cortisol-morning-routine' },
-  glass: { cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.', href: '/blog/how-to-get-glass-skin' },
-  capsule: { cat: 'Fashion', date: 'June 1, 2026', title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide', excerpt: '30 essential pieces, outfit formulas and a checklist to build a wardrobe that actually works.', href: '/blog/capsule-wardrobe-guide' },
-  summer: { cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.', href: '/blog/summer-2026-fashion-trends' },
-  grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas' },
-  itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review' },
-  books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada' },
+  low: { cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.', href: '/blog/low-cortisol-morning-routine', img: '/images/blog/low-cortisol-morning-routine.webp' },
+  glass: { cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.', href: '/blog/how-to-get-glass-skin', img: '/images/blog/how-to-get-glass-skin-skincare-ritual.webp' },
+  capsule: { cat: 'Fashion', date: 'June 1, 2026', title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide', excerpt: '30 essential pieces, outfit formulas and a checklist to build a wardrobe that actually works.', href: '/blog/capsule-wardrobe-guide', img: '/images/blog/capsule-wardrobe-for-women-2026.webp' },
+  summer: { cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.', href: '/blog/summer-2026-fashion-trends', img: '/images/blog/summer-2026-fashion-trends.webp' },
+  grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas', img: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp' },
+  itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review', img: '/images/blog/it-ends-with-us-book-review.webp' },
+  books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada', img: '/images/blog/books-like-devil-wears-prada-hero.webp' },
 }
 const iCard = (a: ArtItem, block: string) => ({ ...a, block })
 const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
@@ -2224,7 +2439,7 @@ const internalLinksCss = `
 .internal-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .internal-link-card { display: flex; flex-direction: column; cursor: pointer; text-decoration: none; }
 .internal-link-card:hover .internal-link-title { color: #C2845A; }
-.internal-link-color-block { height: 160px; border-radius: 4px; margin-bottom: 0.85rem; }
+.internal-link-color-block { height: 160px; width: 100%; object-fit: cover; display: block; border-radius: 4px; margin-bottom: 0.85rem; }
 .internal-link-meta { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8C7060; margin-bottom: 0.4rem; }
 .internal-link-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #2C2018; line-height: 1.4; margin-bottom: 0.4rem; transition: color 0.2s; }
 .internal-link-excerpt { font-family: 'Jost', sans-serif; font-size: 0.85rem; color: #8C7060; line-height: 1.6; }
@@ -2350,7 +2565,7 @@ export default function BlogPostPage() {
             <div className="internal-links-grid">
               {links.cards.map((c, i) => (
                 <Link href={c.href} key={i} className="internal-link-card">
-                  <div className="internal-link-color-block" style={{ background: c.block }} />
+                  <img className="internal-link-color-block" src={c.img} alt={c.title} loading="lazy" style={{ background: c.block }} />
                   <div className="internal-link-meta">{c.cat} · {c.date}</div>
                   <div className="internal-link-title">{c.title}</div>
                   <div className="internal-link-excerpt">{c.excerpt}</div>
