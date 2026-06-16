@@ -2172,15 +2172,15 @@ const relatedPostPool = [
 ]
 
 // ---- Internal linking (contextual link + curated "You Might Also Like") ----
-type ArtItem = { cat: string; date: string; title: string; excerpt: string; href: string }
+type ArtItem = { cat: string; date: string; title: string; excerpt: string; href: string; img: string }
 const ART: Record<string, ArtItem> = {
-  low: { cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.', href: '/blog/low-cortisol-morning-routine' },
-  glass: { cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.', href: '/blog/how-to-get-glass-skin' },
-  capsule: { cat: 'Fashion', date: 'June 1, 2026', title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide', excerpt: '30 essential pieces, outfit formulas and a checklist to build a wardrobe that actually works.', href: '/blog/capsule-wardrobe-guide' },
-  summer: { cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.', href: '/blog/summer-2026-fashion-trends' },
-  grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas' },
-  itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review' },
-  books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada' },
+  low: { cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.', href: '/blog/low-cortisol-morning-routine', img: '/images/blog/low-cortisol-morning-routine.webp' },
+  glass: { cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.', href: '/blog/how-to-get-glass-skin', img: '/images/blog/how-to-get-glass-skin-skincare-ritual.webp' },
+  capsule: { cat: 'Fashion', date: 'June 1, 2026', title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide', excerpt: '30 essential pieces, outfit formulas and a checklist to build a wardrobe that actually works.', href: '/blog/capsule-wardrobe-guide', img: '/images/blog/capsule-wardrobe-for-women-2026.webp' },
+  summer: { cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.', href: '/blog/summer-2026-fashion-trends', img: '/images/blog/summer-2026-fashion-trends.webp' },
+  grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas', img: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp' },
+  itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review', img: '/images/blog/it-ends-with-us-book-review.webp' },
+  books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada', img: '/images/blog/books-like-devil-wears-prada-hero.webp' },
 }
 const iCard = (a: ArtItem, block: string) => ({ ...a, block })
 const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
@@ -2224,7 +2224,7 @@ const internalLinksCss = `
 .internal-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .internal-link-card { display: flex; flex-direction: column; cursor: pointer; text-decoration: none; }
 .internal-link-card:hover .internal-link-title { color: #C2845A; }
-.internal-link-color-block { height: 160px; border-radius: 4px; margin-bottom: 0.85rem; }
+.internal-link-color-block { height: 160px; width: 100%; object-fit: cover; display: block; border-radius: 4px; margin-bottom: 0.85rem; }
 .internal-link-meta { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8C7060; margin-bottom: 0.4rem; }
 .internal-link-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #2C2018; line-height: 1.4; margin-bottom: 0.4rem; transition: color 0.2s; }
 .internal-link-excerpt { font-family: 'Jost', sans-serif; font-size: 0.85rem; color: #8C7060; line-height: 1.6; }
@@ -2350,7 +2350,7 @@ export default function BlogPostPage() {
             <div className="internal-links-grid">
               {links.cards.map((c, i) => (
                 <Link href={c.href} key={i} className="internal-link-card">
-                  <div className="internal-link-color-block" style={{ background: c.block }} />
+                  <img className="internal-link-color-block" src={c.img} alt={c.title} loading="lazy" style={{ background: c.block }} />
                   <div className="internal-link-meta">{c.cat} · {c.date}</div>
                   <div className="internal-link-title">{c.title}</div>
                   <div className="internal-link-excerpt">{c.excerpt}</div>
