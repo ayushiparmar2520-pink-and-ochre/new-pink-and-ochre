@@ -2538,14 +2538,14 @@ export default function BlogPostPage() {
             <div>
               <p className="text-taupe text-sm font-sans tracking-wide uppercase mb-4">Share this story</p>
               <div className="flex gap-6">
-                <a href="#" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
-                  Instagram
-                </a>
-                <a href="#" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
+                <a href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent('https://pinkandochre.com/blog/' + slug)}&description=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
                   Pinterest
                 </a>
-                <a href="#" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
-                  Email
+                <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://pinkandochre.com/blog/' + slug)}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
+                  Twitter
+                </a>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://pinkandochre.com/blog/' + slug)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" className="text-taupe hover:text-gold transition font-sans text-sm tracking-wide uppercase">
+                  Facebook
                 </a>
               </div>
             </div>

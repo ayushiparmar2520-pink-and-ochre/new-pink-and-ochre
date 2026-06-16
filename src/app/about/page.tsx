@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About Aayushi Parmar | Founder of Pink & Ochre Lifestyle Blog',
-  description: 'Meet Aayushi Parmar, the founder and writer behind Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally tested.',
+  title: 'About Aayushi Parmar — Founder & Writer | Pink & Ochre Lifestyle Blog',
+  description: 'Meet Aayushi Parmar, the founder and sole author of Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally written.',
   alternates: { canonical: 'https://pinkandochre.com/about' },
   openGraph: {
-    title: 'About Aayushi Parmar | Founder of Pink & Ochre Lifestyle Blog',
-    description: 'Meet Aayushi Parmar, the founder and writer behind Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally tested.',
+    title: 'About Aayushi Parmar | Pink & Ochre',
+    description: 'The founder and writer behind Pink & Ochre — an independent lifestyle blog about fashion, beauty, wellness, food, and books. Written without sponsored filler, personally tested, honestly told.',
+    type: 'profile',
     url: 'https://pinkandochre.com/about',
     siteName: 'Pink & Ochre',
-    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Aayushi Parmar | Pink & Ochre',
+    description: 'The founder and writer behind Pink & Ochre — an independent lifestyle blog about fashion, beauty, wellness, food, and books.',
   },
 }
 
