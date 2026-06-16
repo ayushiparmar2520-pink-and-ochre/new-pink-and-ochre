@@ -2171,11 +2171,76 @@ const relatedPostPool = [
   },
 ]
 
+// ---- Internal linking (contextual link + curated "You Might Also Like") ----
+type ArtItem = { cat: string; date: string; title: string; excerpt: string; href: string }
+const ART: Record<string, ArtItem> = {
+  low: { cat: 'Wellness', date: 'June 9, 2026', title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.', href: '/blog/low-cortisol-morning-routine' },
+  glass: { cat: 'Beauty', date: 'June 5, 2026', title: 'How to Get Glass Skin: The Skincare Ritual That Actually Works', excerpt: 'Three ingredients, one method, and the honest timeline that creates glass skin for every skin tone.', href: '/blog/how-to-get-glass-skin' },
+  capsule: { cat: 'Fashion', date: 'June 1, 2026', title: 'Capsule Wardrobe for Women 2026: The Complete Beginner\'s Guide', excerpt: '30 essential pieces, outfit formulas and a checklist to build a wardrobe that actually works.', href: '/blog/capsule-wardrobe-guide' },
+  summer: { cat: 'Fashion', date: 'May 28, 2026', title: 'Summer 2026 Fashion Trends: 10 Viral Styles Taking Over Right Now', excerpt: 'From the Glamoratti aesthetic to Transformative Teal — the complete guide to what everyone is wearing this summer.', href: '/blog/summer-2026-fashion-trends' },
+  grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas' },
+  itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review' },
+  books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada' },
+}
+const iCard = (a: ArtItem, block: string) => ({ ...a, block })
+const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
+  'low-cortisol-morning-routine': {
+    ctx: { pre: 'If you enjoyed this, you might also love our guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
+    cards: [iCard(ART.glass, '#D5E8DF'), iCard(ART.grazing, '#F5F0D5'), iCard(ART.capsule, '#EDD5C0')],
+  },
+  'how-to-get-glass-skin': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'Low Cortisol Morning Routine guide', href: '/blog/low-cortisol-morning-routine' },
+    cards: [iCard(ART.low, '#D5E8DF'), iCard(ART.capsule, '#EDD5C0'), iCard(ART.itends, '#E8D5F5')],
+  },
+  'capsule-wardrobe-guide': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'Summer 2026 Fashion Trends guide', href: '/blog/summer-2026-fashion-trends' },
+    cards: [iCard(ART.summer, '#EDD5C0'), iCard(ART.low, '#D5E8DF'), iCard(ART.glass, '#F5D0D9')],
+  },
+  'summer-2026-fashion-trends': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'Capsule Wardrobe for Women 2026 guide', href: '/blog/capsule-wardrobe-guide' },
+    cards: [iCard(ART.capsule, '#EDD5C0'), iCard(ART.itends, '#E8D5F5'), iCard(ART.low, '#D5E8DF')],
+  },
+  'aesthetic-grazing-board-ideas': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'Low Cortisol Morning Routine guide', href: '/blog/low-cortisol-morning-routine' },
+    cards: [iCard(ART.low, '#D5E8DF'), iCard(ART.glass, '#F5D0D9'), iCard(ART.capsule, '#EDD5C0')],
+  },
+  'it-ends-with-us-book-review': {
+    ctx: { pre: 'If you enjoyed this, you might also love our list of ', link: 'Books Like The Devil Wears Prada', href: '/blog/books-like-devil-wears-prada' },
+    cards: [iCard(ART.books, '#E8D5F5'), iCard(ART.low, '#D5E8DF'), iCard(ART.glass, '#F5D0D9')],
+  },
+  'books-like-devil-wears-prada': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'It Ends With Us Book Review', href: '/blog/it-ends-with-us-book-review' },
+    cards: [iCard(ART.itends, '#E8D5F5'), iCard(ART.capsule, '#EDD5C0'), iCard(ART.low, '#D5E8DF')],
+  },
+  'mindful-living-modern-times': {
+    ctx: { pre: 'If you enjoyed this, you might also love our ', link: 'Low Cortisol Morning Routine guide', href: '/blog/low-cortisol-morning-routine' },
+    cards: [iCard(ART.low, '#D5E8DF'), iCard(ART.glass, '#F5D0D9'), iCard(ART.itends, '#E8D5F5')],
+  },
+}
+const internalLinksCss = `
+.internal-links-section { padding: 3rem 0; border-top: 1px solid #E8DDD5; }
+.internal-links-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #8C7060; margin-bottom: 0.5rem; }
+.internal-links-heading { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #2C2018; margin-bottom: 2rem; }
+.internal-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.internal-link-card { display: flex; flex-direction: column; cursor: pointer; text-decoration: none; }
+.internal-link-card:hover .internal-link-title { color: #C2845A; }
+.internal-link-color-block { height: 160px; border-radius: 4px; margin-bottom: 0.85rem; }
+.internal-link-meta { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8C7060; margin-bottom: 0.4rem; }
+.internal-link-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #2C2018; line-height: 1.4; margin-bottom: 0.4rem; transition: color 0.2s; }
+.internal-link-excerpt { font-family: 'Jost', sans-serif; font-size: 0.85rem; color: #8C7060; line-height: 1.6; }
+.contextual-link { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: #8C7060; padding: 1.5rem 0; border-top: 1px solid #E8DDD5; display: block; }
+.contextual-link a { color: #C2845A; text-decoration: underline; text-underline-offset: 3px; }
+.contextual-link a:hover { color: #D4607A; }
+@media (max-width: 1024px) { .internal-links-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .internal-links-grid { grid-template-columns: 1fr; } }
+`
+
 export default function BlogPostPage() {
   const params = useParams()
   const slug = params.slug as string
   const post = blogPosts[slug]
   const relatedPosts = relatedPostPool.filter((p) => p.slug !== slug).slice(0, 2)
+  const links = internalLinks[slug]
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -2201,6 +2266,7 @@ export default function BlogPostPage() {
 
   return (
     <>
+      <style dangerouslySetInnerHTML={{ __html: internalLinksCss }} />
       {/* Header */}
       <section className="py-20 md:py-28 bg-ivory">
         <div className="section-container max-w-4xl">
@@ -2242,6 +2308,11 @@ export default function BlogPostPage() {
             className="prose max-w-none text-taupe font-body leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.content.replace(/<h2>/g, '<h2 class="heading-small mt-12 mb-6 text-charcoal">').replace(/<p>/g, '<p class="text-lg mb-6 leading-relaxed">') }}
           />
+          {links && (
+            <p className="contextual-link">
+              {links.ctx.pre}<Link href={links.ctx.href}>{links.ctx.link}</Link> →
+            </p>
+          )}
         </article>
       </section>
 
@@ -2270,20 +2341,39 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {/* Related Posts */}
-      <section className="py-20 md:py-28 bg-ivory">
-        <div className="section-container">
-          <div className="mb-16 pb-8 border-b border-warm-stone">
-            <span className="text-xs font-sans tracking-widest text-taupe uppercase">Related</span>
-            <h2 className="heading-medium mt-4">More Stories</h2>
+      {/* You Might Also Like (curated) / generic fallback */}
+      {links ? (
+        <section className="internal-links-section">
+          <div className="section-container max-w-5xl">
+            <p className="internal-links-label">Keep Reading</p>
+            <h2 className="internal-links-heading">You Might Also Like</h2>
+            <div className="internal-links-grid">
+              {links.cards.map((c, i) => (
+                <Link href={c.href} key={i} className="internal-link-card">
+                  <div className="internal-link-color-block" style={{ background: c.block }} />
+                  <div className="internal-link-meta">{c.cat} · {c.date}</div>
+                  <div className="internal-link-title">{c.title}</div>
+                  <div className="internal-link-excerpt">{c.excerpt}</div>
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            {relatedPosts.map((relatedPost) => (
-              <BlogCard key={relatedPost.id} {...relatedPost} />
-            ))}
+        </section>
+      ) : (
+        <section className="py-20 md:py-28 bg-ivory">
+          <div className="section-container">
+            <div className="mb-16 pb-8 border-b border-warm-stone">
+              <span className="text-xs font-sans tracking-widest text-taupe uppercase">Related</span>
+              <h2 className="heading-medium mt-4">More Stories</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+              {relatedPosts.map((relatedPost) => (
+                <BlogCard key={relatedPost.id} {...relatedPost} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   )
 }
