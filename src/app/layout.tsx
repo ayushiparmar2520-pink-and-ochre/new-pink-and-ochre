@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import GoogleAnalytics from '@/app/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pinkandochre.com'),
@@ -47,6 +48,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-cream text-charcoal font-body">
+        <GoogleAnalytics />
         <Navigation />
         <main className="min-h-screen">
           {children}
