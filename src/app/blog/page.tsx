@@ -37,7 +37,7 @@ const allPosts = [
     id: 1,
     title: 'The Art of Mindful Living in Modern Times',
     excerpt: 'Discover how to cultivate presence and intention in your everyday life.',
-    date: '2024-05-10',
+    date: '2026-05-10',
     category: 'Wellness',
     slug: 'mindful-living-modern-times',
     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=750&q=75',
