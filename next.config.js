@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/blogs/beauty/orange-peel-powder-benefits-for-skin-6-diy-for-healthy-glowing-skin',
+        destination: '/blog/orange-peel-powder-diy-recipes',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
