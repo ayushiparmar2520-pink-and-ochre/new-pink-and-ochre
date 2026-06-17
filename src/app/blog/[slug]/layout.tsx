@@ -13,6 +13,13 @@ type ArticleMeta = {
 // the live routes are "how-to-get-glass-skin" and "capsule-wardrobe-guide", so
 // the data is keyed (and its ogUrl set) to the real slugs.
 const metaData: Record<string, ArticleMeta> = {
+  '5-diy-toner-recipes-for-all-skin': {
+    title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner | Pink & Ochre',
+    description: 'Make your own toner at home with 5 easy DIY recipes — green tea toner for acne, viral rice water toner, rose water for sensitive skin, and more. Natural, affordable, and genuinely effective.',
+    ogTitle: '5 Easy DIY Toner Recipes for Every Skin Type | Pink & Ochre',
+    ogDescription: 'Green tea toner for acne, viral rice water toner, rose water for sensitive skin & more. Natural, affordable DIY toners that actually work.',
+    ogUrl: 'https://pinkandochre.com/blog/5-diy-toner-recipes-for-all-skin',
+  },
   'low-cortisol-morning-routine': {
     title: 'Low Cortisol Morning Routine: 7 Habits to Start Your Day Without Stress | Pink & Ochre',
     description: 'Feeling wired and tired before 9am? Discover the low cortisol morning routine that actually works — what spikes your stress hormones and the 7 gentle habits to fix it.',

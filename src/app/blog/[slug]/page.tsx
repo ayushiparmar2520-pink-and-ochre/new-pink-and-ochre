@@ -5,6 +5,243 @@ import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
 
 const blogPosts: Record<string, any> = {
+  '5-diy-toner-recipes-for-all-skin': {
+    title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner',
+    date: '2026-06-17',
+    category: 'Beauty',
+    author: 'Aayushi Parmar',
+    image: '/images/blog/diy-toner-recipes-natural-skincare.webp',
+    content: `
+      <p style="font-style:italic;color:#8C7060;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:1.3rem;line-height:1.6;">Some of the most effective things in your skincare routine do not come in expensive packaging.</p>
+      <p>Toners sit in an interesting middle ground in most people's routines — they know they probably should be using one, they have seen the TikToks about rice water, and they have definitely winced at the price of that glass bottle at the beauty counter. The gap between knowing toner is good for your skin and actually using one consistently is often just this: cost, confusion, and not being sure what is actually in them.</p>
+      <p>DIY toner solves all three. And it is significantly simpler than most people expect. This is your complete guide to five easy homemade toner recipes — one for every skin type, including the viral fermented rice water toner — plus exactly what each ingredient does, how to use it correctly, and the storage tips that keep your toner safe and effective.</p>
+
+      <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 .5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#D4607A;">Quick Answer</p>
+        <p style="margin:0;color:#46403a;font-size:1.06rem;line-height:1.75;">A DIY toner is a homemade skincare solution applied after cleansing to balance your skin's pH, remove remaining residue, prep skin for serums and moisturiser, and deliver targeted ingredients for your specific concerns. The five best DIY toner recipes are: green tea toner (all skin types), rose water and witch hazel toner (sensitive skin), apple cider vinegar toner (oily and acne-prone skin), cucumber and aloe vera toner (dry skin), and fermented rice water toner (all skin types, especially for brightening). All five cost less than $10 to make and last approximately one week refrigerated.</p>
+      </div>
+
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 1rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Key Takeaways</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;font-size:1.03rem;line-height:1.7;">
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Toner is the second step in skincare — after cleansing and before serum and moisturiser.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Commercial toners cost $5 to $250 per bottle — DIY versions cost under $10 using ingredients you likely already have.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>The right toner depends on your skin type — not every recipe suits every skin.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Fermented rice water toner is the most searched DIY skincare recipe of 2026 — and one of the most genuinely effective.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Always store homemade toners in the refrigerator — they last approximately one week.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Do a patch test before applying any new DIY recipe to your face.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Sunscreen is non-negotiable when using any active ingredients.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#D4607A;font-weight:700;">✓</span>Never use undiluted lemon juice as a toner — it sensitises skin to UV damage.</li>
+        </ul>
+      </div>
+
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 .9rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#2C2018;">In This Article</p>
+        <ol style="margin:0;padding-left:1.25rem;color:#C2845A;font-size:1.02rem;line-height:1.85;">
+          <li><a href="#why-toner-matters" style="color:#C2845A;">Why Toner Actually Matters</a></li>
+          <li><a href="#green-tea-toner" style="color:#C2845A;">Recipe 1: Green Tea Toner</a></li>
+          <li><a href="#rose-water-toner" style="color:#C2845A;">Recipe 2: Rose Water &amp; Witch Hazel Toner</a></li>
+          <li><a href="#acv-toner" style="color:#C2845A;">Recipe 3: Apple Cider Vinegar Toner</a></li>
+          <li><a href="#cucumber-toner" style="color:#C2845A;">Recipe 4: Cucumber &amp; Aloe Vera Toner</a></li>
+          <li><a href="#rice-water-toner" style="color:#C2845A;">Recipe 5: Fermented Rice Water Toner</a></li>
+          <li><a href="#storage" style="color:#C2845A;">How to Store &amp; Use Your DIY Toner</a></li>
+          <li><a href="#mistakes" style="color:#C2845A;">Common Mistakes to Avoid</a></li>
+          <li><a href="#faq" style="color:#C2845A;">FAQ</a></li>
+        </ol>
+      </div>
+
+      <h2 id="why-toner-matters" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Why Toner Actually Matters in Your Skincare Routine</h2>
+      <p>Toner used to have a terrible reputation — and honestly, for good reason. The old formulas were basically alcohol in a bottle, stripping the skin down and leaving it feeling tight and irritated. The beauty industry has come a long way since then, and modern toners — including DIY ones made with the right ingredients — are genuinely one of the most useful steps you can add to a routine.</p>
+      <ul style="list-style:none;padding:0;margin:1.5rem 0;">
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Rebalances your skin's pH after cleansing.</span><span style="color:#46403a;line-height:1.65;">Cleansers, even gentle ones, can temporarily disrupt the slightly acidic pH of your skin. Toner brings it back into balance, which means the rest of your skincare products work more effectively.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Removes what cleansing missed.</span><span style="color:#46403a;line-height:1.65;">Even after a thorough cleanse, traces of makeup, sunscreen, and pollutants can remain. A toner sweep catches what your cleanser left behind.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Prepares skin for what comes next.</span><span style="color:#46403a;line-height:1.65;">A well-formulated toner primes the skin surface so serums and moisturisers absorb better and work harder.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Delivers targeted ingredients.</span><span style="color:#46403a;line-height:1.65;">This is where DIY toners shine — you can put exactly the ingredient your skin needs most, at exactly the right concentration, in the lightest possible formulation.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:0;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">The cost argument is real.</span><span style="color:#46403a;line-height:1.65;">Commercial toners range from $5 to over $250 per bottle. The DIY recipes below cost under $10 to make and deliver results that genuinely compete with their store-bought equivalents.</span></li>
+      </ul>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="green-tea-toner" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Recipe 1: Green Tea Toner — For All Skin Types</h2>
+      <img src="/images/blog/green-tea-toner-for-acne-prone-skin.webp" alt="Green tea toner for acne prone skin — glass cup of green tea in warm natural light" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+      <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.6rem;">Green tea toner — one of the most well-researched natural ingredients for acne-prone and sensitive skin</p>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.7;">
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 cup green tea (brewed and fully cooled)</li>
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2–3 drops tea tree oil (optional — for acne-prone skin)</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 tablespoon apple cider vinegar (optional — for oily skin)</li>
+        </ul>
+      </div>
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2C2018;">Instructions</p>
+        <ol style="margin:0;padding-left:1.3rem;color:#46403a;line-height:1.75;">
+          <li>Brew one cup of green tea using one tea bag and allow to cool completely — at least 30 minutes.</li>
+          <li>If using, add apple cider vinegar and stir well.</li>
+          <li>If using tea tree oil, add 2–3 drops and mix.</li>
+          <li>Pour into a clean spray bottle or glass jar with a lid.</li>
+          <li>Store in the refrigerator and use within one week.</li>
+        </ol>
+      </div>
+      <p style="font-style:italic;color:#8C7060;border-left:2px solid #C2845A;padding-left:1rem;margin:1.3rem 0;line-height:1.65;">After cleansing, spray directly onto your face or apply with a clean cotton pad. Allow to absorb fully — approximately 60 seconds — before applying serum or moisturiser. Use morning and evening.</p>
+      <p>Green tea is rich in polyphenols — specifically EGCG (epigallocatechin gallate) — one of the most potent antioxidants studied in skincare. These compounds fight free radical damage, reduce inflammation, and help protect the skin barrier against environmental stressors. Green tea also contains Vitamin B2 (riboflavin), which supports natural collagen production and helps maintain skin firmness, and Vitamin E, which strengthens the skin barrier and supports healing.</p>
+      <p style="margin:1rem 0 .5rem;"><span style="display:inline-block;background:#FFF0F3;color:#D4607A;border-radius:20px;padding:.4rem 1.1rem;font-size:.9rem;font-weight:600;">Best for: All skin types, particularly oily and acne-prone skin</span></p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="rose-water-toner" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Recipe 2: Rose Water &amp; Witch Hazel Toner — For Sensitive Skin</h2>
+      <img src="/images/blog/rose-water-witch-hazel-toner-sensitive-skin.webp" alt="Rose water witch hazel toner for sensitive skin — pink rose petals on wooden board" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+      <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.6rem;">Rose petals — the key ingredient in the most soothing DIY toner for sensitive skin</p>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.7;">
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ cup rose water (pure, without added fragrance)</li>
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ cup witch hazel (alcohol-free — this distinction matters)</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>5–7 drops lavender or chamomile essential oil (optional)</li>
+        </ul>
+      </div>
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2C2018;">Instructions</p>
+        <ol style="margin:0;padding-left:1.3rem;color:#46403a;line-height:1.75;">
+          <li>Combine rose water and witch hazel in a clean glass bottle.</li>
+          <li>Add essential oil if using and close the lid.</li>
+          <li>Shake gently before each use to combine.</li>
+          <li>Store at room temperature or in the refrigerator for up to two weeks.</li>
+        </ol>
+      </div>
+      <p style="font-style:italic;color:#8C7060;border-left:2px solid #C2845A;padding-left:1rem;margin:1.3rem 0;line-height:1.65;">Apply with a cotton pad after cleansing, sweeping gently across the face and neck. Use morning and evening. Allow to absorb before continuing your routine.</p>
+      <p>Rose water is a potent antioxidant containing very high levels of polyphenols — naturally occurring antioxidants that strengthen the skin barrier and help fight free radical damage. Rose water is also deeply soothing with anti-inflammatory properties that calm redness and reduce irritation. Witch hazel naturally reduces sebum production and visibly minimises pore size — the critical detail here is to use alcohol-free witch hazel. The alcohol version is too stripping for most skin types. Together, rose water soothes and hydrates while witch hazel tightens and clarifies.</p>
+      <p style="margin:1rem 0 .5rem;"><span style="display:inline-block;background:#FFF0F3;color:#D4607A;border-radius:20px;padding:.4rem 1.1rem;font-size:.9rem;font-weight:600;">Best for: Sensitive, combination, and reactive skin</span></p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="acv-toner" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Recipe 3: Apple Cider Vinegar Toner — For Oily &amp; Acne-Prone Skin</h2>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.7;">
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>¼ cup raw apple cider vinegar (with "the mother")</li>
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>¾ cup distilled water</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>5–7 drops tea tree oil (optional)</li>
+        </ul>
+      </div>
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2C2018;">Instructions</p>
+        <ol style="margin:0;padding-left:1.3rem;color:#46403a;line-height:1.75;">
+          <li>Combine apple cider vinegar and distilled water in a clean glass bottle — the dilution ratio is important, do not skip it.</li>
+          <li>Add tea tree oil if using and mix well.</li>
+          <li>Seal and store in a cool, dark place or the refrigerator.</li>
+        </ol>
+      </div>
+      <p style="font-style:italic;color:#8C7060;border-left:2px solid #C2845A;padding-left:1rem;margin:1.3rem 0;line-height:1.65;">Apply with a cotton pad, focusing on oily areas and any acne-prone zones. Use at night to begin — once or twice a week initially — and build up to daily evening use as your skin adjusts. Always follow with moisturiser. Always use SPF the next morning.</p>
+      <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.25rem 1.5rem;margin:1.6rem 0;"><p style="margin:0;color:#46403a;line-height:1.7;"><strong style="color:#2C2018;">⚠️ Important:</strong> Never use undiluted apple cider vinegar on your skin. The ¾ cup water to ¼ cup ACV ratio in this recipe is the correct dilution for facial use. Undiluted ACV can cause chemical burns.</p></div>
+      <p>Apple cider vinegar contains acetic acid, citric acid, malic acid, and amino acids — together these deliver genuine antibacterial and antifungal action, which directly addresses the bacterial component of acne. The acid content helps dissolve dead skin cells that block pores, making it a mild chemical exfoliant as well as an antibacterial agent. Over time, regular use can lighten post-acne marks through gentle exfoliation.</p>
+      <p style="margin:1rem 0 .5rem;"><span style="display:inline-block;background:#FFF0F3;color:#D4607A;border-radius:20px;padding:.4rem 1.1rem;font-size:.9rem;font-weight:600;">Best for: Oily skin, acne-prone skin, and congestion</span></p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="cucumber-toner" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Recipe 4: Cucumber &amp; Aloe Vera Toner — For Dry Skin</h2>
+      <img src="/images/blog/cucumber-aloe-vera-toner-dry-skin.webp" alt="Cucumber aloe vera toner for dry skin — woman with cucumber slices natural skincare" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+      <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.6rem;">Cucumber — one of the most cooling, soothing, and hydrating ingredients for dry and sensitive skin</p>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.7;">
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 medium cucumber (blended and strained)</li>
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2 tablespoons pure aloe vera gel</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>¼ cup distilled water</li>
+        </ul>
+      </div>
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2C2018;">Instructions</p>
+        <ol style="margin:0;padding-left:1.3rem;color:#46403a;line-height:1.75;">
+          <li>Blend the cucumber until completely smooth.</li>
+          <li>Strain through a fine mesh sieve or muslin cloth to extract juice only — discard the pulp.</li>
+          <li>Combine cucumber juice, aloe vera gel, and distilled water in a clean glass jar.</li>
+          <li>Mix well and store in the refrigerator for up to one week.</li>
+        </ol>
+      </div>
+      <p style="font-style:italic;color:#8C7060;border-left:2px solid #C2845A;padding-left:1rem;margin:1.3rem 0;line-height:1.65;">Apply after cleansing using a cotton pad or clean hands. Pat gently — do not rub. Allow to absorb for 60 seconds before applying serum and moisturiser. Especially soothing after sun exposure.</p>
+      <p>Cucumber contains Vitamin C, folic acid, caffeic acid, and natural astringents — together these calm irritation, reduce puffiness, and have a genuine mild brightening effect on dark circles when applied around the eye area. Aloe vera contains a compound called aloin, which has proven anti-inflammatory and antioxidant properties. Research has demonstrated that aloin can help reverse UV damage, particularly from sunburn, making this toner especially useful in summer or after a day of sun exposure.</p>
+      <p style="margin:1rem 0 .5rem;"><span style="display:inline-block;background:#FFF0F3;color:#D4607A;border-radius:20px;padding:.4rem 1.1rem;font-size:.9rem;font-weight:600;">Best for: Dry skin, dehydrated skin, sensitive skin, and post-sun recovery</span></p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="rice-water-toner" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Recipe 5: Fermented Rice Water Toner — For Brightening All Skin Types</h2>
+      <div style="background:#2C2018;color:#FDF8F4;border-radius:12px;padding:1.25rem 1.5rem;margin:1.6rem 0;line-height:1.65;">🌾 7,200 people search for rice toner every month. The global rice-based skincare market is projected to reach $10.88 billion by 2031. This is not a trend — it is a century-old East Asian beauty tradition now backed by modern dermatology.</div>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.7;">
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 cup uncooked rice (white rice — jasmine, basmati, or short grain)</li>
+          <li style="padding-left:1.3rem;position:relative;margin-bottom:.4rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2 cups water</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2–3 drops tea tree oil (optional — add after fermentation)</li>
+        </ul>
+      </div>
+      <div style="background:#FDFAF7;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem;margin:1.4rem 0;">
+        <p style="margin:0 0 .8rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2C2018;">Instructions</p>
+        <ol style="margin:0;padding-left:1.3rem;color:#46403a;line-height:1.75;">
+          <li>Wash the rice twice under cold water to remove surface dirt, then drain.</li>
+          <li>Place washed rice in a clean bowl and add 2 cups of water.</li>
+          <li>Leave at room temperature, uncovered, for 24 hours — this is the fermentation stage.</li>
+          <li>After 24 hours, strain the rice out and pour the fermented water into a clean glass jar or spray bottle.</li>
+          <li>Add 2–3 drops of tea tree oil if using.</li>
+          <li>Refrigerate and use within one week.</li>
+        </ol>
+      </div>
+      <p style="font-style:italic;color:#8C7060;border-left:2px solid #C2845A;padding-left:1rem;margin:1.3rem 0;line-height:1.65;">After cleansing, apply the fermented rice water toner using a clean cotton pad or spray directly onto skin. Pat gently — do not rub. Allow to absorb for 60–90 seconds before continuing your routine. Use morning and evening for best results.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.6rem 0;">
+        <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:10px;padding:1rem 1.2rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#2C2018;">Ferulic Acid</p><p style="margin:0;color:#46403a;font-size:.92rem;line-height:1.55;">A potent antioxidant that neutralises free radicals and provides protection against UV-induced oxidative stress.</p></div>
+        <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:10px;padding:1rem 1.2rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#2C2018;">Kojic Acid</p><p style="margin:0;color:#46403a;font-size:.92rem;line-height:1.55;">Naturally occurring during fermentation — a well-documented brightening compound that gradually reduces hyperpigmentation and dark spots.</p></div>
+        <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:10px;padding:1rem 1.2rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#2C2018;">Gamma-Oryzanol</p><p style="margin:0;color:#46403a;font-size:.92rem;line-height:1.55;">Unique to rice — improves skin barrier function and reduces transepidermal water loss. Both antioxidant and anti-inflammatory.</p></div>
+        <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:10px;padding:1rem 1.2rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#2C2018;">Vitamins B &amp; E</p><p style="margin:0;color:#46403a;font-size:.92rem;line-height:1.55;">Nourish and protect the skin surface, support collagen maintenance, and improve overall skin texture with consistent use.</p></div>
+      </div>
+      <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.25rem 1.5rem;margin:1.6rem 0;"><p style="margin:0;color:#46403a;line-height:1.7;"><strong style="font-family:'Playfair Display',serif;color:#2C2018;">Why fermented and not plain?</strong> Fermentation reduces the molecule size of rice water's active compounds, meaning they penetrate the skin more effectively. Fermented rice water also produces additional beneficial compounds including natural lactic acid (a gentle AHA) and enhanced kojic acid for brightening.</p></div>
+      <p style="margin:1rem 0 .5rem;"><span style="display:inline-block;background:#FFF0F3;color:#D4607A;border-radius:20px;padding:.4rem 1.1rem;font-size:.9rem;font-weight:600;">Best for: All skin types — especially uneven tone, dullness, and hyperpigmentation</span></p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="storage" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">How to Store &amp; Use Your DIY Toner Safely</h2>
+      <img src="/images/blog/natural-diy-skincare-toner-storage.webp" alt="Natural DIY skincare toner storage — glass dropper bottle aloe jar botanical ingredients" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:16/9;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+      <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.6rem;">Store your DIY toner in clean glass bottles — refrigerated and used within one week</p>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Use clean sterile containers</p><p style="margin:0;color:#46403a;line-height:1.65;">Wash bottles and jars in hot soapy water, then rinse with boiling water before using. Glass bottles are ideal — they are easy to sterilise and do not react with acidic ingredients like apple cider vinegar.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Refrigerate everything</p><p style="margin:0;color:#46403a;line-height:1.65;">DIY toners contain no preservatives. Refrigeration significantly extends their shelf life and adds a bonus cooling, depuffing effect when applied. Most recipes last approximately one week refrigerated.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Shake before every use</p><p style="margin:0;color:#46403a;line-height:1.65;">Natural ingredients separate over time — a quick shake before use ensures even distribution of all ingredients.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Always do a patch test first</p><p style="margin:0;color:#46403a;line-height:1.65;">Apply a small amount to the inside of your forearm or behind your ear and wait 24 hours before using on your face. This applies to every new recipe, every time.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Use SPF the following morning</p><p style="margin:0;color:#46403a;line-height:1.65;">Any recipe containing ACV, green tea, or rice water involves mild exfoliating compounds that increase sun sensitivity. SPF is non-negotiable — every single morning.</p></div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 id="mistakes" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Common Mistakes to Avoid</h2>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Using undiluted ACV</p><p style="margin:0;color:#46403a;line-height:1.65;">The most common DIY toner mistake — undiluted ACV can cause chemical burns on facial skin. Always use the 1:3 ratio (one part ACV to three parts water) minimum.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Adding lemon juice</p><p style="margin:0;color:#46403a;line-height:1.65;">Lemon juice is frequently suggested in DIY skincare content and is one of the ingredients to avoid. Citrus juice contains psoralen, which significantly increases skin sensitivity to UV radiation.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Skipping the patch test</p><p style="margin:0;color:#46403a;line-height:1.65;">Even with entirely natural ingredients, individual skin reactions vary. A patch test takes 24 hours and protects you from a potential allergic reaction.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Keeping toner too long</p><p style="margin:0;color:#46403a;line-height:1.65;">Without preservatives, homemade toners can harbour bacteria after one week even when refrigerated. If your toner smells different, discard it and make a fresh batch.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Using tap water</p><p style="margin:0;color:#46403a;line-height:1.65;">The chlorine and mineral content in tap water can affect both the efficacy of your toner and its shelf life. Use distilled or filtered water in all recipes.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.25rem 1.4rem 1.25rem 3.2rem;margin:1rem 0;position:relative;"><span style="position:absolute;left:1.2rem;top:1.25rem;">❌</span><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Expecting overnight results</p><p style="margin:0;color:#46403a;line-height:1.65;">DIY toners are gentle, consistent treatments. Most people see visible results in skin texture and tone within two to four weeks of consistent twice-daily use.</p></div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin:3rem 0;"><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span><span style="color:#C2845A;font-size:1.1rem;">✦</span><span style="height:1px;background:#E8DDD5;flex:1;max-width:120px;"></span></div>
+
+      <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;">Quick Reference Guide</h2>
+      <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.92rem;min-width:640px;">
+        <thead><tr><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Recipe</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Skin Type</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Key Ingredient</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Main Benefit</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Shelf Life</th></tr></thead>
+        <tbody>
+          <tr style="background:#FDF8F4;"><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#2C2018;font-weight:600;">Green Tea</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">All skin types</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">EGCG polyphenols</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Antioxidant, anti-acne</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">1 week fridge</td></tr>
+          <tr style="background:#F5EDE4;"><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#2C2018;font-weight:600;">Rose Water &amp; Witch Hazel</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Sensitive</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Tannins + polyphenols</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Soothing, pore-tightening</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">2 weeks fridge</td></tr>
+          <tr style="background:#FDF8F4;"><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#2C2018;font-weight:600;">Apple Cider Vinegar</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Oily, acne-prone</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Acetic acid</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Antibacterial, pH balance</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">1 week fridge</td></tr>
+          <tr style="background:#F5EDE4;"><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#2C2018;font-weight:600;">Cucumber &amp; Aloe Vera</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Dry, reactive</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Aloin + Vitamin C</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">Deep hydration, soothing</td><td style="border-bottom:1px solid #E8DDD5;padding:.75rem 1rem;color:#46403a;">1 week fridge</td></tr>
+          <tr style="background:#FDF8F4;"><td style="padding:.75rem 1rem;color:#2C2018;font-weight:600;">Fermented Rice Water</td><td style="padding:.75rem 1rem;color:#46403a;">All skin types</td><td style="padding:.75rem 1rem;color:#46403a;">Ferulic acid + kojic acid</td><td style="padding:.75rem 1rem;color:#46403a;">Brightening, barrier repair</td><td style="padding:.75rem 1rem;color:#46403a;">1 week fridge</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:#8C7060;text-align:center;margin:2.5rem auto .8rem;line-height:1.6;max-width:600px;">Skincare does not have to be expensive to be effective. Some of the most genuinely useful ingredients for your skin are already in your kitchen — you simply need to know how to use them.</p>
+      <p style="text-align:right;color:#8C7060;font-size:.9rem;">— Aayushi Parmar, Pink &amp; Ochre</p>
+
+      <h2 id="faq" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Frequently Asked Questions</h2>
+      <div style="margin:1.5rem 0;">
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">What is a DIY toner?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">A DIY toner is a homemade skincare solution applied after cleansing and before serum and moisturiser. It balances the skin's pH, removes remaining residue after cleansing, and delivers targeted ingredients for your specific skin concern — all without the cost or ingredient complexity of commercial toners.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Which DIY toner is best for acne-prone skin?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">The green tea toner with optional tea tree oil is the best DIY toner for acne-prone skin. Green tea's EGCG polyphenols have genuine antibacterial and anti-inflammatory action that reduces breakouts. The apple cider vinegar toner is also effective for oily, acne-prone skin.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">What is the rice water toner and why is it viral?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Fermented rice water toner is a DIY skincare recipe based on an East Asian beauty tradition dating back centuries. It contains ferulic acid, kojic acid, gamma-oryzanol, and Vitamins B and E — compounds that together brighten skin tone, reduce hyperpigmentation, and deliver noticeable radiance with consistent use.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">How long does homemade toner last?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Most DIY toners last approximately one week when stored in the refrigerator. The rose water and witch hazel toner can last up to two weeks due to witch hazel's natural preservation properties. If your toner smells different from when you made it, discard it and make a fresh batch.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I use DIY toner every day?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes — most recipes are gentle enough for twice-daily use morning and evening. The apple cider vinegar toner is the exception — begin with once daily in the evening and build up gradually. Always follow with moisturiser and SPF in the morning.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Do I need to do a patch test for DIY toners?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Always. Even entirely natural ingredients can cause individual reactions. Apply a small amount to the inside of your forearm or behind your ear and wait 24 hours before applying to your face. This is especially important for recipes containing tea tree oil or apple cider vinegar.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Is fermented rice water better than plain rice water?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes — significantly. Fermentation reduces the molecule size of rice water's active compounds, meaning they penetrate the skin more effectively. Fermented rice water also produces natural lactic acid and enhanced kojic acid content for brightening.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">What should I avoid putting in a DIY toner?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Avoid undiluted apple cider vinegar (burn risk), lemon juice (increases UV sensitivity), and any essential oil you have not patch-tested. Also avoid tap water where possible — use distilled or filtered water for better results and longer shelf life.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I use these toners on my body as well as my face?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes. All five recipes are safe for body use. The apple cider vinegar toner is particularly effective on the chest and back for acne, and the cucumber and aloe vera toner is excellent for soothing dry or sun-exposed body skin.</p></details>
+      </div>
+`,
+  },
   'low-cortisol-morning-routine': {
     title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones',
     date: '2026-06-09',
@@ -2396,9 +2633,14 @@ const ART: Record<string, ArtItem> = {
   grazing: { cat: 'Food', date: 'May 24, 2026', title: 'Aesthetic Grazing Board Ideas for Any Occasion', excerpt: 'The complete guide to a beautiful grazing board — ingredients, styling tips and the secrets that make it Pinterest-worthy.', href: '/blog/aesthetic-grazing-board-ideas', img: '/images/blog/aesthetic-grazing-board-brie-strawberries.webp' },
   itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review', img: '/images/blog/it-ends-with-us-book-review.webp' },
   books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada', img: '/images/blog/books-like-devil-wears-prada-hero.webp' },
+  toner: { cat: 'Beauty', date: 'June 17, 2026', title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner', excerpt: 'Green tea, rose water, ACV, cucumber and viral fermented rice water — 5 natural toners for every skin type, all under $10.', href: '/blog/5-diy-toner-recipes-for-all-skin', img: '/images/blog/diy-toner-recipes-natural-skincare.webp' },
 }
 const iCard = (a: ArtItem, block: string) => ({ ...a, block })
 const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
+  '5-diy-toner-recipes-for-all-skin': {
+    ctx: { pre: 'If you enjoyed this, you might also love our complete guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
+    cards: [iCard(ART.glass, '#F5D0D9'), iCard(ART.low, '#D5E8DF'), iCard(ART.grazing, '#EDD5C0')],
+  },
   'low-cortisol-morning-routine': {
     ctx: { pre: 'If you enjoyed this, you might also love our guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
     cards: [iCard(ART.glass, '#D5E8DF'), iCard(ART.grazing, '#F5F0D5'), iCard(ART.capsule, '#EDD5C0')],
