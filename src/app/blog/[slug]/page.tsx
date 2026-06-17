@@ -2642,6 +2642,10 @@ const internalLinks: Record<string, { ctx: { pre: string; link: string; href: st
     ctx: { pre: 'If you enjoyed this, you might also love our complete guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
     cards: [iCard(ART.orange, '#EDD5C0'), iCard(ART.glass, '#F5D0D9'), iCard(ART.low, '#D5E8DF')],
   },
+  'orange-peel-powder-diy-recipes': {
+    ctx: { pre: 'If you loved these DIY recipes, you might also love our complete guide to ', link: '5 Easy DIY Toner Recipes', href: '/blog/5-diy-toner-recipes-for-all-skin' },
+    cards: [iCard(ART.toner, '#EDD5C0'), iCard(ART.glass, '#F5D0D9'), iCard(ART.low, '#D5E8DF')],
+  },
   'low-cortisol-morning-routine': {
     ctx: { pre: 'If you enjoyed this, you might also love our guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
     cards: [iCard(ART.glass, '#D5E8DF'), iCard(ART.grazing, '#F5F0D5'), iCard(ART.capsule, '#EDD5C0')],
