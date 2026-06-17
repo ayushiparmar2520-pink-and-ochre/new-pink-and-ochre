@@ -16,6 +16,15 @@ export const metadata: Metadata = {
 
 const allPosts = [
   {
+    id: 19,
+    title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner',
+    excerpt: 'Green tea, rose water, ACV, cucumber and the viral fermented rice water toner — 5 natural recipes for every skin type, all under $10 to make.',
+    date: '2026-06-17',
+    category: 'Beauty',
+    slug: '5-diy-toner-recipes-for-all-skin',
+    image: '/images/blog/diy-toner-recipes-natural-skincare.webp',
+  },
+  {
     id: 18,
     title: 'Low Cortisol Morning Routine: How to Start Your Day Without Spiking Your Stress Hormones',
     excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day.',

@@ -90,6 +90,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Blog posts
     {
+      url: `${baseUrl}/blog/5-diy-toner-recipes-for-all-skin`,
+      lastModified: new Date('2026-06-17'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/low-cortisol-morning-routine`,
       lastModified: new Date('2026-06-09'),
       changeFrequency: 'monthly',
