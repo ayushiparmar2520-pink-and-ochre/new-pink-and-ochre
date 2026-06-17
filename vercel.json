@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/blogs/beauty/5-diy-toner-recipes-for-all-skin",
+      "destination": "/blog/5-diy-toner-recipes-for-all-skin",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/beauty/orange-peel-powder-benefits-for-skin-6-diy-for-healthy-glowing-skin",
+      "destination": "/blog/orange-peel-powder-diy-recipes",
+      "statusCode": 301
+    }
+  ]
+}
