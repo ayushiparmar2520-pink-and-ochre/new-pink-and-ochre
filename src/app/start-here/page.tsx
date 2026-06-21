@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import SubscribeForm from '@/components/SubscribeForm'
 
 export const metadata: Metadata = {
   title: 'Start Here | Pink & Ochre',
@@ -96,6 +97,7 @@ const css = `
 .start-here .sh-news-inner { max-width:500px; margin:0 auto; text-align:center; }
 .start-here .sh-news h2 { color:#FDF8F4; font-size:1.6rem; margin-bottom:1rem; }
 .start-here .sh-news p { font-size:0.9rem; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:1.8rem; }
+.start-here .sh-news-success { color:#E6B884; font-family:'Jost',sans-serif; font-size:1rem; margin:0; }
 .start-here .sh-news-form { display:flex; gap:0.75rem; }
 .start-here .sh-news-form input { flex:1; background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; padding:0.75rem 1.25rem; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.9rem; }
 .start-here .sh-news-form input::placeholder { color:rgba(255,255,255,0.45); }
@@ -183,10 +185,7 @@ export default function StartHerePage() {
         <div className="sh-news-inner">
           <h2>Stay Connected</h2>
           <p>Receive the latest stories directly in your inbox, thoughtfully crafted and personally shared.</p>
-          <form className="sh-news-form">
-            <input type="email" placeholder="Your email address" aria-label="Email address" required />
-            <button type="submit">SUBSCRIBE</button>
-          </form>
+          <SubscribeForm formClassName="sh-news-form" buttonLabel="SUBSCRIBE" successClassName="sh-news-success" />
         </div>
       </section>
     </div>

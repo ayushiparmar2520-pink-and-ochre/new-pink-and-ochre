@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
+import SubscribeForm from '@/components/SubscribeForm'
 
 export const metadata: Metadata = {
   title: 'Pink & Ochre | Lifestyle Blog — Fashion, Beauty, Wellness, Food & Books',
@@ -280,20 +281,13 @@ export default function Home() {
           <p className="subtitle text-cream mb-10">
             Receive the latest stories directly in your inbox, thoughtfully crafted and personally shared.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-6 py-4 bg-ivory text-charcoal placeholder-taupe focus:outline-none border border-warm-stone focus:border-gold transition-colors"
-              required
-            />
-            <button
-              type="submit"
-              className="px-10 py-4 bg-gold text-charcoal font-sans font-semibold tracking-wide uppercase hover:bg-cream transition-colors duration-300"
-            >
-              Subscribe
-            </button>
-          </form>
+          <SubscribeForm
+            formClassName="flex flex-col sm:flex-row gap-4"
+            inputClassName="flex-1 px-6 py-4 bg-ivory text-charcoal placeholder-taupe focus:outline-none border border-warm-stone focus:border-gold transition-colors"
+            buttonClassName="px-10 py-4 bg-gold text-charcoal font-sans font-semibold tracking-wide uppercase hover:bg-cream transition-colors duration-300"
+            buttonLabel="Subscribe"
+            successClassName="text-gold font-sans text-lg tracking-wide"
+          />
         </div>
       </section>
     </>
