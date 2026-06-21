@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
@@ -2709,7 +2710,202 @@ const internalLinksCss = `
 .contextual-link a:hover { color: #D4607A; }
 @media (max-width: 1024px) { .internal-links-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .internal-links-grid { grid-template-columns: 1fr; } }
+
+/* Email capture (FIX 4) */
+.email-capture { background: #2C2018; border-radius: 16px; padding: 3rem 2rem; margin: 3rem 0; text-align: center; }
+.email-capture-inner { max-width: 520px; margin: 0 auto; }
+.email-capture-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #E6B884; margin-bottom: 0.75rem; }
+.email-capture-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: #FDF8F4; margin-bottom: 1rem; line-height: 1.2; }
+.email-capture-desc { font-family: 'Jost', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.70); line-height: 1.7; margin-bottom: 1.5rem; }
+.email-capture-form { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.email-input { font-family: 'Jost', sans-serif; padding: 0.85rem 1.25rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.20); background: rgba(255,255,255,0.08); color: white; font-size: 0.9rem; min-width: 240px; flex: 1; }
+.email-input::placeholder { color: rgba(255,255,255,0.40); }
+.email-input:focus { outline: none; border-color: #D4607A; }
+.email-btn { font-family: 'Jost', sans-serif; padding: 0.85rem 1.75rem; border-radius: 50px; background: #D4607A; color: white; border: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s; }
+.email-btn:hover { background: #C2845A; }
+.email-note { font-family: 'Jost', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.40); margin-top: 1rem; }
+
+/* Author bio (FIX 9) */
+.author-bio { display: flex; gap: 1.5rem; align-items: flex-start; background: #F5EDE4; border-radius: 16px; padding: 2rem; margin: 3rem 0; }
+.author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #D4607A, #C2845A); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; flex-shrink: 0; }
+.author-tag { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C2845A; margin-bottom: 0.25rem; }
+.author-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #2C2018; margin-bottom: 0.75rem; }
+.author-text { font-family: 'Jost', sans-serif; font-size: 0.9rem; color: #8C7060; line-height: 1.7; margin-bottom: 1rem; }
+.author-social { display: flex; gap: 0.75rem; }
+.author-social-link { color: #8C7060; transition: color 0.2s; display: inline-flex; }
+.author-social-link:hover { color: #D4607A; }
+@media (max-width: 600px) { .author-bio { flex-direction: column; } }
 `
+
+// FIX 4 — Email capture (ready for ConvertKit: replace the <form> with the embed)
+function EmailCapture() {
+  const [submitted, setSubmitted] = useState(false)
+  return (
+    <section className="email-capture">
+      <div className="email-capture-inner">
+        <p className="email-capture-label">Join the Community</p>
+        <h2 className="email-capture-heading">Good Things, Straight to Your Inbox</h2>
+        <p className="email-capture-desc">
+          Weekly beauty tips, outfit ideas, wellness habits, and book recommendations — plus content that never makes it to the blog. No spam, ever.
+        </p>
+        {submitted ? (
+          <p className="email-note" style={{ display: 'block', color: '#E6B884', fontSize: '0.95rem' }}>
+            🌸 You&apos;re in! Check your inbox soon.
+          </p>
+        ) : (
+          <form
+            className="email-capture-form"
+            onSubmit={(e) => {
+              e.preventDefault()
+              setSubmitted(true)
+            }}
+          >
+            <input type="email" placeholder="your@email.com" required className="email-input" aria-label="Email address" />
+            <button type="submit" className="email-btn">Subscribe →</button>
+          </form>
+        )}
+        <p className="email-note">Join 12,000+ readers. Unsubscribe any time.</p>
+      </div>
+    </section>
+  )
+}
+
+// FIX 9 — Author bio box (E-E-A-T)
+function AuthorBio() {
+  return (
+    <div className="author-bio">
+      <div className="author-avatar">AP</div>
+      <div className="author-content">
+        <p className="author-tag">Founder, Pink &amp; Ochre</p>
+        <h3 className="author-name">Aayushi Parmar</h3>
+        <p className="author-text">
+          Aayushi is the founder and sole author of Pink &amp; Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books. A digital marketer based in Gurgaon, she writes without sponsored filler — every post is personally researched, tested, and honestly told.
+        </p>
+        <div className="author-social">
+          <a href="https://www.instagram.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="author-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://pinterest.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="author-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.63 11.17-.11-.95-.2-2.4.04-3.44.22-.93 1.4-5.94 1.4-5.94s-.36-.72-.36-1.78c0-1.67.97-2.91 2.17-2.91 1.02 0 1.52.77 1.52 1.69 0 1.03-.66 2.57-1 4-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.26 3.78-5.51 0-2.88-2.07-4.9-5.03-4.9-3.43 0-5.44 2.57-5.44 5.23 0 1.04.4 2.15.9 2.75.1.12.11.22.08.34l-.33 1.37c-.05.22-.18.27-.4.16-1.5-.7-2.43-2.88-2.43-4.64 0-3.78 2.74-7.25 7.92-7.25 4.16 0 7.39 2.96 7.39 6.92 0 4.13-2.6 7.45-6.22 7.45-1.21 0-2.35-.63-2.74-1.38l-.75 2.84c-.27 1.04-1 2.35-1.49 3.15C9.57 23.81 10.76 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// FIX 1 — JSON-LD schema (server-rendered into the page HTML)
+const SITE = 'https://pinkandochre.com'
+
+const schemaDescriptions: Record<string, string> = {
+  'low-cortisol-morning-routine': 'Feeling wired and tired before 9am? Discover the low cortisol morning routine that actually works — what spikes your stress hormones and the 7 gentle habits to fix it.',
+  'how-to-get-glass-skin': 'Can Indian skin get glass skin? Yes — and here is exactly how. The HER Method: 3 ingredients, one evening ritual, and the honest 6-month timeline for glowing skin.',
+  'capsule-wardrobe-guide': 'Build a capsule wardrobe that truly works in 2026 — 30 essential pieces, outfit formulas, quiet luxury updates, and a complete checklist to start with.',
+  'summer-2026-fashion-trends': 'The 10 biggest summer 2026 fashion trends — the Glamoratti aesthetic, Transformative Teal, cow print, lace, and more.',
+  'aesthetic-grazing-board-ideas': 'Build a stunning grazing board every time — the best ingredients, styling secrets, and a step-by-step guide for parties, picnics, or a cosy night in.',
+  'it-ends-with-us-book-review': 'An honest review of It Ends With Us — the writing, the ending, and whether it deserves the hype. No spoilers in the opening.',
+  'books-like-devil-wears-prada': 'Loved The Devil Wears Prada? These 10 books have the same fashion world glamour, sharp female ambition, and addictive drama. Your next weekend read is here.',
+  'mindful-living-modern-times': 'What does mindful living really mean in 2026? 8 small practical habits for more presence, less distraction, and genuine intentional living.',
+  '5-diy-toner-recipes-for-all-skin': 'Make your own toner at home with 5 easy DIY recipes — green tea toner for acne, viral rice water toner, rose water for sensitive skin, and more.',
+  'orange-peel-powder-diy-recipes': 'Discover the benefits of orange peel powder for skin and 6 easy DIY recipes for healthy glowing skin at home.',
+  'throw-pillow-guide': 'Everything you need to know about choosing and styling throw pillows — sizes, fabrics, colours, and the layering secrets that make a sofa look intentional.',
+  'devil-wears-prada-book-review': 'An honest review of The Devil Wears Prada by Lauren Weisberger — why the original novel is having its biggest moment in 2026.',
+  'devil-wears-prada-book-vs-movie': 'Book vs movie: the reasons The Devil Wears Prada novel outshines the film adaptation in humour, depth, and emotional honesty.',
+}
+
+const schemaHowTos: Record<string, any[]> = {
+  'how-to-get-glass-skin': [
+    {
+      '@context': 'https://schema.org', '@type': 'HowTo',
+      name: 'The HER Method for Glass Skin',
+      description: 'A 3-step evening skincare method for glass skin',
+      step: [
+        { '@type': 'HowToStep', name: 'Hydrate', text: 'Apply a hydrating serum or toner after cleansing' },
+        { '@type': 'HowToStep', name: 'Exfoliate', text: 'Use a chemical exfoliant 1-2 times per week' },
+        { '@type': 'HowToStep', name: 'Retinol', text: 'Apply retinol 3-4 nights per week, starting at 0.1%' },
+        { '@type': 'HowToStep', name: 'Repeat', text: 'Maintain consistency for 6-8 months for full glass skin results' },
+      ],
+    },
+  ],
+  '5-diy-toner-recipes-for-all-skin': [
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Green Tea Toner', supply: ['green tea', 'tea tree oil', 'apple cider vinegar'], step: [{ '@type': 'HowToStep', text: 'Brew one cup of green tea and allow to cool completely' }, { '@type': 'HowToStep', text: 'Add optional apple cider vinegar and tea tree oil and mix' }, { '@type': 'HowToStep', text: 'Pour into a clean spray bottle or glass jar' }, { '@type': 'HowToStep', text: 'Refrigerate and use within one week' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Rose Water & Witch Hazel Toner', supply: ['rose water', 'alcohol-free witch hazel', 'essential oil'], step: [{ '@type': 'HowToStep', text: 'Combine rose water and witch hazel in a clean glass bottle' }, { '@type': 'HowToStep', text: 'Add optional essential oil and shake gently before use' }, { '@type': 'HowToStep', text: 'Store refrigerated for up to two weeks' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Apple Cider Vinegar Toner', supply: ['apple cider vinegar', 'distilled water', 'tea tree oil'], step: [{ '@type': 'HowToStep', text: 'Combine apple cider vinegar and distilled water in a clean glass bottle' }, { '@type': 'HowToStep', text: 'Add optional tea tree oil and mix well' }, { '@type': 'HowToStep', text: 'Store in a cool dark place or the refrigerator' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Cucumber & Aloe Vera Toner', supply: ['cucumber', 'aloe vera gel', 'distilled water'], step: [{ '@type': 'HowToStep', text: 'Blend the cucumber and strain to extract the juice' }, { '@type': 'HowToStep', text: 'Combine cucumber juice, aloe vera gel and distilled water' }, { '@type': 'HowToStep', text: 'Refrigerate and use within one week' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Fermented Rice Water Toner', supply: ['uncooked white rice', 'water', 'tea tree oil'], step: [{ '@type': 'HowToStep', text: 'Wash the rice twice and soak in two cups of water' }, { '@type': 'HowToStep', text: 'Leave uncovered at room temperature for 24 hours to ferment' }, { '@type': 'HowToStep', text: 'Strain into a clean jar, refrigerate and use within one week' }] },
+  ],
+}
+
+const schemaReviews: Record<string, any> = {
+  'it-ends-with-us-book-review': {
+    '@context': 'https://schema.org', '@type': 'Review',
+    name: 'It Ends With Us — Book Review',
+    author: { '@type': 'Person', name: 'Aayushi Parmar' },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    itemReviewed: { '@type': 'Book', name: 'It Ends With Us', author: { '@type': 'Person', name: 'Colleen Hoover' }, datePublished: '2016-08-02' },
+  },
+}
+
+function stripSchemaText(s: string): string {
+  return s
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#39;|&rsquo;|&lsquo;/g, "'")
+    .replace(/&quot;|&ldquo;|&rdquo;/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function extractFaqs(html: string): Array<{ q: string; a: string }> {
+  const faqs: Array<{ q: string; a: string }> = []
+  let m: RegExpExecArray | null
+  const reDetails = /<summary[^>]*>([\s\S]*?)<\/summary>\s*<p[^>]*>([\s\S]*?)<\/p>/g
+  while ((m = reDetails.exec(html))) faqs.push({ q: stripSchemaText(m[1]), a: stripSchemaText(m[2]) })
+  const reMlFaq = /<div class="ml-faq"><h3>([\s\S]*?)<\/h3><p>([\s\S]*?)<\/p>/g
+  while ((m = reMlFaq.exec(html))) faqs.push({ q: stripSchemaText(m[1]), a: stripSchemaText(m[2]) })
+  return faqs
+}
+
+function articleSchemas(slug: string, post: any): any[] {
+  const url = `${SITE}/blog/${slug}`
+  const schemas: any[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      url,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Pink & Ochre',
+        url: SITE,
+        logo: { '@type': 'ImageObject', url: `${SITE}/android-chrome-512x512.png` },
+      },
+      description: schemaDescriptions[slug] || '',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      inLanguage: 'en-US',
+      isPartOf: { '@id': `${SITE}/#blog` },
+    },
+  ]
+  const faqs = extractFaqs(post.content || '')
+  if (faqs.length) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })
+  }
+  if (schemaHowTos[slug]) schemas.push(...schemaHowTos[slug])
+  if (schemaReviews[slug]) schemas.push(schemaReviews[slug])
+  return schemas
+}
 
 export default function BlogPostPage() {
   const params = useParams()
@@ -2742,6 +2938,9 @@ export default function BlogPostPage() {
 
   return (
     <>
+      {articleSchemas(slug, post).map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <style dangerouslySetInnerHTML={{ __html: internalLinksCss }} />
       {/* Header */}
       <section className="py-20 md:py-28 bg-ivory">
@@ -2854,6 +3053,14 @@ export default function BlogPostPage() {
           </div>
         </section>
       )}
+
+      {/* Email capture (FIX 4) + Author bio (FIX 9) */}
+      <section className="pb-16">
+        <div className="section-container max-w-3xl">
+          <EmailCapture />
+          <AuthorBio />
+        </div>
+      </section>
     </>
   )
 }
