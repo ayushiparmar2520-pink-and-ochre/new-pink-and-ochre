@@ -14,7 +14,7 @@ const blogPosts: Record<string, any> = {
     image: '/images/blog/diy-toner-recipes-natural-skincare.webp',
     content: `
       <p style="font-style:italic;color:#8C7060;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:1.3rem;line-height:1.6;">Some of the most effective things in your skincare routine do not come in expensive packaging.</p>
-      <p>Toners sit in an interesting middle ground in most people's routines — they know they probably should be using one, they have seen the TikToks about rice water, and they have definitely winced at the price of that glass bottle at the beauty counter. The gap between knowing toner is good for your skin and actually using one consistently is often just this: cost, confusion, and not being sure what is actually in them.</p>
+      <p>Toners sit in an interesting middle ground in most people's routines — they know they probably should be using one, they have seen the TikToks about rice water, and they have definitely winced at the price of that glass bottle at the beauty counter. The gap between knowing toner is good for your skin and actually using one consistently is often just this: cost, confusion, and not being sure what is actually in them. These DIY toners work beautifully as part of a complete glass skin ritual — our <a href="/blog/how-to-get-glass-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">HER Method guide</a> shows exactly how to layer them with your actives.</p>
       <p>DIY toner solves all three. And it is significantly simpler than most people expect. This is your complete guide to five easy homemade toner recipes — one for every skin type, including the viral fermented rice water toner — plus exactly what each ingredient does, how to use it correctly, and the storage tips that keep your toner safe and effective.</p>
 
       <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
@@ -577,6 +577,26 @@ const blogPosts: Record<string, any> = {
       </div>
       <div style="background:#2C2018;color:#FDF8F4;border-radius:14px;padding:1.4rem 1.6rem;margin:1.6rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#FDF8F4;">The Progression Method</p><p style="margin:0;color:rgba(253,248,244,.88);font-size:1rem;line-height:1.6;">Start at beginner level. Use 2–3 times per week. When the tube is roughly half-finished — about 2–3 months in — begin applying remaining product to your neck and body, and order the next concentration. The slower you go, the faster you ultimately get there.</p></div>
 
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem;margin:2rem 0;">
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C2845A;margin:0 0 1rem;">Products Worth Trying</p>
+        <div style="margin-bottom:1rem;">
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">The Minimalist 10% Niacinamide Serum</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">Best budget niacinamide for Indian skin</p>
+          <a href="https://www.amazon.in/s?k=minimalist+10+niacinamide+serum&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">The Ordinary Retinol 0.2% in Squalane</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">Perfect beginner retinol concentration</p>
+          <a href="https://www.amazon.com/s?k=the+ordinary+retinol+0.2+squalane&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <div>
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">CeraVe Moisturising Cream</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">The ceramide moisturiser recommended by dermatologists globally</p>
+          <a href="https://www.amazon.com/s?k=cerave+moisturising+cream&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:1rem;padding-top:1rem;border-top:1px solid #E8DDD5;">As an Amazon Associate I earn from qualifying purchases at no extra cost to you.</p>
+      </div>
+
       <h2 id="sunscreen" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">The Sunscreen Rule</h2>
       <p>SPF is not a summer-only product. It is not optional for cloudy days. It is not something you skip when you are staying indoors. Sunscreen is what protects every result you build with your actives.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;margin:1.6rem 0;">
@@ -726,7 +746,7 @@ const blogPosts: Record<string, any> = {
       <img src="/images/blog/what-is-a-capsule-wardrobe.webp" alt="What is a capsule wardrobe — earth tone clothes on a white rack with dried botanicals" loading="lazy" style="width:100%;height:auto;border-radius:16px;margin:1.5rem 0 .6rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
       <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.5rem;">A curated clothing rack — the visual definition of a capsule wardrobe</p>
       <p>The term capsule wardrobe was coined by London boutique owner Susie Faux in the 1970s, and later popularized by designer Donna Karan in 1985 with her iconic 7 Easy Pieces collection. The idea was simple: a small set of high-quality, versatile garments that form the foundation of your wardrobe — pieces that never go out of style and work for almost any occasion.</p>
-      <p>Today, the concept has expanded. A capsule wardrobe is not about owning as few clothes as humanly possible. It is about owning the right clothes — pieces that are versatile, well-made, and genuinely aligned with your lifestyle.</p>
+      <p>Today, the concept has expanded. A capsule wardrobe is not about owning as few clothes as humanly possible. It is about owning the right clothes — pieces that are versatile, well-made, and genuinely aligned with your lifestyle. For this season's specific trends, our <a href="/blog/summer-2026-fashion-trends" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Summer 2026 Fashion Trends guide</a> covers exactly which pieces are worth adding to your capsule this year.</p>
       <p>The cultural shift toward intentional living, sustainability, and quiet luxury has made capsule wardrobes mainstream. Research shows the capsule wardrobe market is projected to reach $4.13 billion by 2027 — driven by women who are tired of cluttered closets and wasted money on clothes they never wear. The average American woman owns 103 pieces of clothing but wears only 20% of them regularly.</p>
       <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#2C2018;margin:2rem 0 .7rem;">What Makes a Piece Capsule-Worthy?</h3>
       <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.3rem 1.6rem;margin:1.2rem 0;">
@@ -1820,6 +1840,8 @@ const blogPosts: Record<string, any> = {
           <li><strong style="color:#C2845A;">Best for:</strong> Adult readers (18+)</li>
           <li><strong style="color:#C2845A;">Rating:</strong> ⭐⭐⭐⭐½ / 5</li>
         </ul>
+        <a href="https://www.amazon.com/s?k=it+ends+with+us+colleen+hoover&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="display:inline-block;margin-top:1rem;background:#C2845A;color:#fff;font-family:'Jost',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.02em;padding:.65rem 1.5rem;border-radius:50px;text-decoration:none;">Find It Ends With Us on Amazon →</a>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:0.5rem;">As an Amazon Associate I earn from qualifying purchases at no extra cost to you.</p>
       </div>
 
       <div style="background:#F7EFE6;border:1px solid #e7d6c2;border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
@@ -1911,6 +1933,7 @@ const blogPosts: Record<string, any> = {
         <p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#2C2018;">⭐⭐⭐⭐½ / 5</p>
         <p style="margin:0;color:#5b4f43;font-size:1.05rem;font-style:italic;">Beautifully written, emotionally devastating, and genuinely important. A must-read.</p>
       </div>
+      <p>Looking for books with a similar energy? See our list of <a href="/blog/books-like-devil-wears-prada" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">books like The Devil Wears Prada</a> — a different genre but the same addictive quality.</p>
 `,
   },
   'devil-wears-prada-book-review': {
@@ -2348,6 +2371,22 @@ const blogPosts: Record<string, any> = {
       <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.3rem 1.5rem;margin-bottom:1.1rem;"><p style="margin:0 0 .45rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;">If you loved the BOSS/ASSISTANT DYNAMIC...</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">→ The Assistants is your book. Same power imbalance, same sharp commentary, same deeply satisfying ending.</p></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #7A9E8E;border-radius:12px;padding:1.3rem 1.5rem;margin-bottom:1.1rem;"><p style="margin:0 0 .45rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;">If you loved the ROMANCE SUBPLOT...</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">→ The Idea of You and Our Stop are both compulsively readable romances with the same witty voice and glamorous settings.</p></div>
 
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 1rem;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#C2845A;">Where to Read These Books</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:2;">
+          <li><a href="https://www.amazon.com/s?k=the+assistants+camille+perri+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Assistants by Camille Perri →</a></li>
+          <li><a href="https://www.amazon.com/s?k=eligible+curtis+sittenfeld+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Eligible by Curtis Sittenfeld →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+knockoff+lucy+sykes+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Knockoff by Lucy Sykes →</a></li>
+          <li><a href="https://www.amazon.com/s?k=attachments+rainbow+rowell+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Attachments by Rainbow Rowell →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+idea+of+you+robinne+lee+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Idea of You by Robinne Lee →</a></li>
+          <li><a href="https://www.amazon.com/s?k=our+stop+laura+jane+williams+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Our Stop by Laura Jane Williams →</a></li>
+          <li><a href="https://www.amazon.com/s?k=whered+you+go+bernadette+maria+semple+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Where&rsquo;d You Go, Bernadette by Maria Semple →</a></li>
+          <li><a href="https://www.amazon.com/s?k=how+to+be+a+bawse+lilly+singh+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">How to Be a Bawse by Lilly Singh →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+intern+michele+gorman+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Intern by Michele Gorman →</a></li>
+        </ul>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:1rem;padding-top:1rem;border-top:1px solid #E8DDD5;">This post contains affiliate links. As an Amazon Associate I earn from qualifying purchases at no extra cost to you. All recommendations are genuine and independently chosen.</p>
+      </div>
+
       <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;">The Bottom Line</h2>
       <p>The Devil Wears Prada endures because it asks a question that never gets old: what are you willing to sacrifice for the life you think you want — and what happens when you realize the answer is nothing? Every book on this list asks a version of that same question.</p>
       <p>Pick up The Assistants if you want the sharpest workplace satire. Pick up The Intern if you want the most direct fashion world substitute. Pick up Where'd You Go, Bernadette if you want to see Miranda Priestly get her own story. And pick up Attachments if you just want to feel warm and happy by the last page.</p>
@@ -2394,7 +2433,7 @@ const blogPosts: Record<string, any> = {
 
       <p>TikTok is no longer just where trends go viral and die within a week. In 2026, it is where entire aesthetics are <em>born</em> — where a single 10-second outfit clip can push a print, a silhouette, or a completely new way of dressing into mainstream culture within days. Pinterest predictions are hitting with 88% accuracy. Runway designers from Marc Jacobs to Chloé to Loewe are aligning with what street style already knew months ago.</p>
 
-      <p>Whether you are building a new wardrobe from scratch, figuring out which trends are actually worth investing in, or just want to know what everyone around you will be wearing come July — this is your complete, research-backed guide to the <strong>summer 2026 fashion trends</strong> you need to know right now.</p>
+      <p>Whether you are building a new wardrobe from scratch, figuring out which trends are actually worth investing in, or just want to know what everyone around you will be wearing come July — this is your complete, research-backed guide to the <strong>summer 2026 fashion trends</strong> you need to know right now. If you are starting from scratch, our <a href="/blog/capsule-wardrobe-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Capsule Wardrobe for Women 2026 guide</a> shows exactly how to build the foundation these trends sit on.</p>
 
       <div style="background:#FBEEF1;border-left:5px solid #D4607A;border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
         <p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#2C2018;">Quick Answer</p>
@@ -2967,11 +3006,30 @@ export default function BlogPostPage() {
       {post.image && (
         <section className="py-12">
           <div className="section-container max-w-4xl">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-96 md:h-[500px] object-cover"
-            />
+            <div className="relative">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-96 md:h-[500px] object-cover"
+              />
+              {/* FIX 8 — Pink & Ochre watermark for articles with generic stock hero images */}
+              {(slug === 'mindful-living-modern-times' || slug === 'books-like-devil-wears-prada') && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '1.25rem',
+                    right: '1.5rem',
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: '1rem',
+                    color: 'rgba(255,255,255,0.82)',
+                    letterSpacing: '0.05em',
+                    textShadow: '0 1px 8px rgba(28,21,18,0.55)',
+                  }}
+                >
+                  Pink <span style={{ color: '#E6B884', fontStyle: 'italic' }}>&amp;</span> Ochre
+                </div>
+              )}
+            </div>
           </div>
         </section>
       )}
