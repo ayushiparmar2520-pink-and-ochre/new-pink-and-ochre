@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
@@ -13,8 +14,8 @@ const blogPosts: Record<string, any> = {
     image: '/images/blog/diy-toner-recipes-natural-skincare.webp',
     content: `
       <p style="font-style:italic;color:#8C7060;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:1.3rem;line-height:1.6;">Some of the most effective things in your skincare routine do not come in expensive packaging.</p>
-      <p>Toners sit in an interesting middle ground in most people's routines — they know they probably should be using one, they have seen the TikToks about rice water, and they have definitely winced at the price of that glass bottle at the beauty counter. The gap between knowing toner is good for your skin and actually using one consistently is often just this: cost, confusion, and not being sure what is actually in them.</p>
-      <p>DIY toner solves all three. And it is significantly simpler than most people expect. This is your complete guide to five easy homemade toner recipes — one for every skin type, including the viral fermented rice water toner — plus exactly what each ingredient does, how to use it correctly, and the storage tips that keep your toner safe and effective.</p>
+      <p>Toners sit in an interesting middle ground in most people's routines — they know they probably should be using one, they have seen the TikToks about rice water, and they have definitely winced at the price of that glass bottle at the beauty counter. The gap between knowing toner is good for your skin and actually using one consistently is often just this: cost, confusion, and not being sure what is actually in them. These DIY toners work beautifully as part of a complete glass skin ritual — our <a href="/blog/how-to-get-glass-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">HER Method guide</a> shows exactly how to layer them with your actives.</p>
+      <p>DIY toner solves all three. And it is significantly simpler than most people expect. This is your complete guide to five easy homemade toner recipes — one for every skin type, including the viral fermented rice water toner — plus exactly what each ingredient does, how to use it correctly, and the storage tips that keep your toner safe and effective. If you enjoy making your own skincare, our guide to <a href="/blog/orange-peel-powder-diy-recipes" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">orange peel powder DIY recipes</a> is worth bookmarking next — natural Vitamin C, gentle exfoliation, and six easy recipes for glowing skin.</p>
 
       <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
         <p style="margin:0 0 .5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#D4607A;">Quick Answer</p>
@@ -287,7 +288,7 @@ const blogPosts: Record<string, any> = {
       </div>
 
       <h2 id="what-is-cortisol" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">What Is Cortisol — And Why Does the Morning Matter So Much?</h2>
-      <p>Cortisol is your body's primary stress hormone, produced by your adrenal glands in response to signals from your brain. It controls your energy levels, immune response, metabolism, blood pressure, and your sleep-wake cycle. It is not a villain. You need it.</p>
+      <p>Cortisol is your body's primary stress hormone, produced by your adrenal glands in response to signals from your brain. It controls your energy levels, immune response, metabolism, blood pressure, and your sleep-wake cycle. It is not a villain. You need it. A low cortisol morning also sets up your skin for better results — if you are working toward <a href="/blog/how-to-get-glass-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">glass skin</a>, cortisol regulation is one of the most overlooked factors.</p>
       <p>The problem is not cortisol itself — it is cortisol at the wrong times, in the wrong amounts, triggered by the wrong things. Cortisol follows a predictable daily rhythm called the circadian curve. It is lowest around midnight, begins rising a few hours before you wake up, spikes naturally after awakening, then declines steadily through the afternoon and evening before dropping again at night.</p>
       <p>This curve is your body's natural energy and focus schedule. When it works correctly, you wake up alert, feel focused mid-morning, wind down naturally in the evening, and sleep deeply at night. When it is disrupted — by stress, poor morning habits, artificial light, or chronic overwork — the entire system falls out of sync. The morning is the most important moment in this entire curve. What you do in the first 30–90 minutes after waking shapes your cortisol pattern for the entire rest of the day.</p>
 
@@ -309,12 +310,12 @@ const blogPosts: Record<string, any> = {
       <p>These are not productivity hacks. They are not a 5am challenge. They are gentle, science-backed inputs that work with your body's natural cortisol curve rather than against it.</p>
       <img src="/images/blog/gentle-morning-routine-wellness.webp" alt="Gentle morning wellness routine — woman waking slowly in natural sunlight calm and unhurried" loading="lazy" style="width:100%;height:auto;border-radius:16px;margin:1.5rem 0 .6rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
       <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.5rem;">A gentle waking — the foundation of a low cortisol morning</p>
-      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">01</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Wake Up Without a Jarring Alarm</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Consider a sunrise alarm clock that gradually brightens your room over 20–30 minutes before your wake time, or an app that wakes you during a lighter sleep stage. The goal is a gradual, gentle transition from sleep to wakefulness that allows your natural CAR to do its job.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Gentle waking supports a healthy CAR</div></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">01</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Wake Up Without a Jarring Alarm</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Consider a sunrise alarm clock that gradually brightens your room over 20–30 minutes before your wake time, or an app that wakes you during a lighter sleep stage. The goal is a gradual, gentle transition from sleep to wakefulness that allows your natural CAR to do its job. Your physical environment matters as much as your habits — a bedroom that feels calm and considered genuinely supports better sleep and lower stress. Our <a href="/blog/throw-pillow-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">throw pillow guide</a> is a small but satisfying place to start.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Gentle waking supports a healthy CAR</div></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">02</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">No Phone for 30–60 Minutes</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">This is the habit that most consistently transforms how women describe their mornings. Use this time for yourself — lie quietly, look out the window, stretch, sit with tea. Do not fill the silence with content. Allow your cortisol to peak naturally and begin its natural decline without hijacking it with external stressors.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>The single most impactful habit change</div></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">03</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Drink Water Before Anything Else</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">One large glass of water — room temperature or warm — before coffee, before breakfast, before the day begins. This rehydrates you after overnight water loss and removes one of the most common unnecessary cortisol triggers before it even starts. Adding a squeeze of lemon is optional but supports digestion and provides Vitamin C, which plays a role in cortisol metabolism.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Corrects dehydration before it becomes a cortisol trigger</div></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">04</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Get Natural Light Within the First Hour</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Step outside, open a window, or sit in a bright room. Five to ten minutes of natural light exposure in the first hour sets your circadian rhythm, supports a healthy cortisol peak, and begins suppressing melatonin so you feel alert. On cloudy days, this still works — outdoor daylight is significantly brighter than most indoor lighting.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Anchors your circadian rhythm for the day</div></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">05</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Move Gently Within the First 30 Minutes</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">This does not mean a high-intensity workout. Stretching, walking, slow yoga. Physical movement helps flush the glymphatic system, activates the parasympathetic nervous system, and supports the natural CAR. For women with chronic stress or HPA axis dysregulation, high-intensity exercise first thing can cause a cortisol overshoot — gentle movement first, intensity later.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Activates your body without overshooting cortisol</div></div>
-      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">06</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Eat a Protein-Rich Breakfast</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">A protein-rich breakfast within 90 minutes of waking stabilises blood sugar and gives cortisol permission to decline after its natural morning peak. Eggs, Greek yogurt, nuts, or a protein smoothie. Protein provides a slow, stable glucose source that keeps blood sugar steady for hours.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Gives cortisol permission to decline</div></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">06</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Eat a Protein-Rich Breakfast</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">A protein-rich breakfast within 90 minutes of waking stabilises blood sugar and gives cortisol permission to decline after its natural morning peak. Eggs, Greek yogurt, nuts, or a protein smoothie. Protein provides a slow, stable glucose source that keeps blood sugar steady for hours. What you eat in the morning matters as much as your habits — our <a href="/blog/aesthetic-grazing-board-ideas" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">grazing board guide</a> has beautiful, balanced food ideas that work as much for slow weekend mornings as they do for entertaining.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Gives cortisol permission to decline</div></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1.1rem;"><div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#EDD5C0;line-height:.8;flex:none;">07</span><div><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2C2018;">Spend Five Minutes on Something That Feels Like Yours</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Five minutes spent on something that belongs to you rather than your to-do list. Journaling one sentence. Reading a page of a book. Sitting with coffee and doing nothing. This is not indulgence. This is nervous system regulation — the signal that the day is beginning from safety, not emergency.</p></div></div><div style="display:flex;align-items:center;gap:.6rem;background:#F0F5F3;border-left:3px solid #7A9E8E;border-radius:8px;padding:.7rem 1rem;margin-top:.9rem;font-size:.93rem;color:#3f5249;"><span style="color:#7A9E8E;font-weight:700;flex:none;">✓</span>Nervous system regulation, not indulgence</div></div>
 
       <h2 id="what-it-looks-like" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">What a Low Cortisol Morning Actually Looks Like</h2>
@@ -322,7 +323,7 @@ const blogPosts: Record<string, any> = {
         <div style="background:#FFF0F3;border-top:3px solid #D4607A;border-radius:14px;padding:1.5rem;"><p style="margin:0 0 .8rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#2C2018;">The 20-Minute Version</p><ul style="list-style:none;padding:0;margin:0;"><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Wake up naturally or with a gentle alarm</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Stay off your phone</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Drink a glass of water</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Sit near a window for 5 minutes</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Eat something with protein</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Begin your day</li></ul></div>
         <div style="background:#FDF5EC;border-top:3px solid #C2845A;border-radius:14px;padding:1.5rem;"><p style="margin:0 0 .8rem;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#2C2018;">The 45-Minute Version</p><ul style="list-style:none;padding:0;margin:0;"><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Wake up to a sunrise alarm</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Stay off your phone</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Drink water with lemon</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>10 minutes outside or near bright window</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Gentle stretching or slow walk</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Protein breakfast</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>5 minutes journaling or quiet reading</li><li style="padding-left:1.5rem;position:relative;margin-bottom:.5rem;color:#46403a;font-size:.97rem;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Begin your day</li></ul></div>
       </div>
-      <p>Neither requires waking at 5am. Neither requires an elaborate ritual. Both require the same thing: protecting the first portion of your morning from the inputs that unnecessarily spike cortisol.</p>
+      <p>Neither requires waking at 5am. Neither requires an elaborate ritual. Both require the same thing: protecting the first portion of your morning from the inputs that unnecessarily spike cortisol. For the broader philosophy behind slowing down your mornings, our guide to <a href="/blog/mindful-living-modern-times" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">mindful living in modern times</a> covers the habits that make a low cortisol morning sustainable long-term.</p>
 
       <h2 id="timeline" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">How Long Before You Feel a Difference?</h2>
       <p>This is the honest answer:</p>
@@ -477,7 +478,7 @@ const blogPosts: Record<string, any> = {
       </div>
 
       <h2 id="three-things" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">The Three Things You Actually Need</h2>
-      <p>Here is the honest, no-product-overload answer to glass skin. Your foundation — the non-negotiables — is a cleanser, moisturiser, and SPF. Everything else builds on top. Beyond that foundation, you need exactly three types of active ingredients:</p>
+      <p>Here is the honest, no-product-overload answer to glass skin. Your foundation — the non-negotiables — is a cleanser, moisturiser, and SPF. Everything else builds on top. If you prefer making your own toner, our guide to <a href="/blog/5-diy-toner-recipes-for-all-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">5 DIY toner recipes</a> includes the viral fermented rice water toner and the best options for every skin type. Beyond that foundation, you need exactly three types of active ingredients:</p>
       <div style="overflow-x:auto;">
       <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.98rem;min-width:480px;">
         <thead><tr><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">Active</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">What It Does</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1rem;font-weight:600;">When to Use</th></tr></thead>
@@ -493,6 +494,7 @@ const blogPosts: Record<string, any> = {
       <h2 id="morning-ritual" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Your Morning Skincare Ritual</h2>
       <img src="/images/blog/morning-skincare-ritual-glass-skin.webp" alt="Morning skincare ritual for glass skin — woman applying eye patches in white robe natural window light" loading="lazy" style="width:100%;height:auto;border-radius:16px;margin:1.5rem 0 .6rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
       <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.5rem;">The morning ritual — four intentional steps that protect and brighten</p>
+      <p>Skin health does not happen in isolation from the rest of your life — our guide to the <a href="/blog/low-cortisol-morning-routine" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">low cortisol morning routine</a> explains how stress hormones directly affect skin clarity and why a calm morning is part of any glass skin ritual.</p>
       <div style="display:flex;gap:1.2rem;align-items:flex-start;background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1rem;"><span style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;color:#EDD5C0;line-height:.85;flex:none;">01</span><div><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:#2C2018;">Cleanse</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Use your regular cleanser. Keep it gentle. A cleanser's job is to remove what accumulated overnight and prepare your skin for actives.</p></div></div>
       <div style="display:flex;gap:1.2rem;align-items:flex-start;background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1rem;"><span style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;color:#EDD5C0;line-height:.85;flex:none;">02</span><div><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:#2C2018;">Brightening Serum</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">Apply your Vitamin C or Niacinamide serum. A few drops, pressed gently into the skin. Let it absorb for 30–60 seconds.</p></div></div>
       <div style="display:flex;gap:1.2rem;align-items:flex-start;background:#fff;border:1px solid #E8DDD5;border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1rem;"><span style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;color:#EDD5C0;line-height:.85;flex:none;">03</span><div><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:#2C2018;">Moisturise</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">A ceramide moisturiser is ideal — with hydrating actives like glycerin, squalane, or hyaluronic acid. No additional hydrating serum is required unless your skin is genuinely very dry.</p></div></div>
@@ -575,6 +577,26 @@ const blogPosts: Record<string, any> = {
       </table>
       </div>
       <div style="background:#2C2018;color:#FDF8F4;border-radius:14px;padding:1.4rem 1.6rem;margin:1.6rem 0;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#FDF8F4;">The Progression Method</p><p style="margin:0;color:rgba(253,248,244,.88);font-size:1rem;line-height:1.6;">Start at beginner level. Use 2–3 times per week. When the tube is roughly half-finished — about 2–3 months in — begin applying remaining product to your neck and body, and order the next concentration. The slower you go, the faster you ultimately get there.</p></div>
+
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem;margin:2rem 0;">
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C2845A;margin:0 0 1rem;">Products Worth Trying</p>
+        <div style="margin-bottom:1rem;">
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">The Minimalist 10% Niacinamide Serum</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">Best budget niacinamide for Indian skin</p>
+          <a href="https://www.amazon.in/s?k=minimalist+10+niacinamide+serum&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">The Ordinary Retinol 0.2% in Squalane</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">Perfect beginner retinol concentration</p>
+          <a href="https://www.amazon.com/s?k=the+ordinary+retinol+0.2+squalane&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <div>
+          <strong style="font-family:'Playfair Display',serif;color:#2C2018;">CeraVe Moisturising Cream</strong>
+          <p style="font-family:'Jost',sans-serif;font-size:0.85rem;color:#8C7060;margin:0.25rem 0;">The ceramide moisturiser recommended by dermatologists globally</p>
+          <a href="https://www.amazon.com/s?k=cerave+moisturising+cream&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;font-size:0.82rem;text-decoration:underline;text-underline-offset:3px;font-family:'Jost',sans-serif;">View on Amazon →</a>
+        </div>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:1rem;padding-top:1rem;border-top:1px solid #E8DDD5;">As an Amazon Associate I earn from qualifying purchases at no extra cost to you.</p>
+      </div>
 
       <h2 id="sunscreen" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">The Sunscreen Rule</h2>
       <p>SPF is not a summer-only product. It is not optional for cloudy days. It is not something you skip when you are staying indoors. Sunscreen is what protects every result you build with your actives.</p>
@@ -725,8 +747,8 @@ const blogPosts: Record<string, any> = {
       <img src="/images/blog/what-is-a-capsule-wardrobe.webp" alt="What is a capsule wardrobe — earth tone clothes on a white rack with dried botanicals" loading="lazy" style="width:100%;height:auto;border-radius:16px;margin:1.5rem 0 .6rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
       <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.5rem;">A curated clothing rack — the visual definition of a capsule wardrobe</p>
       <p>The term capsule wardrobe was coined by London boutique owner Susie Faux in the 1970s, and later popularized by designer Donna Karan in 1985 with her iconic 7 Easy Pieces collection. The idea was simple: a small set of high-quality, versatile garments that form the foundation of your wardrobe — pieces that never go out of style and work for almost any occasion.</p>
-      <p>Today, the concept has expanded. A capsule wardrobe is not about owning as few clothes as humanly possible. It is about owning the right clothes — pieces that are versatile, well-made, and genuinely aligned with your lifestyle.</p>
-      <p>The cultural shift toward intentional living, sustainability, and quiet luxury has made capsule wardrobes mainstream. Research shows the capsule wardrobe market is projected to reach $4.13 billion by 2027 — driven by women who are tired of cluttered closets and wasted money on clothes they never wear. The average American woman owns 103 pieces of clothing but wears only 20% of them regularly.</p>
+      <p>Today, the concept has expanded. A capsule wardrobe is not about owning as few clothes as humanly possible. It is about owning the right clothes — pieces that are versatile, well-made, and genuinely aligned with your lifestyle. For this season's specific trends, our <a href="/blog/summer-2026-fashion-trends" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Summer 2026 Fashion Trends guide</a> covers exactly which pieces are worth adding to your capsule this year.</p>
+      <p>The cultural shift toward intentional living, sustainability, and quiet luxury has made capsule wardrobes mainstream. Research shows the capsule wardrobe market is projected to reach $4.13 billion by 2027 — driven by women who are tired of cluttered closets and wasted money on clothes they never wear. The average American woman owns 103 pieces of clothing but wears only 20% of them regularly. Building a capsule wardrobe is one of the most practical expressions of <a href="/blog/mindful-living-modern-times" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">mindful living</a> — choosing fewer pieces with more intention rather than accumulating without direction.</p>
       <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:#2C2018;margin:2rem 0 .7rem;">What Makes a Piece Capsule-Worthy?</h3>
       <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.3rem 1.6rem;margin:1.2rem 0;">
         <ul style="list-style:none;padding:0;margin:0;color:#46403a;font-size:1.02rem;line-height:1.7;">
@@ -985,9 +1007,9 @@ const blogPosts: Record<string, any> = {
 
       <p>There is something about a well-styled grazing board that stops people mid-conversation. Before anyone reaches for a cracker, they reach for their phone.</p>
 
-      <p>That is the magic of a beautiful grazing board. It is food, yes — but it is also an experience, a centerpiece, and honestly, one of the easiest things you can make that looks like you spent hours on it (you did not).</p>
+      <p>That is the magic of a beautiful grazing board. It is food, yes — but it is also an experience, a centerpiece, and honestly, one of the easiest things you can make that looks like you spent hours on it (you did not). The philosophy behind a beautifully set table is the same one behind <a href="/blog/mindful-living-modern-times" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">mindful living</a> — choosing what you bring into your space and your day with genuine intention.</p>
 
-      <p>Whether you are hosting a baby shower, a girls' brunch, a holiday gathering, or a quiet Friday night with wine and your favorite people, a grazing board fits every occasion. And with a few simple styling tricks, yours can look like it came straight from Pinterest.</p>
+      <p>Whether you are hosting a baby shower, a girls' brunch, a holiday gathering, or a quiet Friday night with wine and your favorite people, a grazing board fits every occasion. And with a few simple styling tricks, yours can look like it came straight from Pinterest. If you love styling your home for entertaining, our <a href="/blog/throw-pillow-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">throw pillow guide</a> is worth bookmarking — the same principles of texture and colour layering apply beautifully to your living room.</p>
 
       <p>This guide covers everything — what to put on a grazing board, how to style it beautifully, seasonal ideas, budget tips, and the exact step-by-step method to build one confidently every time.</p>
 
@@ -1438,12 +1460,12 @@ const blogPosts: Record<string, any> = {
         <div class="ml-hcard"><div class="num">04</div><h3>Sensory Grounding</h3><p>When your mind is caught in a spiral of anxiety, planning, or replaying — return to your senses. Name five things you can see. Four things you can hear. Three things you can feel physically.</p><p class="why">Why it works: This is a return to the present moment, which is where genuine experience happens and where calm is actually available.</p></div>
         <div class="ml-hcard"><div class="num">05</div><h3>Intentional Transitions</h3><p>Treat the small gaps between tasks, meetings, and places as reset moments rather than gaps to fill with phones or podcasts. The two minutes between a work call and your next commitment. The walk from the car to the front door.</p><p class="why">Why it works: These micro-transitions, when treated as deliberate pauses, significantly reduce the sense of fractured attention that accumulates across a busy day.</p></div>
         <div class="ml-hcard"><div class="num">06</div><h3>One Screen at a Time</h3><p>Never use two screens simultaneously. No phone while watching television. No television while working. No scrolling while eating.</p><p class="why">Why it works: Each screen you add splits your attention and compounds the sense of never quite arriving anywhere. One screen at a time is a radical act in 2026 — and one of the most effective ones available.</p></div>
-        <div class="ml-hcard"><div class="num">07</div><h3>Mindful Consumption</h3><p>This applies to everything you take in — food, content, information, purchases. The question is simply: is this intentional, or is this automatic? You do not need to stop buying things or watching television. You only need to ask, occasionally: am I choosing this, or is this just happening to me?</p><p class="why">Why it works: The distinction between a chosen experience and a habitual one is the difference between living and being lived.</p></div>
+        <div class="ml-hcard"><div class="num">07</div><h3>Mindful Consumption</h3><p>This applies to everything you take in — food, content, information, purchases. The question is simply: is this intentional, or is this automatic? You do not need to stop buying things or watching television. You only need to ask, occasionally: am I choosing this, or is this just happening to me? Reading is one of the most consistently recommended mindfulness practices — and our review of <a href="/blog/it-ends-with-us-book-review" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">It Ends With Us</a> is a good place to start if you want a book that genuinely makes you think.</p><p class="why">Why it works: The distinction between a chosen experience and a habitual one is the difference between living and being lived.</p></div>
         <div class="ml-hcard"><div class="num">08</div><h3>A Daily Moment of Noticing</h3><p>At some point each day — even 30 seconds — notice something. The quality of light in the room. The warmth of your coffee cup. The sound of rain or quiet. The colour of the sky at whatever time you happen to look at it.</p><p class="why">Why it works: The habit of noticing is how attention gets trained toward the present over time. Small, free, and one of the most consistent entry points into a mindful life.</p></div>
         <div class="ml-divider"><span>✦</span></div>
 
         <h2>A Mindful Morning — Where Intentional Living Begins</h2>
-        <p>The morning is the highest-leverage moment for mindful living because it sets the tone for your nervous system for the rest of the day. A mindful morning does not require waking before dawn, journaling for an hour, or following a rigid sequence. It requires three things:</p>
+        <p>The morning is the highest-leverage moment for mindful living because it sets the tone for your nervous system for the rest of the day. The most powerful place to begin a mindful living practice is your morning — our guide to the <a href="/blog/low-cortisol-morning-routine" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">low cortisol morning routine</a> gives you the science behind why the first 30 minutes of the day shape everything that follows. A mindful morning does not require waking before dawn, journaling for an hour, or following a rigid sequence. It requires three things:</p>
         <div class="ml-grid3">
           <div class="ml-tcard ml-t-pink"><h3>Not starting with your phone</h3><p>Give yourself at least 20 minutes before your first screen. This is the single highest-impact morning habit for attention and nervous system regulation. The mind that begins the day in quiet — even briefly — is genuinely different from the one that begins it in reactive scrolling.</p></div>
           <div class="ml-tcard ml-t-ochre"><h3>Doing one thing at a time</h3><p>Make your coffee without simultaneously checking email. Eat breakfast without watching something. Get dressed without listening to a podcast. These are not productivity rules. They are presence practices — small opportunities to be where you actually are.</p></div>
@@ -1491,6 +1513,7 @@ const blogPosts: Record<string, any> = {
           <div class="b"><ul><li>Morning phone-free period (20 min minimum)</li><li>One real break per workday — no screens</li><li>Full notification audit</li><li>One no-phone zone in your home</li></ul></div>
         </div>
         <div class="ml-dark"><p>Living intentionally will never happen by accident. It always requires both a solid foundation and practical habits built on top of it. But it does not require perfection or a major life change. It requires returning — again and again — to the deliberate choice to be present in your own life.</p></div>
+        <p>The spaces you live in shape how you feel — our <a href="/blog/throw-pillow-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">complete throw pillow guide</a> is a simple place to start creating a home that feels as intentional as your daily habits.</p>
         <div class="ml-divider"><span>✦</span></div>
 
         <div class="ml-dark">
@@ -1595,7 +1618,7 @@ const blogPosts: Record<string, any> = {
       </div>
 
       <h2 id="recipes" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">6 DIY Orange Peel Powder Recipes for Glowing Skin</h2>
-      <p>Here are tried-and-tested recipes that have been passed down rather than invented for content. Use them consistently, do a patch test first, and give your skin the time it needs to respond.</p>
+      <p>Here are tried-and-tested recipes that have been passed down rather than invented for content. Use them consistently, do a patch test first, and give your skin the time it needs to respond. Orange peel powder pairs particularly well with a well-chosen toner — our guide to <a href="/blog/5-diy-toner-recipes-for-all-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">5 DIY toner recipes</a> includes the best natural options to use alongside your DIY skincare routine.</p>
 
       <img src="https://images.pexels.com/photos/5069408/pexels-photo-5069408.jpeg?cs=srgb&dl=pexels-shvetsa-5069408.jpg&fm=jpg" alt="Woman with oranges" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 2rem;display:block;box-shadow:0 4px 24px rgba(44,32,24,.08);" />
 
@@ -1661,7 +1684,7 @@ const blogPosts: Record<string, any> = {
     content: `
       <p><em>By a home décor enthusiast who has obsessed over every square inch of sofa styling.</em></p>
 
-      <p>There's a reason interior designers spend so much time on throw pillows. They're the fastest, most affordable way to completely transform a room — and yet, most of us get them wrong.</p>
+      <p>There's a reason interior designers spend so much time on throw pillows. They're the fastest, most affordable way to completely transform a room — and yet, most of us get them wrong. If you are styling your space for entertaining, pair this with our <a href="/blog/aesthetic-grazing-board-ideas" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">aesthetic grazing board guide</a> — a beautiful table and a beautiful room make the whole experience.</p>
 
       <p>If you've ever stood in a home store holding a pillow, wondering whether it's "the one," or scrolled through Pinterest trying to figure out why your sofa never looks quite like the inspiration photos — this is the guide you've been waiting for.</p>
 
@@ -1700,7 +1723,7 @@ const blogPosts: Record<string, any> = {
       </div>
 
       <h2 id="why" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Why Throw Pillows Matter More Than You Think</h2>
-      <p>Throw pillows add softness, color, pattern, and personality to a space — all at once, and all without any permanent commitment. You can completely change the mood of a room in under ten minutes just by swapping them out.</p>
+      <p>Throw pillows add softness, color, pattern, and personality to a space — all at once, and all without any permanent commitment. You can completely change the mood of a room in under ten minutes just by swapping them out. The same principles that make a sofa look considered apply to how you structure your days — our guide to <a href="/blog/mindful-living-modern-times" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">mindful living in modern times</a> is the natural companion read to this one.</p>
       <p>They also do something very practical: they make your sofa actually comfortable. A well-placed lumbar pillow supports your lower back. A plush 24-inch square gives you something to lean into. They're not just decorative — they're functional.</p>
 
       <h2 id="size" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">The Designer's Size Formula for Couch Throw Pillows</h2>
@@ -1818,6 +1841,8 @@ const blogPosts: Record<string, any> = {
           <li><strong style="color:#C2845A;">Best for:</strong> Adult readers (18+)</li>
           <li><strong style="color:#C2845A;">Rating:</strong> ⭐⭐⭐⭐½ / 5</li>
         </ul>
+        <a href="https://www.amazon.com/s?k=it+ends+with+us+colleen+hoover&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="display:inline-block;margin-top:1rem;background:#C2845A;color:#fff;font-family:'Jost',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.02em;padding:.65rem 1.5rem;border-radius:50px;text-decoration:none;">Find It Ends With Us on Amazon →</a>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:0.5rem;">As an Amazon Associate I earn from qualifying purchases at no extra cost to you.</p>
       </div>
 
       <div style="background:#F7EFE6;border:1px solid #e7d6c2;border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
@@ -1903,12 +1928,13 @@ const blogPosts: Record<string, any> = {
 
 
       <h2 id="verdict" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Final Verdict</h2>
-      <p>It Ends With Us is not an easy read. It will make you uncomfortable. It will make you angry. It will probably make you cry. And when you finish it, you'll find yourself sitting quietly for a few minutes, just thinking.</p>
+      <p>It Ends With Us is not an easy read. It will make you uncomfortable. It will make you angry. It will probably make you cry. And when you finish it, you'll find yourself sitting quietly for a few minutes, just thinking. After a book this emotionally demanding, a <a href="/blog/low-cortisol-morning-routine" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">low cortisol morning routine</a> is genuinely worth having — the kind of quiet start that lets you process what you have read before the day begins.</p>
       <p>That's exactly what the best books do. Colleen Hoover has written something that goes far beyond a love story — a novel that asks hard questions about the relationships we accept, the patterns we inherit, and the courage it takes to choose differently. I know I did.</p>
       <div style="background:#FBEEF1;border-left:5px solid #D4607A;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0;text-align:center;">
         <p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#2C2018;">⭐⭐⭐⭐½ / 5</p>
         <p style="margin:0;color:#5b4f43;font-size:1.05rem;font-style:italic;">Beautifully written, emotionally devastating, and genuinely important. A must-read.</p>
       </div>
+      <p>Looking for books with a similar energy? See our list of <a href="/blog/books-like-devil-wears-prada" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">books like The Devil Wears Prada</a> — a different genre but the same addictive quality.</p>
 `,
   },
   'devil-wears-prada-book-review': {
@@ -2215,7 +2241,7 @@ const blogPosts: Record<string, any> = {
 
       <h2 id="why" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Why These Books?</h2>
       <p>Every book on this list was chosen for a specific reason: it captures at least three of the core elements that make The Devil Wears Prada so addictive. A woman figuring out who she is under pressure. A workplace or world that is glamorous on the surface and brutal underneath. Writing that is sharp, witty, and genuinely hard to put down.</p>
-      <p>Some are set in fashion. Some are set in media. Some are love stories with ambition running underneath them. All of them will fill the reading-shaped hole that Lauren Weisberger left behind.</p>
+      <p>Some are set in fashion. Some are set in media. Some are love stories with ambition running underneath them. All of them will fill the reading-shaped hole that Lauren Weisberger left behind. If the fashion world of these books has you thinking about your own wardrobe, our <a href="/blog/capsule-wardrobe-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Capsule Wardrobe for Women 2026</a> is a grounded, practical alternative to the excess these novels so brilliantly satirise.</p>
 
       <div id="b1" style="background:#fff;border:1px solid #E8DDD5;border-radius:16px;padding:1.8rem;margin:1.5rem 0;box-shadow:0 2px 12px rgba(44,32,24,.06);scroll-margin-top:90px;">
         <div style="display:flex;align-items:flex-start;gap:1.1rem;margin-bottom:.9rem;"><span style="font-family:'Playfair Display',serif;font-size:3rem;color:#EDD5C0;font-weight:700;line-height:1;flex:none;">01</span><div><div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#2C2018;line-height:1.25;">The Assistants</div><div style="font-size:.9rem;color:#8C7060;font-style:italic;margin-top:.15rem;">Camille Perri</div></div></div>
@@ -2346,8 +2372,24 @@ const blogPosts: Record<string, any> = {
       <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.3rem 1.5rem;margin-bottom:1.1rem;"><p style="margin:0 0 .45rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;">If you loved the BOSS/ASSISTANT DYNAMIC...</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">→ The Assistants is your book. Same power imbalance, same sharp commentary, same deeply satisfying ending.</p></div>
       <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #7A9E8E;border-radius:12px;padding:1.3rem 1.5rem;margin-bottom:1.1rem;"><p style="margin:0 0 .45rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;">If you loved the ROMANCE SUBPLOT...</p><p style="margin:0;color:#46403a;font-size:1rem;line-height:1.6;">→ The Idea of You and Our Stop are both compulsively readable romances with the same witty voice and glamorous settings.</p></div>
 
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 1rem;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#C2845A;">Where to Read These Books</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:2;">
+          <li><a href="https://www.amazon.com/s?k=the+assistants+camille+perri+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Assistants by Camille Perri →</a></li>
+          <li><a href="https://www.amazon.com/s?k=eligible+curtis+sittenfeld+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Eligible by Curtis Sittenfeld →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+knockoff+lucy+sykes+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Knockoff by Lucy Sykes →</a></li>
+          <li><a href="https://www.amazon.com/s?k=attachments+rainbow+rowell+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Attachments by Rainbow Rowell →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+idea+of+you+robinne+lee+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Idea of You by Robinne Lee →</a></li>
+          <li><a href="https://www.amazon.com/s?k=our+stop+laura+jane+williams+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Our Stop by Laura Jane Williams →</a></li>
+          <li><a href="https://www.amazon.com/s?k=whered+you+go+bernadette+maria+semple+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Where&rsquo;d You Go, Bernadette by Maria Semple →</a></li>
+          <li><a href="https://www.amazon.com/s?k=how+to+be+a+bawse+lilly+singh+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">How to Be a Bawse by Lilly Singh →</a></li>
+          <li><a href="https://www.amazon.com/s?k=the+intern+michele+gorman+book&tag=pinkandochre-20" target="_blank" rel="noopener noreferrer nofollow" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">The Intern by Michele Gorman →</a></li>
+        </ul>
+        <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:#8C7060;font-style:italic;margin-top:1rem;padding-top:1rem;border-top:1px solid #E8DDD5;">This post contains affiliate links. As an Amazon Associate I earn from qualifying purchases at no extra cost to you. All recommendations are genuine and independently chosen.</p>
+      </div>
+
       <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;">The Bottom Line</h2>
-      <p>The Devil Wears Prada endures because it asks a question that never gets old: what are you willing to sacrifice for the life you think you want — and what happens when you realize the answer is nothing? Every book on this list asks a version of that same question.</p>
+      <p>The Devil Wears Prada endures because it asks a question that never gets old: what are you willing to sacrifice for the life you think you want — and what happens when you realize the answer is nothing? Every book on this list asks a version of that same question. If you are a Colleen Hoover reader, our full review of <a href="/blog/it-ends-with-us-book-review" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">It Ends With Us</a> is worth reading before you pick up your next title from her catalogue.</p>
       <p>Pick up The Assistants if you want the sharpest workplace satire. Pick up The Intern if you want the most direct fashion world substitute. Pick up Where'd You Go, Bernadette if you want to see Miranda Priestly get her own story. And pick up Attachments if you just want to feel warm and happy by the last page.</p>
 
       <h2 id="faq" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">Frequently Asked Questions</h2>
@@ -2392,7 +2434,7 @@ const blogPosts: Record<string, any> = {
 
       <p>TikTok is no longer just where trends go viral and die within a week. In 2026, it is where entire aesthetics are <em>born</em> — where a single 10-second outfit clip can push a print, a silhouette, or a completely new way of dressing into mainstream culture within days. Pinterest predictions are hitting with 88% accuracy. Runway designers from Marc Jacobs to Chloé to Loewe are aligning with what street style already knew months ago.</p>
 
-      <p>Whether you are building a new wardrobe from scratch, figuring out which trends are actually worth investing in, or just want to know what everyone around you will be wearing come July — this is your complete, research-backed guide to the <strong>summer 2026 fashion trends</strong> you need to know right now.</p>
+      <p>Whether you are building a new wardrobe from scratch, figuring out which trends are actually worth investing in, or just want to know what everyone around you will be wearing come July — this is your complete, research-backed guide to the <strong>summer 2026 fashion trends</strong> you need to know right now. If you are starting from scratch, our <a href="/blog/capsule-wardrobe-guide" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">Capsule Wardrobe for Women 2026 guide</a> shows exactly how to build the foundation these trends sit on.</p>
 
       <div style="background:#FBEEF1;border-left:5px solid #D4607A;border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
         <p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#2C2018;">Quick Answer</p>
@@ -2537,7 +2579,7 @@ const blogPosts: Record<string, any> = {
 
       <h2 id="shop" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.25rem;line-height:1.25;scroll-margin-top:90px;">How to Shop These Trends Without Buying Everything New</h2>
       <p>Here is the honest truth: most of the <strong>summer 2026 fashion trends</strong> on this list are built around things you likely already own.</p>
-      <p>Graphic tees. Denim. Linen basics. Strappy sandals. Gold jewelry. The magic is in how you combine them — not in how much you spend.</p>
+      <p>Graphic tees. Denim. Linen basics. Strappy sandals. Gold jewelry. The magic is in how you combine them — not in how much you spend. Summer style is as much about skin as it is about clothes — our complete guide to <a href="/blog/how-to-get-glass-skin" style="color:#C2845A;text-decoration:underline;text-underline-offset:3px;">glass skin</a> covers the lightweight ritual that keeps skin glowing through heat and humidity.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;">
         <div style="background:#FFFFFF;border:1px solid #ece2d6;border-radius:10px;padding:1.2rem 1.4rem;"><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-weight:700;color:#D4607A;font-size:1.05rem;">Invest once per trend</p><p style="margin:0;color:#5b4f43;font-size:.97rem;line-height:1.65;">One great teal linen dress. One pair of tailored Bermuda shorts. One chunky gold necklace that works with everything. One statement print piece in cow print or paisley.</p></div>
         <div style="background:#FFFFFF;border:1px solid #ece2d6;border-radius:10px;padding:1.2rem 1.4rem;"><p style="margin:0 0 .35rem;font-family:'Playfair Display',serif;font-weight:700;color:#D4607A;font-size:1.05rem;">Style differently first</p><p style="margin:0;color:#5b4f43;font-size:.97rem;line-height:1.65;">Before buying anything, reach for your layering pieces. Collared shirts under tees. Sheer tops over camisoles. Lace skirts with oversized sweaters. The layered tops trend costs nothing if you already have a wardrobe.</p></div>
@@ -2637,9 +2679,20 @@ const ART: Record<string, ArtItem> = {
   books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada', img: '/images/blog/books-like-devil-wears-prada-hero.webp' },
   toner: { cat: 'Beauty', date: 'June 17, 2026', title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner', excerpt: 'Green tea, rose water, ACV, cucumber and viral fermented rice water — 5 natural toners for every skin type, all under $10.', href: '/blog/5-diy-toner-recipes-for-all-skin', img: '/images/blog/diy-toner-recipes-natural-skincare.webp' },
   orange: { cat: 'Beauty', date: 'May 4, 2026', title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin', excerpt: 'Your kitchen might already have the best-kept skincare secret — and it has been sitting in your trash bin this whole time.', href: '/blog/orange-peel-powder-diy-recipes', img: '/images/blog/orange-peel-banner.jpg' },
+  // No local hero image for these two — the card falls back to its gradient color block.
+  mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '' },
+  throw: { cat: 'Lifestyle', date: 'May 5, 2026', title: 'The Only Throw Pillow Guide You\'ll Ever Need (Designer Secrets Inside)', excerpt: 'The designer size formula, pattern-mixing secrets, and seasonal swaps that make a sofa look intentional.', href: '/blog/throw-pillow-guide', img: '' },
 }
 const iCard = (a: ArtItem, block: string) => ({ ...a, block })
 const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
+  'throw-pillow-guide': {
+    ctx: { pre: 'If you enjoyed this, you might also love our guide to ', link: 'The Art of Mindful Living in Modern Times', href: '/blog/mindful-living-modern-times' },
+    cards: [
+      iCard(ART.mindful, 'linear-gradient(135deg,#D5E8DF,#BDD4C8)'),
+      iCard(ART.low, 'linear-gradient(135deg,#D5E8DF,#C2845A)'),
+      iCard(ART.grazing, 'linear-gradient(135deg,#EDD5C0,#D4B896)'),
+    ],
+  },
   '5-diy-toner-recipes-for-all-skin': {
     ctx: { pre: 'If you enjoyed this, you might also love our complete guide to ', link: 'How to Get Glass Skin', href: '/blog/how-to-get-glass-skin' },
     cards: [iCard(ART.orange, '#EDD5C0'), iCard(ART.glass, '#F5D0D9'), iCard(ART.low, '#D5E8DF')],
@@ -2697,7 +2750,202 @@ const internalLinksCss = `
 .contextual-link a:hover { color: #D4607A; }
 @media (max-width: 1024px) { .internal-links-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .internal-links-grid { grid-template-columns: 1fr; } }
+
+/* Email capture (FIX 4) */
+.email-capture { background: #2C2018; border-radius: 16px; padding: 3rem 2rem; margin: 3rem 0; text-align: center; }
+.email-capture-inner { max-width: 520px; margin: 0 auto; }
+.email-capture-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #E6B884; margin-bottom: 0.75rem; }
+.email-capture-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: #FDF8F4; margin-bottom: 1rem; line-height: 1.2; }
+.email-capture-desc { font-family: 'Jost', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.70); line-height: 1.7; margin-bottom: 1.5rem; }
+.email-capture-form { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.email-input { font-family: 'Jost', sans-serif; padding: 0.85rem 1.25rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.20); background: rgba(255,255,255,0.08); color: white; font-size: 0.9rem; min-width: 240px; flex: 1; }
+.email-input::placeholder { color: rgba(255,255,255,0.40); }
+.email-input:focus { outline: none; border-color: #D4607A; }
+.email-btn { font-family: 'Jost', sans-serif; padding: 0.85rem 1.75rem; border-radius: 50px; background: #D4607A; color: white; border: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s; }
+.email-btn:hover { background: #C2845A; }
+.email-note { font-family: 'Jost', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.40); margin-top: 1rem; }
+
+/* Author bio (FIX 9) */
+.author-bio { display: flex; gap: 1.5rem; align-items: flex-start; background: #F5EDE4; border-radius: 16px; padding: 2rem; margin: 3rem 0; }
+.author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #D4607A, #C2845A); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; flex-shrink: 0; }
+.author-tag { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C2845A; margin-bottom: 0.25rem; }
+.author-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #2C2018; margin-bottom: 0.75rem; }
+.author-text { font-family: 'Jost', sans-serif; font-size: 0.9rem; color: #8C7060; line-height: 1.7; margin-bottom: 1rem; }
+.author-social { display: flex; gap: 0.75rem; }
+.author-social-link { color: #8C7060; transition: color 0.2s; display: inline-flex; }
+.author-social-link:hover { color: #D4607A; }
+@media (max-width: 600px) { .author-bio { flex-direction: column; } }
 `
+
+// FIX 4 — Email capture (ready for ConvertKit: replace the <form> with the embed)
+function EmailCapture() {
+  const [submitted, setSubmitted] = useState(false)
+  return (
+    <section className="email-capture">
+      <div className="email-capture-inner">
+        <p className="email-capture-label">Join the Community</p>
+        <h2 className="email-capture-heading">Good Things, Straight to Your Inbox</h2>
+        <p className="email-capture-desc">
+          Weekly beauty tips, outfit ideas, wellness habits, and book recommendations — plus content that never makes it to the blog. No spam, ever.
+        </p>
+        {submitted ? (
+          <p className="email-note" style={{ display: 'block', color: '#E6B884', fontSize: '0.95rem' }}>
+            🌸 You&apos;re in! Check your inbox soon.
+          </p>
+        ) : (
+          <form
+            className="email-capture-form"
+            onSubmit={(e) => {
+              e.preventDefault()
+              setSubmitted(true)
+            }}
+          >
+            <input type="email" placeholder="your@email.com" required className="email-input" aria-label="Email address" />
+            <button type="submit" className="email-btn">Subscribe →</button>
+          </form>
+        )}
+        <p className="email-note">Join 12,000+ readers. Unsubscribe any time.</p>
+      </div>
+    </section>
+  )
+}
+
+// FIX 9 — Author bio box (E-E-A-T)
+function AuthorBio() {
+  return (
+    <div className="author-bio">
+      <div className="author-avatar">AP</div>
+      <div className="author-content">
+        <p className="author-tag">Founder, Pink &amp; Ochre</p>
+        <h3 className="author-name">Aayushi Parmar</h3>
+        <p className="author-text">
+          Aayushi is the founder and sole author of Pink &amp; Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books. A digital marketer based in Gurgaon, she writes without sponsored filler — every post is personally researched, tested, and honestly told.
+        </p>
+        <div className="author-social">
+          <a href="https://www.instagram.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="author-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://pinterest.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="author-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.63 11.17-.11-.95-.2-2.4.04-3.44.22-.93 1.4-5.94 1.4-5.94s-.36-.72-.36-1.78c0-1.67.97-2.91 2.17-2.91 1.02 0 1.52.77 1.52 1.69 0 1.03-.66 2.57-1 4-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.26 3.78-5.51 0-2.88-2.07-4.9-5.03-4.9-3.43 0-5.44 2.57-5.44 5.23 0 1.04.4 2.15.9 2.75.1.12.11.22.08.34l-.33 1.37c-.05.22-.18.27-.4.16-1.5-.7-2.43-2.88-2.43-4.64 0-3.78 2.74-7.25 7.92-7.25 4.16 0 7.39 2.96 7.39 6.92 0 4.13-2.6 7.45-6.22 7.45-1.21 0-2.35-.63-2.74-1.38l-.75 2.84c-.27 1.04-1 2.35-1.49 3.15C9.57 23.81 10.76 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// FIX 1 — JSON-LD schema (server-rendered into the page HTML)
+const SITE = 'https://pinkandochre.com'
+
+const schemaDescriptions: Record<string, string> = {
+  'low-cortisol-morning-routine': 'Feeling wired and tired before 9am? Discover the low cortisol morning routine that actually works — what spikes your stress hormones and the 7 gentle habits to fix it.',
+  'how-to-get-glass-skin': 'Can Indian skin get glass skin? Yes — and here is exactly how. The HER Method: 3 ingredients, one evening ritual, and the honest 6-month timeline for glowing skin.',
+  'capsule-wardrobe-guide': 'Build a capsule wardrobe that truly works in 2026 — 30 essential pieces, outfit formulas, quiet luxury updates, and a complete checklist to start with.',
+  'summer-2026-fashion-trends': 'The 10 biggest summer 2026 fashion trends — the Glamoratti aesthetic, Transformative Teal, cow print, lace, and more.',
+  'aesthetic-grazing-board-ideas': 'Build a stunning grazing board every time — the best ingredients, styling secrets, and a step-by-step guide for parties, picnics, or a cosy night in.',
+  'it-ends-with-us-book-review': 'An honest review of It Ends With Us — the writing, the ending, and whether it deserves the hype. No spoilers in the opening.',
+  'books-like-devil-wears-prada': 'Loved The Devil Wears Prada? These 10 books have the same fashion world glamour, sharp female ambition, and addictive drama. Your next weekend read is here.',
+  'mindful-living-modern-times': 'What does mindful living really mean in 2026? 8 small practical habits for more presence, less distraction, and genuine intentional living.',
+  '5-diy-toner-recipes-for-all-skin': 'Make your own toner at home with 5 easy DIY recipes — green tea toner for acne, viral rice water toner, rose water for sensitive skin, and more.',
+  'orange-peel-powder-diy-recipes': 'Discover the benefits of orange peel powder for skin and 6 easy DIY recipes for healthy glowing skin at home.',
+  'throw-pillow-guide': 'Everything you need to know about choosing and styling throw pillows — sizes, fabrics, colours, and the layering secrets that make a sofa look intentional.',
+  'devil-wears-prada-book-review': 'An honest review of The Devil Wears Prada by Lauren Weisberger — why the original novel is having its biggest moment in 2026.',
+  'devil-wears-prada-book-vs-movie': 'Book vs movie: the reasons The Devil Wears Prada novel outshines the film adaptation in humour, depth, and emotional honesty.',
+}
+
+const schemaHowTos: Record<string, any[]> = {
+  'how-to-get-glass-skin': [
+    {
+      '@context': 'https://schema.org', '@type': 'HowTo',
+      name: 'The HER Method for Glass Skin',
+      description: 'A 3-step evening skincare method for glass skin',
+      step: [
+        { '@type': 'HowToStep', name: 'Hydrate', text: 'Apply a hydrating serum or toner after cleansing' },
+        { '@type': 'HowToStep', name: 'Exfoliate', text: 'Use a chemical exfoliant 1-2 times per week' },
+        { '@type': 'HowToStep', name: 'Retinol', text: 'Apply retinol 3-4 nights per week, starting at 0.1%' },
+        { '@type': 'HowToStep', name: 'Repeat', text: 'Maintain consistency for 6-8 months for full glass skin results' },
+      ],
+    },
+  ],
+  '5-diy-toner-recipes-for-all-skin': [
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Green Tea Toner', supply: ['green tea', 'tea tree oil', 'apple cider vinegar'], step: [{ '@type': 'HowToStep', text: 'Brew one cup of green tea and allow to cool completely' }, { '@type': 'HowToStep', text: 'Add optional apple cider vinegar and tea tree oil and mix' }, { '@type': 'HowToStep', text: 'Pour into a clean spray bottle or glass jar' }, { '@type': 'HowToStep', text: 'Refrigerate and use within one week' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Rose Water & Witch Hazel Toner', supply: ['rose water', 'alcohol-free witch hazel', 'essential oil'], step: [{ '@type': 'HowToStep', text: 'Combine rose water and witch hazel in a clean glass bottle' }, { '@type': 'HowToStep', text: 'Add optional essential oil and shake gently before use' }, { '@type': 'HowToStep', text: 'Store refrigerated for up to two weeks' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Apple Cider Vinegar Toner', supply: ['apple cider vinegar', 'distilled water', 'tea tree oil'], step: [{ '@type': 'HowToStep', text: 'Combine apple cider vinegar and distilled water in a clean glass bottle' }, { '@type': 'HowToStep', text: 'Add optional tea tree oil and mix well' }, { '@type': 'HowToStep', text: 'Store in a cool dark place or the refrigerator' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Cucumber & Aloe Vera Toner', supply: ['cucumber', 'aloe vera gel', 'distilled water'], step: [{ '@type': 'HowToStep', text: 'Blend the cucumber and strain to extract the juice' }, { '@type': 'HowToStep', text: 'Combine cucumber juice, aloe vera gel and distilled water' }, { '@type': 'HowToStep', text: 'Refrigerate and use within one week' }] },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: 'How to Make Fermented Rice Water Toner', supply: ['uncooked white rice', 'water', 'tea tree oil'], step: [{ '@type': 'HowToStep', text: 'Wash the rice twice and soak in two cups of water' }, { '@type': 'HowToStep', text: 'Leave uncovered at room temperature for 24 hours to ferment' }, { '@type': 'HowToStep', text: 'Strain into a clean jar, refrigerate and use within one week' }] },
+  ],
+}
+
+const schemaReviews: Record<string, any> = {
+  'it-ends-with-us-book-review': {
+    '@context': 'https://schema.org', '@type': 'Review',
+    name: 'It Ends With Us — Book Review',
+    author: { '@type': 'Person', name: 'Aayushi Parmar' },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    itemReviewed: { '@type': 'Book', name: 'It Ends With Us', author: { '@type': 'Person', name: 'Colleen Hoover' }, datePublished: '2016-08-02' },
+  },
+}
+
+function stripSchemaText(s: string): string {
+  return s
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#39;|&rsquo;|&lsquo;/g, "'")
+    .replace(/&quot;|&ldquo;|&rdquo;/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function extractFaqs(html: string): Array<{ q: string; a: string }> {
+  const faqs: Array<{ q: string; a: string }> = []
+  let m: RegExpExecArray | null
+  const reDetails = /<summary[^>]*>([\s\S]*?)<\/summary>\s*<p[^>]*>([\s\S]*?)<\/p>/g
+  while ((m = reDetails.exec(html))) faqs.push({ q: stripSchemaText(m[1]), a: stripSchemaText(m[2]) })
+  const reMlFaq = /<div class="ml-faq"><h3>([\s\S]*?)<\/h3><p>([\s\S]*?)<\/p>/g
+  while ((m = reMlFaq.exec(html))) faqs.push({ q: stripSchemaText(m[1]), a: stripSchemaText(m[2]) })
+  return faqs
+}
+
+function articleSchemas(slug: string, post: any): any[] {
+  const url = `${SITE}/blog/${slug}`
+  const schemas: any[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      url,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Pink & Ochre',
+        url: SITE,
+        logo: { '@type': 'ImageObject', url: `${SITE}/android-chrome-512x512.png` },
+      },
+      description: schemaDescriptions[slug] || '',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      inLanguage: 'en-US',
+      isPartOf: { '@id': `${SITE}/#blog` },
+    },
+  ]
+  const faqs = extractFaqs(post.content || '')
+  if (faqs.length) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })
+  }
+  if (schemaHowTos[slug]) schemas.push(...schemaHowTos[slug])
+  if (schemaReviews[slug]) schemas.push(schemaReviews[slug])
+  return schemas
+}
 
 export default function BlogPostPage() {
   const params = useParams()
@@ -2730,6 +2978,9 @@ export default function BlogPostPage() {
 
   return (
     <>
+      {articleSchemas(slug, post).map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <style dangerouslySetInnerHTML={{ __html: internalLinksCss }} />
       {/* Header */}
       <section className="py-20 md:py-28 bg-ivory">
@@ -2756,11 +3007,30 @@ export default function BlogPostPage() {
       {post.image && (
         <section className="py-12">
           <div className="section-container max-w-4xl">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-96 md:h-[500px] object-cover"
-            />
+            <div className="relative">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-96 md:h-[500px] object-cover"
+              />
+              {/* FIX 8 — Pink & Ochre watermark for articles with generic stock hero images */}
+              {(slug === 'mindful-living-modern-times' || slug === 'books-like-devil-wears-prada') && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '1.25rem',
+                    right: '1.5rem',
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: '1rem',
+                    color: 'rgba(255,255,255,0.82)',
+                    letterSpacing: '0.05em',
+                    textShadow: '0 1px 8px rgba(28,21,18,0.55)',
+                  }}
+                >
+                  Pink <span style={{ color: '#E6B884', fontStyle: 'italic' }}>&amp;</span> Ochre
+                </div>
+              )}
+            </div>
           </div>
         </section>
       )}
@@ -2814,7 +3084,11 @@ export default function BlogPostPage() {
             <div className="internal-links-grid">
               {links.cards.map((c, i) => (
                 <Link href={c.href} key={i} className="internal-link-card">
-                  <img className="internal-link-color-block" src={c.img} alt={c.title} loading="lazy" style={{ background: c.block }} />
+                  {c.img ? (
+                    <img className="internal-link-color-block" src={c.img} alt={c.title} loading="lazy" style={{ background: c.block }} />
+                  ) : (
+                    <div className="internal-link-color-block" style={{ background: c.block }} aria-hidden="true" />
+                  )}
                   <div className="internal-link-meta">{c.cat} · {c.date}</div>
                   <div className="internal-link-title">{c.title}</div>
                   <div className="internal-link-excerpt">{c.excerpt}</div>
@@ -2838,6 +3112,14 @@ export default function BlogPostPage() {
           </div>
         </section>
       )}
+
+      {/* Email capture (FIX 4) + Author bio (FIX 9) */}
+      <section className="pb-16">
+        <div className="section-container max-w-3xl">
+          <EmailCapture />
+          <AuthorBio />
+        </div>
+      </section>
     </>
   )
 }
