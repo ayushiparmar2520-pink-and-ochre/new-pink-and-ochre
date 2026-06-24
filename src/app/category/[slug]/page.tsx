@@ -104,7 +104,7 @@ const allPosts: Record<string, any[]> = {
       date: '2026-05-10',
       category: 'Wellness',
       slug: 'mindful-living-modern-times',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=750&q=75',
+      image: '/images/blog/mindful-living-modern-times.webp',
     },
   ],
   'books': [

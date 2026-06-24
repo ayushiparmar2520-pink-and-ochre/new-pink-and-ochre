@@ -1443,7 +1443,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-10',
     category: 'Wellness',
     author: 'Aayushi Parmar',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1080&q=75',
+    image: '/images/blog/mindful-living-modern-times.webp',
     content: `
       <style>
         .ml-article h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #2C2018; margin: 2.6rem 0 1.1rem; line-height: 1.25; }
@@ -2811,7 +2811,7 @@ const ART: Record<string, ArtItem> = {
   toner: { cat: 'Beauty', date: 'June 17, 2026', title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner', excerpt: 'Green tea, rose water, ACV, cucumber and viral fermented rice water — 5 natural toners for every skin type, all under $10.', href: '/blog/5-diy-toner-recipes-for-all-skin', img: '/images/blog/diy-toner-recipes-natural-skincare.webp' },
   orange: { cat: 'Beauty', date: 'May 4, 2026', title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin', excerpt: 'Your kitchen might already have the best-kept skincare secret — and it has been sitting in your trash bin this whole time.', href: '/blog/orange-peel-powder-diy-recipes', img: '/images/blog/orange-peel-banner.jpg' },
   // No local hero image for these two — the card falls back to its gradient color block.
-  mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '' },
+  mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '/images/blog/mindful-living-modern-times.webp' },
   throw: { cat: 'Lifestyle', date: 'May 5, 2026', title: 'The Only Throw Pillow Guide You\'ll Ever Need (Designer Secrets Inside)', excerpt: 'The designer size formula, pattern-mixing secrets, and seasonal swaps that make a sofa look intentional.', href: '/blog/throw-pillow-guide', img: '' },
   banana: { cat: 'Food', date: 'June 24, 2026', title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist', excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make.', href: '/blog/greek-yogurt-banana-bread', img: '/images/blog/greek-yogurt-banana-bread-hero.webp' },
 }
