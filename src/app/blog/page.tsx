@@ -16,6 +16,15 @@ export const metadata: Metadata = {
 
 const allPosts = [
   {
+    id: 20,
+    title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist',
+    excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make, with a subtle greek-yogurt tang.',
+    date: '2026-06-24',
+    category: 'Food',
+    slug: 'greek-yogurt-banana-bread',
+    image: '/images/blog/greek-yogurt-banana-bread-hero.webp',
+  },
+  {
     id: 19,
     title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner',
     excerpt: 'Green tea, rose water, ACV, cucumber and the viral fermented rice water toner — 5 natural recipes for every skin type, all under $10 to make.',

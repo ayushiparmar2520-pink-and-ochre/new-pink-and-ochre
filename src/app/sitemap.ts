@@ -90,6 +90,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Blog posts
     {
+      url: `${baseUrl}/blog/greek-yogurt-banana-bread`,
+      lastModified: new Date('2026-06-24'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/5-diy-toner-recipes-for-all-skin`,
       lastModified: new Date('2026-06-17'),
       changeFrequency: 'monthly',

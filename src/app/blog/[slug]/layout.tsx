@@ -13,6 +13,13 @@ type ArticleMeta = {
 // the live routes are "how-to-get-glass-skin" and "capsule-wardrobe-guide", so
 // the data is keyed (and its ogUrl set) to the real slugs.
 const metaData: Record<string, ArticleMeta> = {
+  'greek-yogurt-banana-bread': {
+    title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist | Pink & Ochre',
+    description: "This greek yogurt banana bread is tender, protein-rich, and stays moist for days. One bowl, no mixer, no butter — just the best banana bread you'll ever make.",
+    ogTitle: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist | Pink & Ochre',
+    ogDescription: "This greek yogurt banana bread is tender, protein-rich, and stays moist for days. One bowl, no mixer, no butter — just the best banana bread you'll ever make.",
+    ogUrl: 'https://pinkandochre.com/blog/greek-yogurt-banana-bread',
+  },
   '5-diy-toner-recipes-for-all-skin': {
     title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner | Pink & Ochre',
     description: 'Make your own toner at home with 5 easy DIY recipes — green tea toner for acne, viral rice water toner, rose water for sensitive skin, and more. Natural, affordable, and genuinely effective.',

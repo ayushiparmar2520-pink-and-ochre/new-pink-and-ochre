@@ -176,6 +176,15 @@ const allPosts: Record<string, any[]> = {
   ],
   food: [
     {
+      id: 20,
+      title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist',
+      excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make, with a subtle greek-yogurt tang.',
+      date: '2026-06-24',
+      category: 'Food',
+      slug: 'greek-yogurt-banana-bread',
+      image: '/images/blog/greek-yogurt-banana-bread-hero.webp',
+    },
+    {
       id: 17,
       title: 'Aesthetic Grazing Board Ideas for Any Occasion (That Look Like a Pinterest Dream)',
       excerpt: 'The complete guide to building a beautiful grazing board — ingredients, styling tips, and the secrets that make it look like a Pinterest dream.',
