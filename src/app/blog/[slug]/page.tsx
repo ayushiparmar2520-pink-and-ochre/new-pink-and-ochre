@@ -6,6 +6,137 @@ import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
 
 const blogPosts: Record<string, any> = {
+  'greek-yogurt-banana-bread': {
+    title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist',
+    date: '2026-06-24',
+    category: 'Food',
+    author: 'Aayushi Parmar',
+    image: '/images/blog/greek-yogurt-banana-bread-hero.webp',
+    content: `
+      <div style="background:#FFF0F3;border-left:3px solid #D4607A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 .5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#D4607A;">Quick Answer</p>
+        <p style="margin:0;color:#46403a;font-size:1.06rem;line-height:1.75;">Can you substitute greek yogurt in banana bread? Yes — and you absolutely should. Greek yogurt replaces butter or sour cream, adds protein, keeps the crumb incredibly moist, and gives a subtle tang that makes the bread taste more complex. Use full-fat or 2% for best results.</p>
+      </div>
+
+      <p style="font-style:italic;color:#8C7060;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:1.3rem;line-height:1.6;">There is a version of banana bread that is dry, dense, and forgotten by Tuesday. And then there is this one.</p>
+      <p>This is the banana bread I make more than any other — the one that gets requested, the one that disappears off the cooling rack before it has properly cooled. It comes together in a single bowl, with no mixer and no butter, and it stays genuinely soft for four days (if it lasts that long). It is the kind of recipe you stop measuring after a while because your hands already know it.</p>
+      <p>The secret is greek yogurt: it brings protein, it locks in moisture, and it adds a gentle tang that makes the banana flavour sing. What follows is the tested version — the exact ratios I have landed on after more loaves than I would like to admit — plus everything I learned along the way so yours turns out right the first time.</p>
+
+      <h2 id="why-greek-yogurt" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Why Greek Yogurt Makes Better Banana Bread</h2>
+      <p>Greek yogurt is not a health-food shortcut here — it is a genuine upgrade to the texture and flavour. Here is exactly what it does.</p>
+      <ul style="list-style:none;padding:0;margin:1.5rem 0;">
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Moisture without heaviness.</span><span style="color:#46403a;line-height:1.65;">Butter makes banana bread rich but can weigh it down; oil makes it greasy. Greek yogurt adds moisture that keeps the crumb tender and soft for days without that dense, heavy quality.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Protein — 8 to 10g per loaf.</span><span style="color:#46403a;line-height:1.65;">A half cup of greek yogurt plus two eggs quietly builds the protein content to roughly 8–10g across the loaf (about 1–2g per slice), turning a treat into something that actually holds you over.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:1.1rem;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Acidity that activates the leavening.</span><span style="color:#46403a;line-height:1.65;">Greek yogurt is mildly acidic, exactly like buttermilk. That acidity reacts with the baking soda to give the bread a beautiful, even rise — the same trick behind the fluffiest old-fashioned recipes.</span></li>
+        <li style="padding-left:1.5rem;position:relative;margin-bottom:0;"><span style="position:absolute;left:0;top:.55rem;width:8px;height:8px;border-radius:50%;background:#D4607A;display:block;"></span><span style="display:block;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;margin-bottom:.2rem;">Tangy depth of flavour.</span><span style="color:#46403a;line-height:1.65;">The faint sourness rounds out the sweetness and makes the banana taste more pronounced, not less. It is the difference between banana bread that tastes flat and banana bread that tastes complex.</span></li>
+      </ul>
+
+      <h2 id="ingredients" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">What You Need — Ingredients</h2>
+      <p style="color:#8C7060;font-style:italic;margin-bottom:1.2rem;">Makes 1 standard loaf (9×5 inch pan) · 10 slices</p>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.1rem 0;">
+        <p style="margin:0 0 .7rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">The Base</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.8;">
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>3 very ripe bananas (the blacker the peel, the better)</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ cup full-fat greek yogurt (or 2%)</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2 large eggs, room temperature</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>⅓ cup light brown sugar, packed</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>3 tablespoons honey or maple syrup</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 teaspoon pure vanilla extract</li>
+        </ul>
+      </div>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.1rem 0;">
+        <p style="margin:0 0 .7rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">The Dry Ingredients</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.8;">
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1½ cups all-purpose flour</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 teaspoon baking soda</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ teaspoon baking powder</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ teaspoon fine sea salt</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>1 teaspoon cinnamon</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>¼ teaspoon nutmeg</li>
+        </ul>
+      </div>
+      <div style="background:#FDF5EC;border-radius:12px;padding:1.25rem 1.4rem;margin:1.1rem 0;">
+        <p style="margin:0 0 .7rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Optional Mix-Ins (choose one or two)</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;line-height:1.8;">
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ cup dark chocolate chips</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>½ cup chopped walnuts or pecans</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>2 tablespoons nut butter swirled on top</li>
+          <li style="padding-left:1.3rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;font-weight:700;">–</span>Sliced banana pressed into the surface before baking</li>
+        </ul>
+      </div>
+      <img src="/images/blog/greek-yogurt-banana-bread-baking-oven.webp" alt="Banana bread loaf in a gold loaf pan inside the oven, golden brown crust with a natural centre crack, baking on oven rack" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+      <p style="text-align:center;font-size:.85rem;color:#8C7060;font-style:italic;margin:0 0 1.6rem;">Golden brown with a natural centre crack — exactly what you want at the 55-minute mark</p>
+
+      <div style="background:#FDF5EC;border-left:3px solid #C2845A;border-radius:12px;padding:1.5rem 1.75rem;margin:2.5rem 0;">
+        <p style="margin:0 0 1rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#C2845A;">Key Takeaways</p>
+        <ul style="list-style:none;padding:0;margin:0;color:#46403a;font-size:1.03rem;line-height:1.7;">
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;">✦</span>Use bananas with fully black peels — they are 30–40% sweeter than spotted-yellow ones.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;">✦</span>Do not overmix — stir until just combined; a few flour streaks are completely fine.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;">✦</span>Bring the greek yogurt to room temperature so it folds in evenly.</li>
+          <li style="padding:.35rem 0 .35rem 1.9rem;position:relative;"><span style="position:absolute;left:0;color:#C2845A;">✦</span>The toothpick test: test at the edge, not the centre, for the truest read.</li>
+        </ul>
+      </div>
+
+      <h2 id="recipe-steps" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">The Recipe — Step by Step</h2>
+      <div style="background:#FDF8F4;border:1px solid #E8DDD5;border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;"><span style="color:#D4607A;">Step 1</span> · Prep (5 minutes)</p><p style="margin:0;color:#46403a;line-height:1.65;">Preheat the oven to 175°C / 350°F. Grease a 9×5 loaf pan and line it with a parchment overhang so you can lift the loaf out later. Let the eggs and yogurt sit at room temperature for 15–20 minutes.</p></div>
+      <div style="background:#FDF8F4;border:1px solid #E8DDD5;border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;"><span style="color:#D4607A;">Step 2</span> · Mash and Mix the Wet Ingredients (5 minutes)</p><p style="margin:0;color:#46403a;line-height:1.65;">Mash the bananas until you have a smooth purée. Add the greek yogurt, eggs, brown sugar, honey, and vanilla. Whisk until uniform — the mixture should be pale yellow and slightly thick.</p></div>
+      <div style="background:#FDF8F4;border:1px solid #E8DDD5;border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;"><span style="color:#D4607A;">Step 3</span> · Add the Dry Ingredients (3 minutes)</p><p style="margin:0;color:#46403a;line-height:1.65;">Sift the flour, baking soda, baking powder, salt, cinnamon, and nutmeg into the wet mixture. Fold with a rubber spatula until JUST combined — stop the moment no dry streaks remain. The batter should look slightly lumpy. Fold in chocolate chips or walnuts now if using.</p></div>
+      <div style="background:#FDF8F4;border:1px solid #E8DDD5;border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;"><span style="color:#D4607A;">Step 4</span> · Bake (55–65 minutes)</p><p style="margin:0;color:#46403a;line-height:1.65;">Pour the batter into the prepared pan and smooth the top. Press on a sliced-banana topping now if you like. Bake at 175°C for 55–65 minutes. At 50 minutes, check the colour — you want a deep golden brown. Test with a toothpick at the SIDE, not the centre. If it is browning too fast, tent loosely with foil at the 45-minute mark.</p></div>
+      <div style="background:#FDF8F4;border:1px solid #E8DDD5;border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;"><p style="margin:0 0 .4rem;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#2C2018;"><span style="color:#D4607A;">Step 5</span> · Cool (Do Not Skip)</p><p style="margin:0;color:#46403a;line-height:1.65;">Cool in the pan for 15 minutes, then lift the loaf out using the parchment overhang onto a wire rack. Let it cool completely — another 30–40 minutes — before slicing. Cutting it hot releases the steam and ruins the crumb.</p></div>
+
+      <div style="background:#FDF8F4;border-left:4px solid #D4607A;border-radius:0 12px 12px 0;padding:1.5rem 1.75rem;margin:2.5rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;line-height:1.6;color:#2C2018;">The faint sourness of greek yogurt makes the banana flavour taste more pronounced — not less. It rounds out the sweetness without making the bread taste "healthy" in the flat, joyless way that word sometimes implies.</div>
+
+      <h2 id="variations" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Variations Worth Trying</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:1.6rem 0;">
+        <div style="border-radius:12px;overflow:hidden;"><img src="/images/blog/greek-yogurt-banana-bread-chocolate-pecan.webp" alt="Banana bread loaf with chocolate chips and pecan halves on top, sliced to show moist crumb, overripe bananas in background, moody natural light" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;display:block;" /><div style="background:#FDF5EC;padding:20px;border-radius:0 0 12px 12px;"><p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Chocolate Chip Greek Yogurt Banana Bread</p><p style="margin:0;color:#8C7060;font-size:.95rem;line-height:1.6;">Fold ½ cup dark chocolate chips into the batter, then press a few extras on top before baking for that bakery look.</p></div></div>
+        <div style="border-radius:12px;overflow:hidden;"><img src="/images/blog/greek-yogurt-banana-bread-high-protein.webp" alt="Banana smoothie bowl with coconut flakes and cinnamon on a wooden surface, wholesome high-protein breakfast ingredients, warm natural light" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;display:block;" /><div style="background:#FDF5EC;padding:20px;border-radius:0 0 12px 12px;"><p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">High-Protein Version</p><p style="margin:0;color:#8C7060;font-size:.95rem;line-height:1.6;">Replace ¼ cup of the flour with unflavoured protein powder, and add an extra tablespoon of yogurt so the crumb stays moist.</p></div></div>
+        <div style="border-radius:12px;overflow:hidden;"><img src="/images/blog/greek-yogurt-banana-bread-walnut-sliced.webp" alt="Sliced banana walnut bread on a wooden cutting board with dried banana slices on top, walnuts scattered around, jar of caramel in background" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;display:block;" /><div style="background:#FDF5EC;padding:20px;border-radius:0 0 12px 12px;"><p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Walnut and Honey Version</p><p style="margin:0;color:#8C7060;font-size:.95rem;line-height:1.6;">Fold in ½ cup chopped walnuts and drizzle honey over the top just before baking for a crackly, golden finish.</p></div></div>
+        <div style="border-radius:12px;overflow:hidden;"><img src="/images/blog/greek-yogurt-banana-bread-gluten-free.webp" alt="Sliced banana bread loaf on a wooden board with parchment paper, butter and milk jar beside it, overhead moody food photography" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;display:block;" /><div style="background:#FDF5EC;padding:20px;border-radius:0 0 12px 12px;"><p style="margin:0 0 .5rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">Gluten-Free Version</p><p style="margin:0;color:#8C7060;font-size:.95rem;line-height:1.6;">Swap in a 1:1 gluten-free baking flour blend with xanthan gum. Do not use almond flour alone — the loaf will not hold its structure.</p></div></div>
+      </div>
+      <img src="/images/blog/greek-yogurt-banana-bread-walnut-topping.webp" alt="Close-up of banana bread loaf topped with chopped walnuts on parchment paper, golden brown crust with visible texture" loading="lazy" style="width:100%;border-radius:16px;aspect-ratio:16/9;object-fit:cover;margin:1.8rem 0 .6rem;display:block;" />
+
+      <h2 id="storage" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">How to Store Greek Yogurt Banana Bread</h2>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">🏠 Counter</p><p style="margin:0;color:#46403a;line-height:1.6;">Keep it in an airtight container for 3–4 days. Do NOT refrigerate — the fridge dries banana bread out and turns the crumb gummy.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">❄️ Freezer</p><p style="margin:0;color:#46403a;line-height:1.6;">Slice, wrap each piece individually, and stash in a zip-lock bag for up to 3 months. Thaw 1–2 hours at room temperature, or microwave a slice for 30–45 seconds.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-left:4px solid #C2845A;border-radius:12px;padding:1.25rem 1.4rem;margin:1rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2C2018;">🍳 Meal Prep Tip</p><p style="margin:0;color:#46403a;line-height:1.6;">Bake on Sunday, freeze individual slices, and pull one out each morning — a protein-rich breakfast ready by the time your coffee is.</p></div>
+
+      <h2 id="nutrition" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Nutrition Per Slice (Approximate)</h2>
+      <p style="color:#8C7060;font-style:italic;margin-bottom:1rem;">Based on 10 slices, full-fat greek yogurt, no mix-ins</p>
+      <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:.96rem;min-width:320px;">
+        <thead><tr><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1.2rem;font-weight:600;">&nbsp;</th><th style="background:#2C2018;color:#FDF8F4;text-align:left;padding:.85rem 1.2rem;font-weight:600;">Per Slice</th></tr></thead>
+        <tbody>
+          <tr style="background:#FDF8F4;"><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Calories</td><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#46403a;">~195 kcal</td></tr>
+          <tr style="background:#F5EDE4;"><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Protein</td><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#46403a;">~5g</td></tr>
+          <tr style="background:#FDF8F4;"><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Carbohydrates</td><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#46403a;">~32g</td></tr>
+          <tr style="background:#F5EDE4;"><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Fat</td><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#46403a;">~4g</td></tr>
+          <tr style="background:#FDF8F4;"><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Sugar</td><td style="border-bottom:1px solid #E8DDD5;padding:.8rem 1.2rem;color:#46403a;">~14g</td></tr>
+          <tr style="background:#F5EDE4;"><td style="padding:.8rem 1.2rem;color:#2C2018;font-weight:600;">Fibre</td><td style="padding:.8rem 1.2rem;color:#46403a;">~1.5g</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:.8rem;color:#8C7060;font-style:italic;">Values are estimates and will vary based on exact ingredients used.</p>
+
+      <h2 id="mistakes" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Common Mistakes — and How to Fix Them</h2>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">Gummy middle</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> It is underbaked. Bake a little longer and test with the toothpick at the side, not the centre — the middle is the last part to set.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">A dramatic crack down the top</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> Nothing to fix — this is completely normal and actually desirable. It happens as the outside sets before the centre finishes rising.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">Dense and heavy</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> You either overmixed the batter or your bananas were not ripe enough. Mix only until just combined, and use bananas with black peels.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">Too sweet</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> Reduce the honey to 1 tablespoon and the brown sugar to ¼ cup. Very ripe bananas already bring a lot of natural sweetness.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">Stuck to the pan</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> Always line the pan with parchment, not just grease. The parchment overhang lets you lift the whole loaf out cleanly.</p></div>
+      <div style="background:#fff;border:1px solid #E8DDD5;border-radius:12px;padding:1.1rem 1.4rem;margin:.85rem 0;"><p style="margin:0 0 .3rem;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:600;color:#2C2018;">Sank in the middle</p><p style="margin:0;color:#46403a;line-height:1.6;"><strong style="color:#D4607A;">Fix:</strong> Usually too much leavening, or the oven door was opened too early. Measure the baking soda carefully and keep the door shut until at least the 45-minute mark.</p></div>
+
+      <h2 id="faq" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#2C2018;margin:3rem 0 1.1rem;line-height:1.25;scroll-margin-top:90px;">Frequently Asked Questions</h2>
+      <div style="margin:1.5rem 0;">
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I use non-fat greek yogurt?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">You can, but the bread will be slightly less rich. Add an extra tablespoon of oil to compensate for the lower fat content.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I use regular yogurt instead?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes, but the batter will be thinner. Strain regular yogurt through cheesecloth for about 30 minutes first to thicken it closer to greek yogurt consistency.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">How ripe do bananas need to be?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Mostly or entirely black peels are ideal. To speed-ripen, place unpeeled bananas on a baking sheet at 150°C for 15–20 minutes until the skins blacken.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I make this without eggs?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes — use a flax egg (1 tablespoon ground flaxseed mixed with 3 tablespoons water, rested 5 minutes). The bread will be slightly denser but holds together well.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I double the recipe?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes — use two separate loaf pans rather than one large pan, and keep the same baking time.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Why did my banana bread sink in the middle?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Usually too much leavening, underbaking, or opening the oven before the 45-minute mark, which causes the rise to collapse.</p></details>
+        <details style="border:1px solid #E8DDD5;border-radius:10px;padding:1rem 1.25rem;margin-bottom:.75rem;background:#fff;"><summary style="font-weight:700;color:#2C2018;cursor:pointer;font-size:1.05rem;">Can I add protein powder?</summary><p style="margin:.75rem 0 0;color:#8C7060;font-size:1rem;line-height:1.7;">Yes — replace ¼ cup of the flour with unflavoured protein powder and add 1 extra tablespoon of greek yogurt to keep the crumb moist.</p></details>
+      </div>
+`,
+  },
   '5-diy-toner-recipes-for-all-skin': {
     title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner',
     date: '2026-06-17',
@@ -1312,7 +1443,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-10',
     category: 'Wellness',
     author: 'Aayushi Parmar',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1080&q=75',
+    image: '/images/blog/mindful-living-modern-times.webp',
     content: `
       <style>
         .ml-article h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #2C2018; margin: 2.6rem 0 1.1rem; line-height: 1.25; }
@@ -2680,11 +2811,16 @@ const ART: Record<string, ArtItem> = {
   toner: { cat: 'Beauty', date: 'June 17, 2026', title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner', excerpt: 'Green tea, rose water, ACV, cucumber and viral fermented rice water — 5 natural toners for every skin type, all under $10.', href: '/blog/5-diy-toner-recipes-for-all-skin', img: '/images/blog/diy-toner-recipes-natural-skincare.webp' },
   orange: { cat: 'Beauty', date: 'May 4, 2026', title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin', excerpt: 'Your kitchen might already have the best-kept skincare secret — and it has been sitting in your trash bin this whole time.', href: '/blog/orange-peel-powder-diy-recipes', img: '/images/blog/orange-peel-banner.jpg' },
   // No local hero image for these two — the card falls back to its gradient color block.
-  mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '' },
+  mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '/images/blog/mindful-living-modern-times.webp' },
   throw: { cat: 'Lifestyle', date: 'May 5, 2026', title: 'The Only Throw Pillow Guide You\'ll Ever Need (Designer Secrets Inside)', excerpt: 'The designer size formula, pattern-mixing secrets, and seasonal swaps that make a sofa look intentional.', href: '/blog/throw-pillow-guide', img: '' },
+  banana: { cat: 'Food', date: 'June 24, 2026', title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist', excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make.', href: '/blog/greek-yogurt-banana-bread', img: '/images/blog/greek-yogurt-banana-bread-hero.webp' },
 }
 const iCard = (a: ArtItem, block: string) => ({ ...a, block })
 const internalLinks: Record<string, { ctx: { pre: string; link: string; href: string }, cards: Array<ArtItem & { block: string }> }> = {
+  'greek-yogurt-banana-bread': {
+    ctx: { pre: 'Looking for more food inspiration on Pink & Ochre? You might also love our ', link: 'Aesthetic Grazing Board Ideas', href: '/blog/aesthetic-grazing-board-ideas' },
+    cards: [iCard(ART.grazing, '#EDD5C0'), iCard(ART.mindful, '#D5E8DF'), iCard(ART.low, '#F5D0D9')],
+  },
   'throw-pillow-guide': {
     ctx: { pre: 'If you enjoyed this, you might also love our guide to ', link: 'The Art of Mindful Living in Modern Times', href: '/blog/mindful-living-modern-times' },
     cards: [
@@ -2838,6 +2974,7 @@ function AuthorBio() {
 const SITE = 'https://pinkandochre.com'
 
 const schemaDescriptions: Record<string, string> = {
+  'greek-yogurt-banana-bread': "This greek yogurt banana bread is tender, protein-rich, and stays moist for days. One bowl, no mixer, no butter — just the best banana bread you'll ever make.",
   'low-cortisol-morning-routine': 'Feeling wired and tired before 9am? Discover the low cortisol morning routine that actually works — what spikes your stress hormones and the 7 gentle habits to fix it.',
   'how-to-get-glass-skin': 'Can Indian skin get glass skin? Yes — and here is exactly how. The HER Method: 3 ingredients, one evening ritual, and the honest 6-month timeline for glowing skin.',
   'capsule-wardrobe-guide': 'Build a capsule wardrobe that truly works in 2026 — 30 essential pieces, outfit formulas, quiet luxury updates, and a complete checklist to start with.',
@@ -2883,6 +3020,47 @@ const schemaReviews: Record<string, any> = {
     author: { '@type': 'Person', name: 'Aayushi Parmar' },
     reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
     itemReviewed: { '@type': 'Book', name: 'It Ends With Us', author: { '@type': 'Person', name: 'Colleen Hoover' }, datePublished: '2016-08-02' },
+  },
+}
+
+const schemaRecipes: Record<string, any> = {
+  'greek-yogurt-banana-bread': {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: 'Greek Yogurt Banana Bread',
+    author: { '@type': 'Person', name: 'Aayushi Parmar' },
+    datePublished: '2026-06-24',
+    description: 'Protein-packed greek yogurt banana bread that stays moist for days. One bowl, no mixer, no butter.',
+    prepTime: 'PT10M',
+    cookTime: 'PT65M',
+    totalTime: 'PT75M',
+    recipeYield: '10 slices',
+    recipeCategory: 'Bread',
+    recipeCuisine: 'American',
+    keywords: 'greek yogurt banana bread, protein banana bread, healthy banana bread',
+    image: 'https://pinkandochre.com/images/blog/greek-yogurt-banana-bread-hero.webp',
+    nutrition: { '@type': 'NutritionInformation', calories: '195 calories', proteinContent: '5g', carbohydrateContent: '32g', fatContent: '4g' },
+    recipeIngredient: [
+      '3 very ripe bananas',
+      '½ cup full-fat greek yogurt',
+      '2 large eggs',
+      '⅓ cup light brown sugar',
+      '3 tablespoons honey',
+      '1 teaspoon vanilla extract',
+      '1½ cups all-purpose flour',
+      '1 teaspoon baking soda',
+      '½ teaspoon baking powder',
+      '½ teaspoon fine sea salt',
+      '1 teaspoon cinnamon',
+      '¼ teaspoon nutmeg',
+    ],
+    recipeInstructions: [
+      { '@type': 'HowToStep', name: 'Prep', text: 'Preheat oven to 175°C. Grease and line a 9x5 loaf pan with parchment paper.' },
+      { '@type': 'HowToStep', name: 'Mix wet ingredients', text: 'Mash bananas until smooth. Add greek yogurt, eggs, brown sugar, honey, and vanilla. Whisk until combined.' },
+      { '@type': 'HowToStep', name: 'Add dry ingredients', text: 'Sift in flour, baking soda, baking powder, salt, cinnamon, and nutmeg. Fold until just combined.' },
+      { '@type': 'HowToStep', name: 'Bake', text: 'Pour into prepared pan. Bake at 175°C for 55–65 minutes until a toothpick inserted at the side comes out clean.' },
+      { '@type': 'HowToStep', name: 'Cool', text: 'Cool in pan 15 minutes, then transfer to wire rack. Cool completely before slicing.' },
+    ],
   },
 }
 
@@ -2944,6 +3122,7 @@ function articleSchemas(slug: string, post: any): any[] {
   }
   if (schemaHowTos[slug]) schemas.push(...schemaHowTos[slug])
   if (schemaReviews[slug]) schemas.push(schemaReviews[slug])
+  if (schemaRecipes[slug]) schemas.push(schemaRecipes[slug])
   return schemas
 }
 

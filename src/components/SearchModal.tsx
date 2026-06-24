@@ -13,6 +13,7 @@ type Article = {
 
 // Client-side article index (slugs corrected to the real live routes).
 const ARTICLES: Article[] = [
+  { title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Moist', url: '/blog/greek-yogurt-banana-bread', category: 'food', excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make.', keywords: ['banana bread', 'greek yogurt banana bread', 'protein banana bread', 'healthy banana bread', 'baking', 'recipe', 'breakfast'] },
   { title: 'Low Cortisol Morning Routine: 7 Habits to Start Your Day Without Stress', url: '/blog/low-cortisol-morning-routine', category: 'wellness', excerpt: 'What spikes your cortisol before 9am — and the 7 gentle habits that protect your energy all day long.', keywords: ['cortisol', 'morning routine', 'stress hormones', 'gentle morning', 'wired tired', 'wellness'] },
   { title: 'How to Get Glass Skin: The HER Method Skincare Ritual', url: '/blog/how-to-get-glass-skin', category: 'beauty', excerpt: '3 ingredients, the HER Method, and the honest 6-month timeline for glowing even-toned skin.', keywords: ['glass skin', 'skincare', 'HER method', 'retinol', 'niacinamide', 'indian skin', 'glow'] },
   { title: 'Capsule Wardrobe for Women 2026: Quiet Luxury Guide', url: '/blog/capsule-wardrobe-guide', category: 'fashion', excerpt: '30 essential pieces, outfit formulas, and quiet luxury updates for a wardrobe that actually works.', keywords: ['capsule wardrobe', 'quiet luxury', 'wardrobe essentials', 'fashion', 'outfit', '2026'] },

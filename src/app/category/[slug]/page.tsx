@@ -104,7 +104,7 @@ const allPosts: Record<string, any[]> = {
       date: '2026-05-10',
       category: 'Wellness',
       slug: 'mindful-living-modern-times',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=750&q=75',
+      image: '/images/blog/mindful-living-modern-times.webp',
     },
   ],
   'books': [
@@ -175,6 +175,15 @@ const allPosts: Record<string, any[]> = {
     },
   ],
   food: [
+    {
+      id: 20,
+      title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist',
+      excerpt: 'Tender, protein-rich, and moist for days — one bowl, no mixer, no butter. The best banana bread you will ever make, with a subtle greek-yogurt tang.',
+      date: '2026-06-24',
+      category: 'Food',
+      slug: 'greek-yogurt-banana-bread',
+      image: '/images/blog/greek-yogurt-banana-bread-hero.webp',
+    },
     {
       id: 17,
       title: 'Aesthetic Grazing Board Ideas for Any Occasion (That Look Like a Pinterest Dream)',
