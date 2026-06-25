@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
-
+/* Lora is loaded once via the <link> in app/layout.tsx — the duplicate
+   render-blocking @import was removed for faster FCP. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
