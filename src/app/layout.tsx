@@ -132,6 +132,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lora.variable} ${inter.variable} ${jost.variable}`}>
       <head>
+        <meta httpEquiv="content-language" content="en" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}

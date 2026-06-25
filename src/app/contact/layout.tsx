@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description: 'Get in touch with Aayushi Parmar and Pink & Ochre — questions, collaborations, or just to say hello.',
   alternates: {
     canonical: 'https://pinkandochre.com/contact',
-    languages: {
-      'en': 'https://pinkandochre.com/contact',
-      'en-IN': 'https://pinkandochre.com/contact',
-      'en-US': 'https://pinkandochre.com/contact',
-      'x-default': 'https://pinkandochre.com/contact',
-    },
   },
 }
 

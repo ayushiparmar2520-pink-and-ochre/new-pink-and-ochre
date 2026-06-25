@@ -5,12 +5,6 @@ export const metadata: Metadata = {
   description: 'How Pink & Ochre collects, uses, and protects your information.',
   alternates: {
     canonical: 'https://pinkandochre.com/privacy',
-    languages: {
-      'en': 'https://pinkandochre.com/privacy',
-      'en-IN': 'https://pinkandochre.com/privacy',
-      'en-US': 'https://pinkandochre.com/privacy',
-      'x-default': 'https://pinkandochre.com/privacy',
-    },
   },
 }
 

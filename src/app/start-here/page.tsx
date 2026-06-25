@@ -7,12 +7,6 @@ export const metadata: Metadata = {
   description: 'New to Pink & Ochre? Start here — meet Aayushi Parmar, discover what this blog is about, and find your first great read from fashion, beauty, wellness, food and books.',
   alternates: {
     canonical: 'https://pinkandochre.com/start-here',
-    languages: {
-      'en': 'https://pinkandochre.com/start-here',
-      'en-IN': 'https://pinkandochre.com/start-here',
-      'en-US': 'https://pinkandochre.com/start-here',
-      'x-default': 'https://pinkandochre.com/start-here',
-    },
   },
   openGraph: {
     title: 'Start Here | Pink & Ochre',
