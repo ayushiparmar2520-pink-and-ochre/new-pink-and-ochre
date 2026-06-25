@@ -14,7 +14,20 @@
       "Bash(sed -i '8,56d' \"src/app/blog/[slug]/page.tsx\")",
       "Bash(sed -n '6,9p' \"src/app/blog/[slug]/page.tsx\")",
       "Bash(npx tsc *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" remote -v)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" branch -a)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" fetch origin --quiet)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" rev-list --left-right --count origin/main...develop)",
+      "Bash(nslookup -type=NS pinkandochre.com)",
+      "Bash(nslookup pinkandochre.com)",
+      "Bash(nslookup www.pinkandochre.com)",
+      "Bash(curl -sI https://pinkandochre.com --max-time 15)",
+      "Bash(curl -s https://pinkandochre.com --max-time 15)",
+      "Bash(vercel --version)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" log origin/main --oneline -5)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" log origin/main..develop --oneline)",
+      "Bash(git -C \"c:/Users/QSS/Videos/new-pink-and-ochre\" diff develop origin/main --stat)"
     ]
   }
 }
