@@ -44,7 +44,15 @@ export async function generateMetadata(
   return {
     title,
     description,
-    alternates: { canonical: `https://pinkandochre.com/category/${params.slug}` },
+    alternates: {
+      canonical: `https://pinkandochre.com/category/${params.slug}`,
+      languages: {
+        'en': `https://pinkandochre.com/category/${params.slug}`,
+        'en-IN': `https://pinkandochre.com/category/${params.slug}`,
+        'en-US': `https://pinkandochre.com/category/${params.slug}`,
+        'x-default': `https://pinkandochre.com/category/${params.slug}`,
+      },
+    },
     openGraph: {
       title,
       description,
