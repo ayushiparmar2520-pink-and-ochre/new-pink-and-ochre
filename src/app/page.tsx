@@ -6,7 +6,15 @@ import SubscribeForm from '@/components/SubscribeForm'
 export const metadata: Metadata = {
   title: 'Pink & Ochre | Lifestyle Blog — Fashion, Beauty, Wellness, Food & Books',
   description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',
-  alternates: { canonical: 'https://pinkandochre.com/' },
+  alternates: {
+    canonical: 'https://pinkandochre.com/',
+    languages: {
+      'en': 'https://pinkandochre.com/',
+      'en-IN': 'https://pinkandochre.com/',
+      'en-US': 'https://pinkandochre.com/',
+      'x-default': 'https://pinkandochre.com/',
+    },
+  },
   openGraph: {
     title: 'Pink & Ochre | Lifestyle Blog — Fashion, Beauty, Wellness, Food & Books',
     description: 'Pink & Ochre is an independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books. Honest guides, tested recommendations, and quiet rituals for intentional living.',

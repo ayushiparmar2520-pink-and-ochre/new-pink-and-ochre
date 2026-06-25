@@ -5,7 +5,15 @@ import SubscribeForm from '@/components/SubscribeForm'
 export const metadata: Metadata = {
   title: 'Start Here | Pink & Ochre',
   description: 'New to Pink & Ochre? Start here — meet Aayushi Parmar, discover what this blog is about, and find your first great read from fashion, beauty, wellness, food and books.',
-  alternates: { canonical: 'https://pinkandochre.com/start-here' },
+  alternates: {
+    canonical: 'https://pinkandochre.com/start-here',
+    languages: {
+      'en': 'https://pinkandochre.com/start-here',
+      'en-IN': 'https://pinkandochre.com/start-here',
+      'en-US': 'https://pinkandochre.com/start-here',
+      'x-default': 'https://pinkandochre.com/start-here',
+    },
+  },
   openGraph: {
     title: 'Start Here | Pink & Ochre',
     description: 'New to Pink & Ochre? Meet Aayushi Parmar, discover what this blog is about, and find your first great read.',
@@ -45,11 +53,11 @@ const cats = [
 ]
 
 const css = `
-.start-here { --sh-dark:#2C2018; --sh-muted:#8C7060; --sh-border:#E8DDD5; --sh-pink:#D4607A; --sh-ochre:#C2845A; --sh-sage:#7A9E8E; font-family:'Jost',sans-serif; line-height:1.8; }
+.start-here { --sh-dark:#2C2018; --sh-muted:#8C7060; --sh-border:#E8DDD5; --sh-pink:#D4607A; --sh-ochre:#C2845A; --sh-sage:#7A9E8E; font-family:var(--font-jost),sans-serif; line-height:1.8; }
 .start-here .sh-label { font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; color:var(--sh-muted); display:block; margin-bottom:0.8rem; }
 .start-here .sh-rule { border:none; border-top:1px solid var(--sh-border); margin:2rem auto; max-width:1120px; }
 .start-here .sh-rule-wrap { padding:0 2rem; }
-.start-here h1, .start-here h2, .start-here h3 { font-family:'Playfair Display',serif; color:var(--sh-dark); }
+.start-here h1, .start-here h2, .start-here h3 { font-family:var(--font-playfair),serif; color:var(--sh-dark); }
 
 .start-here .sh-hero { max-width:680px; margin:0 auto; padding:4rem 2rem 0; }
 .start-here .sh-hero h1 { font-size:clamp(2rem,5vw,3.2rem); font-weight:700; line-height:1.15; margin-bottom:1.5rem; }
@@ -65,7 +73,7 @@ const css = `
 .start-here .sh-about { max-width:680px; margin:0 auto; padding:3rem 2rem; }
 .start-here .sh-about h2 { font-size:1.8rem; margin-bottom:1.4rem; }
 .start-here .sh-about p { font-size:1rem; color:var(--sh-muted); line-height:1.8; margin-bottom:1.2rem; }
-.start-here .sh-about p.italic { font-family:'Playfair Display',serif; font-style:italic; }
+.start-here .sh-about p.italic { font-family:var(--font-playfair),serif; font-style:italic; }
 
 .start-here .sh-featured { max-width:1120px; margin:0 auto; padding:3rem 2rem; }
 .start-here .sh-featured h2 { font-size:1.8rem; margin-bottom:0.6rem; }
@@ -97,12 +105,12 @@ const css = `
 .start-here .sh-news-inner { max-width:500px; margin:0 auto; text-align:center; }
 .start-here .sh-news h2 { color:#FDF8F4; font-size:1.6rem; margin-bottom:1rem; }
 .start-here .sh-news p { font-size:0.9rem; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:1.8rem; }
-.start-here .sh-news-success { color:#E6B884; font-family:'Jost',sans-serif; font-size:1rem; margin:0; }
+.start-here .sh-news-success { color:#E6B884; font-family:var(--font-jost),sans-serif; font-size:1rem; margin:0; }
 .start-here .sh-news-form { display:flex; gap:0.75rem; }
-.start-here .sh-news-form input { flex:1; background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; padding:0.75rem 1.25rem; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.9rem; }
+.start-here .sh-news-form input { flex:1; background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; padding:0.75rem 1.25rem; border-radius:4px; font-family:var(--font-jost),sans-serif; font-size:0.9rem; }
 .start-here .sh-news-form input::placeholder { color:rgba(255,255,255,0.45); }
 .start-here .sh-news-form input:focus { outline:none; border-color:rgba(255,255,255,0.6); }
-.start-here .sh-news-form button { background:#fff; color:var(--sh-dark); border:none; cursor:pointer; padding:0.75rem 1.25rem; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.08em; transition:opacity 0.2s ease; }
+.start-here .sh-news-form button { background:#fff; color:var(--sh-dark); border:none; cursor:pointer; padding:0.75rem 1.25rem; border-radius:4px; font-family:var(--font-jost),sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.08em; transition:opacity 0.2s ease; }
 .start-here .sh-news-form button:hover { opacity:0.85; }
 
 @media (max-width:900px){ .start-here .sh-cards { grid-template-columns:repeat(2,1fr); } }

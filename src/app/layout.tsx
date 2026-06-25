@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, Lora, Inter, Jost } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import GoogleAnalytics from '@/app/components/GoogleAnalytics'
+
+// Self-hosted fonts (no render-blocking Google Fonts request). Weights match
+// what was loaded before, so headings/body render identically — Jost is now
+// loaded too (it was referenced everywhere but never loaded before).
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700', '800'], display: 'swap', variable: '--font-playfair' })
+const lora = Lora({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap', variable: '--font-lora' })
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap', variable: '--font-inter' })
+const jost = Jost({ subsets: ['latin'], weight: ['300', '400', '500', '600'], display: 'swap', variable: '--font-jost' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pinkandochre.com'),
@@ -38,17 +47,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${lora.variable} ${inter.variable} ${jost.variable}`}>
       <head>
-        {/* Resource hints — speed up font + analytics connections (FCP) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Analytics connection warmup (fonts are now self-hosted via next/font). */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="bg-cream text-charcoal font-body">
         <GoogleAnalytics />
