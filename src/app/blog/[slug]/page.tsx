@@ -2911,6 +2911,19 @@ const internalLinksCss = `
 .author-social-link { color: #8C7060; transition: color 0.2s; display: inline-flex; }
 .author-social-link:hover { color: #D4607A; }
 @media (max-width: 600px) { .author-bio { flex-direction: column; } }
+
+/* Mobile friendliness (≤768px only — desktop untouched) */
+@media (max-width: 768px) {
+  .email-capture { padding: 2rem 1.25rem; }
+  .email-capture-form { flex-direction: column; }
+  .email-input { width: 100%; min-width: 0; font-size: 16px; padding: 0.9rem 1.25rem; }
+  .email-btn { width: 100%; min-height: 48px; padding: 0.9rem 1.5rem; }
+  /* Lift micro-labels to the 12px legibility floor */
+  .internal-links-label,
+  .internal-link-meta,
+  .email-capture-label,
+  .author-tag { font-size: 0.75rem; }
+}
 `
 
 // FIX 4 — Email capture (ready for ConvertKit: replace the <form> with the embed)

@@ -51,14 +51,14 @@ export default function Navigation() {
           <div className="flex items-center gap-1 md:hidden">
             <button
               onClick={() => setSearchOpen(true)}
-              className="search-toggle p-2"
+              className="search-toggle min-h-[48px] min-w-[48px] justify-center"
               aria-label="Search Pink & Ochre"
             >
               <SearchIcon />
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 hover:bg-ivory rounded-sm transition-colors"
+              className="min-h-[48px] min-w-[48px] flex items-center justify-center hover:bg-ivory rounded-sm transition-colors"
               aria-label="Open menu"
             >
               <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,19 +85,19 @@ export default function Navigation() {
               <SearchIcon />
               <span>Search articles...</span>
             </button>
-            <Link href="/" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
+            <Link href="/" className="flex items-center min-h-[48px] px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               HOME
             </Link>
-            <Link href="/blog" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
+            <Link href="/blog" className="flex items-center min-h-[48px] px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               STORIES
             </Link>
-            <Link href="/start-here" className="block px-0 py-2 font-body text-sm tracking-wide text-[#D4607A] hover:text-[#bf4f69] transition-colors">
+            <Link href="/start-here" className="flex items-center min-h-[48px] px-0 py-2 font-body text-sm tracking-wide text-[#D4607A] hover:text-[#bf4f69] transition-colors">
               START HERE
             </Link>
-            <Link href="/about" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
+            <Link href="/about" className="flex items-center min-h-[48px] px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               ABOUT
             </Link>
-            <Link href="/contact" className="block px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
+            <Link href="/contact" className="flex items-center min-h-[48px] px-0 py-2 font-body text-sm tracking-wide text-charcoal hover:text-gold transition-colors">
               CONTACT
             </Link>
           </div>

@@ -355,3 +355,89 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   font-size: 0.85rem;
   color: #8C7060;
 }
+
+/* ============================================================
+   MOBILE FRIENDLINESS  (≤768px ONLY — desktop is untouched)
+   Targets this site's REAL classes/elements. Fixes:
+   1. Legible text  — no rendered text under 12px on mobile
+   2. Tap targets   — interactive elements reach 44–48px
+   3. iOS zoom      — all inputs render at 16px on focus
+   Note: we deliberately do NOT set overflow-x:hidden on
+   html/body — it would break the sticky <nav>. Wide tables
+   are already wrapped in overflow-x:auto scrollers.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* --- iOS Safari auto-zooms any focused input under 16px --- */
+  input,
+  textarea,
+  select,
+  .search-input-field,
+  .email-input {
+    font-size: 16px;
+  }
+
+  /* --- Tap targets: site-wide buttons --- */
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --- Tap targets: footer links --- */
+  footer ul li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  footer .flex a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0;
+  }
+  footer p a {
+    display: inline-block;
+    padding: 0.4rem 0.3rem;
+  }
+
+  /* --- Tap targets + legible labels: search modal --- */
+  .mobile-search-trigger { min-height: 48px; }
+  .search-cat,
+  .search-tag { min-height: 36px; }
+  .search-close,
+  .search-clear {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-result-cat { font-size: 0.75rem; }   /* was .68rem (~11px) */
+  .search-popular-label { font-size: 0.75rem; } /* was .72rem (~11.5px) */
+
+  /* --- Legible text: lift sub-12px inline labels inside articles.
+         Attribute selectors override inline styles (mobile only),
+         so desktop micro-labels stay exactly as designed. --- */
+  .prose [style*="font-size:.72rem"],
+  .prose [style*="font-size:0.72rem"],
+  .prose [style*="font-size:.74rem"] {
+    font-size: 0.75rem !important;
+  }
+
+  /* --- Responsive: stop article media overflowing the viewport --- */
+  .prose img,
+  .prose video,
+  .prose iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* --- Responsive: collapse cramped 3-column inline grids to 1 --- */
+  .prose [style*="grid-template-columns: repeat(3, 1fr)"],
+  .prose [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
