@@ -112,7 +112,7 @@ const allPosts = [
     date: '2026-05-05',
     category: 'Books',
     slug: 'devil-wears-prada-book-review',
-    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=750&q=75',
+    image: '/images/blog/devil-wears-prada-book-review-hero.webp',
   },
   {
     id: 14,
@@ -121,7 +121,7 @@ const allPosts = [
     date: '2026-05-05',
     category: 'Books',
     slug: 'devil-wears-prada-book-vs-movie',
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=750&q=75',
+    image: '/images/blog/devil-wears-prada-book-vs-movie-hero.webp',
   },
   {
     id: 15,

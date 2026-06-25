@@ -13,6 +13,20 @@ type ArticleMeta = {
 // the live routes are "how-to-get-glass-skin" and "capsule-wardrobe-guide", so
 // the data is keyed (and its ogUrl set) to the real slugs.
 const metaData: Record<string, ArticleMeta> = {
+  'devil-wears-prada-book-review': {
+    title: 'The Devil Wears Prada Book Review: Why Everyone Is Obsessing Over It Again in 2026 | Pink & Ochre',
+    description: 'An honest review of The Devil Wears Prada by Lauren Weisberger — why the original novel is having its biggest moment yet, and whether it is worth reading in 2026.',
+    ogTitle: 'The Devil Wears Prada Book Review: Why It Is Having Its Biggest Moment | Pink & Ochre',
+    ogDescription: 'The Devil Wears Prada 2 is here — and the original Lauren Weisberger novel is back. An honest review of why it endures and whether it is worth your next read.',
+    ogUrl: 'https://pinkandochre.com/blog/devil-wears-prada-book-review',
+  },
+  'devil-wears-prada-book-vs-movie': {
+    title: 'The Devil Wears Prada: Book vs Movie — 7 Reasons the Novel Is Better | Pink & Ochre',
+    description: 'Book vs movie: 7 reasons The Devil Wears Prada novel outshines the film adaptation in humour, depth, and emotional honesty — and why everyone is reading it again in 2026.',
+    ogTitle: 'The Devil Wears Prada: Book vs Movie — Why the Novel Wins | Pink & Ochre',
+    ogDescription: '7 reasons the original Devil Wears Prada novel surpasses the film — sharper humour, more depth, and the emotional honesty the movie left out.',
+    ogUrl: 'https://pinkandochre.com/blog/devil-wears-prada-book-vs-movie',
+  },
   'greek-yogurt-banana-bread': {
     title: 'Greek Yogurt Banana Bread: The Protein-Packed Recipe That Stays Perfectly Moist | Pink & Ochre',
     description: "This greek yogurt banana bread is tender, protein-rich, and stays moist for days. One bowl, no mixer, no butter — just the best banana bread you'll ever make.",
@@ -85,6 +99,22 @@ const metaData: Record<string, ArticleMeta> = {
   },
 }
 
+// Per-article hero image for OG / Twitter cards (absolute URLs required).
+const heroImages: Record<string, string> = {
+  'devil-wears-prada-book-review': '/images/blog/devil-wears-prada-book-review-hero.webp',
+  'devil-wears-prada-book-vs-movie': '/images/blog/devil-wears-prada-book-vs-movie-hero.webp',
+  'greek-yogurt-banana-bread': '/images/blog/greek-yogurt-banana-bread-hero.webp',
+  '5-diy-toner-recipes-for-all-skin': '/images/blog/diy-toner-recipes-natural-skincare.webp',
+  'low-cortisol-morning-routine': '/images/blog/low-cortisol-morning-routine.webp',
+  'how-to-get-glass-skin': '/images/blog/how-to-get-glass-skin-skincare-ritual.webp',
+  'capsule-wardrobe-guide': '/images/blog/capsule-wardrobe-for-women-2026.webp',
+  'summer-2026-fashion-trends': '/images/blog/summer-2026-fashion-trends.webp',
+  'aesthetic-grazing-board-ideas': '/images/blog/aesthetic-grazing-board-brie-strawberries.webp',
+  'it-ends-with-us-book-review': '/images/blog/it-ends-with-us-book-review.webp',
+  'books-like-devil-wears-prada': '/images/blog/books-like-devil-wears-prada-hero.webp',
+  'mindful-living-modern-times': '/images/blog/mindful-living-modern-times.webp',
+}
+
 export async function generateMetadata(
   { params }: { params: { slug: string } }
 ): Promise<Metadata> {
@@ -97,6 +127,9 @@ export async function generateMetadata(
     }
   }
 
+  const img = heroImages[params.slug]
+  const ogImages = img ? [{ url: `https://pinkandochre.com${img}` }] : undefined
+
   return {
     title: data.title,
     description: data.description,
@@ -107,11 +140,13 @@ export async function generateMetadata(
       type: 'article',
       url: data.ogUrl,
       siteName: 'Pink & Ochre',
+      images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
       title: data.ogTitle,
       description: data.ogDescription,
+      images: img ? [`https://pinkandochre.com${img}`] : undefined,
     },
   }
 }

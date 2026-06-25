@@ -2073,7 +2073,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-05',
     category: 'Books',
     author: 'Aayushi Parmar',
-    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1080&q=75',
+    image: '/images/blog/devil-wears-prada-book-review-hero.webp',
     content: `
       <p><em>The sequel just made $234 million in its opening weekend. Here's why you need to read the book that started it all — before everyone else does.</em></p>
 
@@ -2199,7 +2199,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-05',
     category: 'Books',
     author: 'Aayushi Parmar',
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1080&q=75',
+    image: '/images/blog/devil-wears-prada-book-vs-movie-hero.webp',
     content: `
       <p><em>Last updated: May 2026 | Reading time: 12 minutes</em></p>
 
@@ -3093,6 +3093,7 @@ function articleSchemas(slug: string, post: any): any[] {
       '@type': 'BlogPosting',
       headline: post.title,
       url,
+      image: post.image ? (post.image.startsWith('http') ? post.image : `${SITE}${post.image}`) : undefined,
       datePublished: post.date,
       dateModified: post.date,
       author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
