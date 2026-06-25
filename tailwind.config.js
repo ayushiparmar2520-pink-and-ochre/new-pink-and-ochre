@@ -18,9 +18,9 @@ module.exports = {
         'gold': '#c4a96a',
       },
       fontFamily: {
-        'display': ['Playfair Display', 'serif'],
-        'body': ['Lora', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'display': ['var(--font-playfair)', 'Georgia', 'serif'],
+        'body': ['var(--font-lora)', 'Georgia', 'serif'],
+        'sans': ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         'wide': '0.15em',

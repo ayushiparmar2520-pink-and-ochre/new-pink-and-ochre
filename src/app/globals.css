@@ -100,7 +100,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
 
 /* Logo */
 .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), serif;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -162,7 +162,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   border-radius: 50px;
   background: #fff;
   color: #8C7060;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.9rem;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
@@ -196,7 +196,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   margin-bottom: 1.5rem;
 }
 .search-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), serif;
   font-size: 1.5rem;
   color: #2C2018;
 }
@@ -224,7 +224,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   padding: 0.9rem 3rem;
   border: 1.5px solid #E8DDD5;
   border-radius: 50px;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.95rem;
   color: #2C2018;
   background: white;
@@ -254,7 +254,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   border-bottom: 1px solid #E8DDD5;
 }
 .search-cat {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -269,14 +269,14 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
 .search-cat:hover { border-color: #D4607A; color: #D4607A; }
 .search-cat.active { background: #D4607A; border-color: #D4607A; color: white; }
 .search-prompt {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.9rem;
   color: #8C7060;
   text-align: center;
   margin-bottom: 2rem;
 }
 .search-popular-label {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -292,7 +292,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   justify-content: center;
 }
 .search-tag {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.82rem;
   padding: 0.4rem 1rem;
   background: #F5EDE4;
@@ -303,7 +303,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
 }
 .search-tag:hover { background: #EDD5C0; }
 .search-count {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.82rem;
   color: #8C7060;
   margin-bottom: 1rem;
@@ -320,7 +320,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
 }
 .search-result-item:hover { border-color: #D4607A; background: #FFF0F3; }
 .search-result-cat {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -330,7 +330,7 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   margin-bottom: 0.35rem;
 }
 .search-result-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), serif;
   font-size: 1rem;
   font-weight: 600;
   color: #2C2018;
@@ -338,20 +338,20 @@ a:not(.btn-primary):not(.btn-secondary):not(.btn-tertiary):not(.logo):hover {
   margin-bottom: 0.35rem;
 }
 .search-result-excerpt {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.82rem;
   color: #8C7060;
   line-height: 1.5;
 }
 .search-no-results { text-align: center; padding: 2rem 0; }
 .search-none-text {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.95rem;
   color: #2C2018;
   margin-bottom: 0.5rem;
 }
 .search-none-sub {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-jost), sans-serif;
   font-size: 0.85rem;
   color: #8C7060;
 }
