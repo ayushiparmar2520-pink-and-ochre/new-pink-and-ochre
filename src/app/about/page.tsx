@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description: 'Meet Aayushi Parmar, the founder and sole author of Pink & Ochre — an independent lifestyle blog covering fashion, beauty, wellness, food, and books. Every post is researched and personally written.',
   alternates: {
     canonical: 'https://pinkandochre.com/about',
-    languages: {
-      'en': 'https://pinkandochre.com/about',
-      'en-IN': 'https://pinkandochre.com/about',
-      'en-US': 'https://pinkandochre.com/about',
-      'x-default': 'https://pinkandochre.com/about',
-    },
   },
   openGraph: {
     title: 'About Aayushi Parmar | Pink & Ochre',

@@ -2911,6 +2911,19 @@ const internalLinksCss = `
 .author-social-link { color: #8C7060; transition: color 0.2s; display: inline-flex; }
 .author-social-link:hover { color: #D4607A; }
 @media (max-width: 600px) { .author-bio { flex-direction: column; } }
+
+/* Mobile friendliness (≤768px only — desktop untouched) */
+@media (max-width: 768px) {
+  .email-capture { padding: 2rem 1.25rem; }
+  .email-capture-form { flex-direction: column; }
+  .email-input { width: 100%; min-width: 0; font-size: 16px; padding: 0.9rem 1.25rem; }
+  .email-btn { width: 100%; min-height: 48px; padding: 0.9rem 1.5rem; }
+  /* Lift micro-labels to the 12px legibility floor */
+  .internal-links-label,
+  .internal-link-meta,
+  .email-capture-label,
+  .author-tag { font-size: 0.75rem; }
+}
 `
 
 // FIX 4 — Email capture (ready for ConvertKit: replace the <form> with the embed)
@@ -3097,12 +3110,7 @@ function articleSchemas(slug: string, post: any): any[] {
       datePublished: post.date,
       dateModified: post.date,
       author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Pink & Ochre',
-        url: SITE,
-        logo: { '@type': 'ImageObject', url: `${SITE}/android-chrome-512x512.png` },
-      },
+      publisher: { '@id': `${SITE}/#organization` },
       description: schemaDescriptions[slug] || '',
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       inLanguage: 'en-US',

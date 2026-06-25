@@ -5,12 +5,6 @@ export const metadata: Metadata = {
   description: 'The terms and conditions for using the Pink & Ochre website.',
   alternates: {
     canonical: 'https://pinkandochre.com/terms',
-    languages: {
-      'en': 'https://pinkandochre.com/terms',
-      'en-IN': 'https://pinkandochre.com/terms',
-      'en-US': 'https://pinkandochre.com/terms',
-      'x-default': 'https://pinkandochre.com/terms',
-    },
   },
 }
 

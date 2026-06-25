@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description: 'Browse all stories on Pink & Ochre — fashion outfit guides, skincare rituals, wellness routines, easy recipes, and curated book lists for women who love intentional living.',
   alternates: {
     canonical: 'https://pinkandochre.com/blog',
-    languages: {
-      'en': 'https://pinkandochre.com/blog',
-      'en-IN': 'https://pinkandochre.com/blog',
-      'en-US': 'https://pinkandochre.com/blog',
-      'x-default': 'https://pinkandochre.com/blog',
-    },
   },
   openGraph: {
     title: 'Stories | Pink & Ochre — Fashion, Beauty, Wellness & Lifestyle Guides',

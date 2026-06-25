@@ -41,6 +41,89 @@ export const metadata: Metadata = {
   },
 }
 
+// Sitewide entity graph — defined once here so the #organization / #website /
+// #person / #blog @id nodes resolve on EVERY page (fixes the dangling isPartOf
+// references in the article, about, and start-here schemas).
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://pinkandochre.com/#organization',
+      name: 'Pink & Ochre',
+      url: 'https://pinkandochre.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://pinkandochre.com/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+      },
+      founder: { '@id': 'https://pinkandochre.com/#person' },
+      sameAs: [
+        'https://pinterest.com/pinkandochre',
+        'https://www.instagram.com/pinkandochre',
+        'https://www.youtube.com/@Pinkandochre-bm1hp',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://pinkandochre.com/#website',
+      url: 'https://pinkandochre.com/',
+      name: 'Pink & Ochre',
+      description: 'An independent lifestyle blog covering fashion, beauty, wellness, food, and books — written by Aayushi Parmar for people who believe living well is in the details.',
+      publisher: { '@id': 'https://pinkandochre.com/#organization' },
+      inLanguage: 'en-US',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://pinkandochre.com/?s={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://pinkandochre.com/#person',
+      name: 'Aayushi Parmar',
+      url: 'https://pinkandochre.com/about',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://pinkandochre.com/images/contact-pink-ochre.webp',
+        width: 1200,
+        height: 628,
+      },
+      description: 'Aayushi Parmar is a digital marketer and the founder and sole author of Pink & Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books.',
+      jobTitle: 'Lifestyle Blogger & Digital Marketer',
+      worksFor: { '@id': 'https://pinkandochre.com/#organization' },
+      sameAs: [
+        'https://pinterest.com/pinkandochre',
+        'https://www.instagram.com/pinkandochre',
+        'https://medium.com/@ayushi.parmar.2520',
+      ],
+    },
+    {
+      '@type': 'Blog',
+      '@id': 'https://pinkandochre.com/#blog',
+      name: 'Pink & Ochre',
+      url: 'https://pinkandochre.com/blog',
+      description: 'An independent lifestyle blog covering fashion, beauty, wellness, food, and books for people who believe living well is in the details.',
+      publisher: { '@id': 'https://pinkandochre.com/#organization' },
+      author: { '@id': 'https://pinkandochre.com/#person' },
+      inLanguage: 'en-US',
+      about: [
+        { '@type': 'Thing', name: 'Fashion' },
+        { '@type': 'Thing', name: 'Beauty' },
+        { '@type': 'Thing', name: 'Wellness' },
+        { '@type': 'Thing', name: 'Food' },
+        { '@type': 'Thing', name: 'Books' },
+        { '@type': 'Thing', name: 'Intentional Living' },
+        { '@type': 'Thing', name: 'Lifestyle' },
+      ],
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -49,6 +132,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lora.variable} ${inter.variable} ${jost.variable}`}>
       <head>
+        <meta httpEquiv="content-language" content="en" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
         {/* Analytics connection warmup (fonts are now self-hosted via next/font). */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />

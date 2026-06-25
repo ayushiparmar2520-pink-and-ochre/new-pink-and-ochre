@@ -120,21 +120,15 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const data = metaData[params.slug]
 
-  // hreflang for every article — slug-derived so it's correct even for
-  // articles without a metaData entry.
+  // Self-referencing canonical for every article — slug-derived so it's
+  // correct even for articles without a metaData entry.
   const canonical = data?.ogUrl || `https://pinkandochre.com/blog/${params.slug}`
-  const languages = {
-    'en': canonical,
-    'en-IN': canonical,
-    'en-US': canonical,
-    'x-default': canonical,
-  }
 
   if (!data) {
     return {
       title: 'Pink & Ochre | Lifestyle Blog',
       description: 'An independent lifestyle blog by Aayushi Parmar covering fashion, beauty, wellness, food, and books.',
-      alternates: { canonical, languages },
+      alternates: { canonical },
     }
   }
 
@@ -144,7 +138,7 @@ export async function generateMetadata(
   return {
     title: data.title,
     description: data.description,
-    alternates: { canonical: data.ogUrl, languages },
+    alternates: { canonical: data.ogUrl },
     openGraph: {
       title: data.ogTitle,
       description: data.ogDescription,
