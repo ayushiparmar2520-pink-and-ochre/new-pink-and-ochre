@@ -1,3 +1,19 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms and Conditions | Pink & Ochre',
+  description: 'The terms and conditions for using the Pink & Ochre website.',
+  alternates: {
+    canonical: 'https://pinkandochre.com/terms',
+    languages: {
+      'en': 'https://pinkandochre.com/terms',
+      'en-IN': 'https://pinkandochre.com/terms',
+      'en-US': 'https://pinkandochre.com/terms',
+      'x-default': 'https://pinkandochre.com/terms',
+    },
+  },
+}
+
 export default function TermsPage() {
   const lastUpdated = 'June 15, 2026'
 

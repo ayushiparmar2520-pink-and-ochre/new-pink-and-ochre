@@ -1,3 +1,19 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Pink & Ochre',
+  description: 'How Pink & Ochre collects, uses, and protects your information.',
+  alternates: {
+    canonical: 'https://pinkandochre.com/privacy',
+    languages: {
+      'en': 'https://pinkandochre.com/privacy',
+      'en-IN': 'https://pinkandochre.com/privacy',
+      'en-US': 'https://pinkandochre.com/privacy',
+      'x-default': 'https://pinkandochre.com/privacy',
+    },
+  },
+}
+
 export default function PrivacyPage() {
   const lastUpdated = 'June 15, 2026'
 
