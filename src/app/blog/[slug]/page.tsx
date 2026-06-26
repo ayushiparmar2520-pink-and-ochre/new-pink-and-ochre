@@ -2903,7 +2903,7 @@ const internalLinksCss = `
 
 /* Author bio (FIX 9) */
 .author-bio { display: flex; gap: 1.5rem; align-items: flex-start; background: #F5EDE4; border-radius: 16px; padding: 2rem; margin: 3rem 0; }
-.author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #D4607A, #C2845A); display: flex; align-items: center; justify-content: center; font-family: var(--font-playfair), serif; font-size: 1.5rem; color: white; flex-shrink: 0; }
+.author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #D4607A, #C2845A); object-fit: cover; object-position: center top; display: flex; align-items: center; justify-content: center; font-family: var(--font-playfair), serif; font-size: 1.5rem; color: white; flex-shrink: 0; }
 .author-tag { font-family: var(--font-jost), sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C2845A; margin-bottom: 0.25rem; }
 .author-name { font-family: var(--font-playfair), serif; font-size: 1.2rem; color: #2C2018; margin-bottom: 0.75rem; }
 .author-text { font-family: var(--font-jost), sans-serif; font-size: 0.9rem; color: #8C7060; line-height: 1.7; margin-bottom: 1rem; }
@@ -2963,7 +2963,7 @@ function EmailCapture() {
 function AuthorBio() {
   return (
     <div className="author-bio">
-      <div className="author-avatar">AP</div>
+      <img className="author-avatar" src="/images/about/aayushi-parmar-pink-and-ochre.webp" alt="Aayushi Parmar — Founder of Pink &amp; Ochre" width={80} height={80} />
       <div className="author-content">
         <p className="author-tag">Founder, Pink &amp; Ochre</p>
         <h3 className="author-name">Aayushi Parmar</h3>
