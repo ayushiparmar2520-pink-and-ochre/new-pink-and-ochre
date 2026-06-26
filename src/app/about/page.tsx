@@ -13,11 +13,20 @@ export const metadata: Metadata = {
     type: 'profile',
     url: 'https://pinkandochre.com/about',
     siteName: 'Pink & Ochre',
+    images: [
+      {
+        url: 'https://pinkandochre.com/images/about/aayushi-parmar-pink-and-ochre.webp',
+        width: 1122,
+        height: 1402,
+        alt: 'Aayushi Parmar — founder and author of Pink & Ochre',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Aayushi Parmar | Pink & Ochre',
     description: 'The founder and writer behind Pink & Ochre — an independent lifestyle blog about fashion, beauty, wellness, food, and books.',
+    images: ['https://pinkandochre.com/images/about/aayushi-parmar-pink-and-ochre.webp'],
   },
 }
 
@@ -136,9 +145,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="/images/contact-pink-ochre.webp"
-                alt="Aayushi Parmar, founder of Pink & Ochre, writing in a notebook over coffee"
-                className="w-full aspect-square object-cover"
+                src="/images/about/aayushi-parmar-pink-and-ochre.webp"
+                alt="Aayushi Parmar — founder and author of Pink & Ochre lifestyle blog"
+                className="w-full aspect-square object-cover object-top"
               />
             </div>
             <div className="space-y-6">

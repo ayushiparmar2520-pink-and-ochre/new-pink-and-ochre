@@ -89,9 +89,9 @@ const siteSchema = {
       url: 'https://pinkandochre.com/about',
       image: {
         '@type': 'ImageObject',
-        url: 'https://pinkandochre.com/images/contact-pink-ochre.webp',
-        width: 1200,
-        height: 628,
+        url: 'https://pinkandochre.com/images/about/aayushi-parmar-pink-and-ochre.webp',
+        width: 1122,
+        height: 1402,
       },
       description: 'Aayushi Parmar is a digital marketer and the founder and sole author of Pink & Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books.',
       jobTitle: 'Lifestyle Blogger & Digital Marketer',
