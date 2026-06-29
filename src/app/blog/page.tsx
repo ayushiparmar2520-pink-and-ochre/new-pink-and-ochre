@@ -87,7 +87,7 @@ const allPosts = [
     date: '2026-05-04',
     category: 'Beauty',
     slug: 'orange-peel-powder-diy-recipes',
-    image: '/images/blog/orange-peel-banner.jpg',
+    image: '/images/blog/orange-peel-powder-diy-recipes.webp',
   },
   {
     id: 11,
