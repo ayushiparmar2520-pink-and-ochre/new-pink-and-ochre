@@ -3110,7 +3110,17 @@ function articleSchemas(slug: string, post: any): any[] {
       datePublished: post.date,
       dateModified: post.date,
       author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
-      publisher: { '@id': `${SITE}/#organization` },
+      publisher: {
+        '@type': 'Organization',
+        '@id': `${SITE}/#organization`,
+        name: 'Pink & Ochre',
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE}/android-chrome-512x512.png`,
+          width: 512,
+          height: 512,
+        },
+      },
       description: schemaDescriptions[slug] || '',
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       inLanguage: 'en-US',

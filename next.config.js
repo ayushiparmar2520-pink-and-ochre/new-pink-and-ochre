@@ -16,6 +16,15 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
+      {
+        // Declare site language at the HTTP layer too (complements <html lang>
+        // and the content-language <meta>). Single-language site, so 'en'
+        // applies to every route.
+        source: '/:path*',
+        headers: [
+          { key: 'Content-Language', value: 'en' },
+        ],
+      },
     ]
   },
   // NOTE: 301 redirects are defined in vercel.json (statusCode: 301).
