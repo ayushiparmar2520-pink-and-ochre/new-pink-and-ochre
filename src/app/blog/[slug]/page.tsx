@@ -1811,7 +1811,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-05',
     category: 'Lifestyle',
     author: 'Aayushi Parmar',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1080&q=75',
+    image: '/images/blog/throw-pillow-guide.webp',
     content: `
       <p><em>By a home décor enthusiast who has obsessed over every square inch of sofa styling.</em></p>
 

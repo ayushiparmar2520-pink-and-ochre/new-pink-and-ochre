@@ -94,7 +94,7 @@ const featuredPosts = [
     date: '2026-05-05',
     category: 'Lifestyle',
     slug: 'throw-pillow-guide',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=750&q=75',
+    image: '/images/blog/throw-pillow-guide.webp',
   },
   {
     id: 12,
