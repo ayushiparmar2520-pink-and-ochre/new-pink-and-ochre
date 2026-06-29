@@ -1682,7 +1682,7 @@ const blogPosts: Record<string, any> = {
     date: '2026-05-04',
     category: 'Beauty',
     author: 'Aayushi Parmar',
-    image: '/images/blog/orange-peel-banner.jpg',
+    image: '/images/blog/orange-peel-powder-diy-recipes.webp',
     content: `
       <p><em>Your kitchen might already have the best-kept skincare secret — and it's been sitting in your trash bin this whole time.</em></p>
 
@@ -2809,7 +2809,7 @@ const ART: Record<string, ArtItem> = {
   itends: { cat: 'Books', date: 'May 20, 2026', title: 'It Ends With Us — A Book Review That Will Stay With You', excerpt: 'A heartfelt review of the book that changed how we talk about love, strength, and the courage to walk away.', href: '/blog/it-ends-with-us-book-review', img: '/images/blog/it-ends-with-us-book-review.webp' },
   books: { cat: 'Books', date: 'May 15, 2026', title: 'Books Like The Devil Wears Prada: 10 Reads You\'ll Devour Next', excerpt: '10 addictive reads with the same fashion, ambition and sharp wit — your next great book is on this list.', href: '/blog/books-like-devil-wears-prada', img: '/images/blog/books-like-devil-wears-prada-hero.webp' },
   toner: { cat: 'Beauty', date: 'June 17, 2026', title: '5 Easy DIY Toner Recipes for Every Skin Type — Including the Viral Rice Water Toner', excerpt: 'Green tea, rose water, ACV, cucumber and viral fermented rice water — 5 natural toners for every skin type, all under $10.', href: '/blog/5-diy-toner-recipes-for-all-skin', img: '/images/blog/diy-toner-recipes-natural-skincare.webp' },
-  orange: { cat: 'Beauty', date: 'May 4, 2026', title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin', excerpt: 'Your kitchen might already have the best-kept skincare secret — and it has been sitting in your trash bin this whole time.', href: '/blog/orange-peel-powder-diy-recipes', img: '/images/blog/orange-peel-banner.jpg' },
+  orange: { cat: 'Beauty', date: 'May 4, 2026', title: 'Orange Peel Powder Benefits for Skin: 6 DIY Recipes for Healthy, Glowing Skin', excerpt: 'Your kitchen might already have the best-kept skincare secret — and it has been sitting in your trash bin this whole time.', href: '/blog/orange-peel-powder-diy-recipes', img: '/images/blog/orange-peel-powder-diy-recipes.webp' },
   // No local hero image for these two — the card falls back to its gradient color block.
   mindful: { cat: 'Lifestyle', date: 'May 10, 2026', title: 'The Art of Mindful Living in Modern Times', excerpt: '8 small, practical habits for more presence, less distraction, and genuine intentional living in 2026.', href: '/blog/mindful-living-modern-times', img: '/images/blog/mindful-living-modern-times.webp' },
   throw: { cat: 'Lifestyle', date: 'May 5, 2026', title: 'The Only Throw Pillow Guide You\'ll Ever Need (Designer Secrets Inside)', excerpt: 'The designer size formula, pattern-mixing secrets, and seasonal swaps that make a sofa look intentional.', href: '/blog/throw-pillow-guide', img: '' },
