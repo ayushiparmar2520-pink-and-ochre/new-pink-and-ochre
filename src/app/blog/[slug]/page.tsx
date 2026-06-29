@@ -2963,7 +2963,7 @@ function EmailCapture() {
 function AuthorBio() {
   return (
     <div className="author-bio">
-      <img className="author-avatar" src="/images/about/aayushi-parmar-pink-and-ochre.webp" alt="Aayushi Parmar — Founder of Pink &amp; Ochre" width={80} height={80} />
+      <img className="author-avatar" src="/images/about/aayushi-parmar-pink-and-ochre.webp" alt="Aayushi Parmar — Founder of Pink &amp; Ochre" width={80} height={80} loading="lazy" decoding="async" />
       <div className="author-content">
         <p className="author-tag">Founder, Pink &amp; Ochre</p>
         <h3 className="author-name">Aayushi Parmar</h3>
@@ -3183,6 +3183,11 @@ export default function BlogPostPage() {
 
   return (
     <>
+      {/* Preload the LCP hero so it fetches immediately at high priority,
+          ahead of this page's client JS bundle (the real cause of slow LCP). */}
+      {post.image && (
+        <link rel="preload" as="image" href={post.image} fetchPriority="high" />
+      )}
       {articleSchemas(slug, post).map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
@@ -3217,6 +3222,9 @@ export default function BlogPostPage() {
                 src={post.image}
                 alt={post.title}
                 className="w-full h-96 md:h-[500px] object-cover"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               {/* FIX 8 — Pink & Ochre watermark for articles with generic stock hero images */}
               {(slug === 'mindful-living-modern-times' || slug === 'books-like-devil-wears-prada') && (
@@ -3245,7 +3253,7 @@ export default function BlogPostPage() {
         <article className="section-container max-w-3xl">
           <div
             className="prose max-w-none text-taupe font-body leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: post.content.replace(/<h2>/g, '<h2 class="heading-small mt-12 mb-6 text-charcoal">').replace(/<p>/g, '<p class="text-lg mb-6 leading-relaxed">') }}
+            dangerouslySetInnerHTML={{ __html: post.content.replace(/<h2>/g, '<h2 class="heading-small mt-12 mb-6 text-charcoal">').replace(/<p>/g, '<p class="text-lg mb-6 leading-relaxed">').replace(/<img /g, '<img loading="lazy" decoding="async" ') }}
           />
           {links && (
             <p className="contextual-link">
