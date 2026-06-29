@@ -3026,6 +3026,13 @@ const schemaHowTos: Record<string, any[]> = {
   ],
 }
 
+// Google flags bare YYYY-MM-DD dates as "invalid datetime / missing timezone"
+// (non-critical). Expand to a full ISO-8601 datetime in IST (the author's
+// timezone) for the JSON-LD only — on-page display dates are formatted separately.
+function schemaDateTime(d: string): string {
+  return /^\d{4}-\d{2}-\d{2}$/.test(d) ? `${d}T09:00:00+05:30` : d
+}
+
 const schemaReviews: Record<string, any> = {
   'it-ends-with-us-book-review': {
     '@context': 'https://schema.org', '@type': 'Review',
@@ -3042,7 +3049,7 @@ const schemaRecipes: Record<string, any> = {
     '@type': 'Recipe',
     name: 'Greek Yogurt Banana Bread',
     author: { '@type': 'Person', name: 'Aayushi Parmar' },
-    datePublished: '2026-06-24',
+    datePublished: schemaDateTime('2026-06-24'),
     description: 'Protein-packed greek yogurt banana bread that stays moist for days. One bowl, no mixer, no butter.',
     prepTime: 'PT10M',
     cookTime: 'PT65M',
@@ -3107,8 +3114,8 @@ function articleSchemas(slug: string, post: any): any[] {
       headline: post.title,
       url,
       image: post.image ? (post.image.startsWith('http') ? post.image : `${SITE}${post.image}`) : undefined,
-      datePublished: post.date,
-      dateModified: post.date,
+      datePublished: schemaDateTime(post.date),
+      dateModified: schemaDateTime(post.date),
       author: { '@type': 'Person', name: 'Aayushi Parmar', url: `${SITE}/about` },
       publisher: {
         '@type': 'Organization',
