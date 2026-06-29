@@ -1,9 +1,6 @@
-'use client'
-
-import { useState } from 'react'
-import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import BlogCard from '@/components/BlogCard'
+import EmailCapture from './EmailCapture'
 
 const blogPosts: Record<string, any> = {
   'greek-yogurt-banana-bread': {
@@ -2926,38 +2923,8 @@ const internalLinksCss = `
 }
 `
 
-// FIX 4 — Email capture (ready for ConvertKit: replace the <form> with the embed)
-function EmailCapture() {
-  const [submitted, setSubmitted] = useState(false)
-  return (
-    <section className="email-capture">
-      <div className="email-capture-inner">
-        <p className="email-capture-label">Join the Community</p>
-        <h2 className="email-capture-heading">Good Things, Straight to Your Inbox</h2>
-        <p className="email-capture-desc">
-          Weekly beauty tips, outfit ideas, wellness habits, and book recommendations — plus content that never makes it to the blog. No spam, ever.
-        </p>
-        {submitted ? (
-          <p className="email-note" style={{ display: 'block', color: '#E6B884', fontSize: '0.95rem' }}>
-            🌸 You&apos;re in! Check your inbox soon.
-          </p>
-        ) : (
-          <form
-            className="email-capture-form"
-            onSubmit={(e) => {
-              e.preventDefault()
-              setSubmitted(true)
-            }}
-          >
-            <input type="email" placeholder="your@email.com" required className="email-input" aria-label="Email address" />
-            <button type="submit" className="email-btn">Subscribe →</button>
-          </form>
-        )}
-        <p className="email-note">Join 12,000+ readers. Unsubscribe any time.</p>
-      </div>
-    </section>
-  )
-}
+// EmailCapture (newsletter form, the one interactive island) now lives in
+// ./EmailCapture.tsx so this page can be a server component.
 
 // FIX 9 — Author bio box (E-E-A-T)
 function AuthorBio() {
@@ -3152,9 +3119,8 @@ function articleSchemas(slug: string, post: any): any[] {
   return schemas
 }
 
-export default function BlogPostPage() {
-  const params = useParams()
-  const slug = params.slug as string
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug
   const post = blogPosts[slug]
   const relatedPosts = relatedPostPool.filter((p) => p.slug !== slug).slice(0, 2)
   const links = internalLinks[slug]
