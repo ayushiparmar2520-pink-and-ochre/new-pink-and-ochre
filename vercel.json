@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blogs/beauty/5-diy-toner-recipes-for-all-skin-type-which-you-can-easily-prepare-at-your-home-with-simple-ingredients",
+      "destination": "/blog/5-diy-toner-recipes-for-all-skin",
+      "statusCode": 301
+    },
+    {
       "source": "/blogs/beauty/5-diy-toner-recipes-for-all-skin",
       "destination": "/blog/5-diy-toner-recipes-for-all-skin",
       "statusCode": 301
