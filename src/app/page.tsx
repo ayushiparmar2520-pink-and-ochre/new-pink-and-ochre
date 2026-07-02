@@ -122,6 +122,11 @@ export default function Home() {
 
   return (
     <>
+      {/* Preload the featured-post image — it's the homepage LCP element,
+          so fetch it early at high priority instead of behind everything else. */}
+      {featured?.image && (
+        <link rel="preload" as="image" href={featured.image} fetchPriority="high" />
+      )}
       {/* Hero Section */}
       <section className="relative min-h-[65vh] flex items-center bg-cream">
         <div className="absolute inset-0 opacity-[0.02]">
@@ -159,7 +164,7 @@ export default function Home() {
               <h2 className="heading-medium mt-4">Latest Story</h2>
             </div>
             <div className="max-w-5xl mx-auto">
-              <BlogCard {...featured} />
+              <BlogCard {...featured} priority />
             </div>
           </div>
         </section>

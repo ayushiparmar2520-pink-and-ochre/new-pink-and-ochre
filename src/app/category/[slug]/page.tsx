@@ -230,8 +230,8 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <div className="section-container">
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {posts.map((post) => (
-                <BlogCard key={post.id} {...post} />
+              {posts.map((post, i) => (
+                <BlogCard key={post.id} {...post} priority={i === 0} />
               ))}
             </div>
           ) : (

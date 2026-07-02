@@ -8,6 +8,7 @@ interface BlogCardProps {
   slug: string
   image?: string
   featured?: boolean
+  priority?: boolean
 }
 
 export default function BlogCard({
@@ -18,6 +19,7 @@ export default function BlogCard({
   slug,
   image,
   featured = false,
+  priority = false,
 }: BlogCardProps) {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -36,6 +38,9 @@ export default function BlogCard({
               <img
                 src={image}
                 alt={title}
+                loading={priority ? 'eager' : 'lazy'}
+                fetchPriority={priority ? 'high' : 'auto'}
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
               />
             </div>
@@ -72,6 +77,9 @@ export default function BlogCard({
             <img
               src={image}
               alt={title}
+              loading={priority ? 'eager' : 'lazy'}
+              fetchPriority={priority ? 'high' : 'auto'}
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
             />
           </div>
