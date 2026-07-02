@@ -6,6 +6,9 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /_next/
 
+# Block internal search result URLs (no indexing value)
+Disallow: /*?search=
+
 # Sitemap location
 Sitemap: https://pinkandochre.com/sitemap.xml
 

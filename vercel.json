@@ -14,6 +14,76 @@
       "source": "/blogs/beauty/orange-peel-powder-benefits-for-skin-6-diy-for-healthy-glowing-skin",
       "destination": "/blog/orange-peel-powder-diy-recipes",
       "statusCode": 301
+    },
+    {
+      "source": "/blogs/books/it-end-with-us-book-review",
+      "destination": "/blog/it-ends-with-us-book-review",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/Beauty",
+      "destination": "/category/beauty",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/beauty",
+      "destination": "/category/beauty",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/Fashion",
+      "destination": "/category/fashion",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/fashion",
+      "destination": "/category/fashion",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/Travel",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/travel",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/Books",
+      "destination": "/category/books",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/Fashion",
+      "destination": "/category/fashion",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/Beauty",
+      "destination": "/category/beauty",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/Travel",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/travel",
+      "destination": "/blog",
+      "statusCode": 301
     }
   ]
 }
