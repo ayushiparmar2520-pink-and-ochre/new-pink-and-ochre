@@ -141,19 +141,20 @@ export default function RootLayout({
         {/* Analytics connection warmup (fonts are now self-hosted via next/font). */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        {/* Google AdSense connection warmup */}
+        {/* Google AdSense — DNS pre-resolve only. No preconnect/preload so its
+            script never competes with the critical render path on slow links. */}
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-cream text-charcoal font-body">
         <GoogleAnalytics />
-        {/* Google AdSense — loads sitewide via the root layout.
-            afterInteractive keeps it from blocking paint (protects LCP/TBT). */}
+        {/* Google AdSense — loads sitewide. lazyOnload defers it to browser
+            idle after the page paints, so it never steals bandwidth from
+            FCP/LCP (afterInteractive was preloading it too early on slow 4G). */}
         <Script
           id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303573384755326"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Navigation />
         <main className="min-h-screen">
