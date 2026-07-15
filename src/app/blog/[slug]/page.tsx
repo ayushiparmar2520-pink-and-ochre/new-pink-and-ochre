@@ -2935,7 +2935,7 @@ function AuthorBio() {
         <p className="author-tag">Founder, Pink &amp; Ochre</p>
         <h3 className="author-name">Aayushi Parmar</h3>
         <p className="author-text">
-          Aayushi is the founder and sole author of Pink &amp; Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books. A digital marketer based in Gurgaon, she writes without sponsored filler — every post is personally researched, tested, and honestly told.
+          Aayushi is the founder and sole author of Pink &amp; Ochre, an independent lifestyle blog covering fashion, beauty, wellness, food, and books. A digital marketer and SEO specialist with 3+ years of experience, she writes without sponsored filler — every post is personally researched, tested, and honestly told.
         </p>
         <div className="author-social">
           <a href="https://www.instagram.com/pinkandochre" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="author-social-link">
