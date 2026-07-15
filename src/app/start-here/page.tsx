@@ -140,7 +140,7 @@ export default function StartHerePage() {
         <span className="sh-label">About</span>
         <h2>Hi, I&apos;m Aayushi.</h2>
         <p>I started Pink &amp; Ochre because I kept looking for a blog that felt like a trusted friend — one who had actually tested the skincare, read the books, tried the recipes, and would tell you honestly what was worth your time and what was not.</p>
-        <p>I am a digital marketer based in Gurgaon, India, writing for an audience largely based in the US and globally. Every post on this blog is researched, personally considered, and written without sponsored filler.</p>
+        <p>I am a digital marketer and SEO specialist with 3+ years of experience, writing for an audience largely based in the US and globally. Every post on this blog is researched, personally considered, and written without sponsored filler.</p>
         <p className="italic">Pink &amp; Ochre is for anyone who believes that living well is not about having more — it is about choosing better.</p>
         <Link href="/about" className="sh-link-ochre">Read my full story →</Link>
       </section>
